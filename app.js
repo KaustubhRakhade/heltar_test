@@ -40,10 +40,10 @@ let scrollActive = true;
 let pageScrollable = false;
 
 let lastScroll = 0;
-function scrollHandler(e) {
-    if (window.scrollY === 0) { window.scrollTo(0, 1);}
-    let direction = window.scrollY > lastScroll ? 1 : -1;
-    lastScroll = window.scrollY;
+function handleWheel(e) {
+    // if (window.scrollY === 0) { window.scrollTo(0, 1);}
+    // let direction = window.scrollY > lastScroll ? 1 : -1;
+    // lastScroll = window.scrollY;
 
 
     if (!pageScrollable) {
@@ -55,7 +55,7 @@ function scrollHandler(e) {
   if (scrollActive) {
 
     scrollActive = false;
-    if (direction > 0) {
+    if (e.deltaY > 0) {
         currentFrame = Math.min(currentFrame + 1, elements.length - 1);
     }
     else {
@@ -78,4 +78,54 @@ function scrollHandler(e) {
   }
 }
 
-window.addEventListener("scroll", scrollHandler);
+
+let lastTouch = -1;
+function handleTouchMove(e) {
+    if (!pageScrollable) {
+        window.scrollTo(0, 1, {behavior: 'instant'});
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    if (lastTouch === -1) {
+        lastTouch = e.touches[0].clientY;
+        return;
+    }
+
+  if (scrollActive && window.scrollY < 2) {
+
+    scrollActive = false;
+    if (e.touches[0].clientY < lastTouch) {
+        currentFrame = Math.min(currentFrame + 1, elements.length - 1);
+    }
+    else {
+        currentFrame = Math.max(currentFrame - 1, 0);
+    }
+    setTimeout(() => {
+        scrollActive = true;
+    }, 1000);
+    timeouts.forEach(t => clearTimeout(t));
+    timeouts = [];
+    for (let i = currentFrame+1; i < elements.length; i++) {
+        let t1 = setTimeout(() => {
+            console.log(i);
+            goToFrame(i);
+        }, 1000 + (i - currentFrame) * delay);
+        timeouts.push(t1);
+    }
+    goToFrame(currentFrame);
+      
+  }
+
+    lastTouch = e.touches[0].clientY;
+}
+
+
+hero.addEventListener("wheel", handleWheel);
+window.addEventListener("touchmove", handleTouchMove, {passive: false});
+window.addEventListener("touchstart", (e) => {
+    lastTouch = e.touches[0].clientY;
+});   
+window.addEventListener("touchend", (e) => {
+    lastTouch = -1;
+});                
