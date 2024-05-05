@@ -1,4 +1,4 @@
-const delay = 5000; //milliseconds
+const delay = 4000; //milliseconds
 let currentFrame = 0;
 
 const elements = document.querySelectorAll('#hero-images img');
