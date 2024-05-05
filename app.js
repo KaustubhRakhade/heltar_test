@@ -47,7 +47,7 @@ function scrollHandler(e) {
 
 
     if (!pageScrollable) {
-        window.scrollTo(0, 1);
+        window.scrollTo(0, 1, {behavior: 'instant'});
         e.preventDefault();
         e.stopPropagation();
     }
