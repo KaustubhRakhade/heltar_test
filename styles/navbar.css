@@ -103,7 +103,7 @@
     #navbar {
         flex-direction: column;
         align-items: flex-start;
-        padding: 1rem 3rem 0 3rem;
+        padding: 1rem 1.5rem 0 1.5rem;
     }
 
     #navbar {
@@ -181,6 +181,7 @@
 }
 
 @media screen and (max-width: 360px) {
+
     #logoBox:focus-within ~ #nav-links {
         margin-bottom: 1rem;
     }
