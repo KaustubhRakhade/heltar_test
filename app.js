@@ -18,6 +18,12 @@ function goToFrame(i) {
             el.classList.add('hidden')
         }
     })
+
+    if (i === elements.length - 1) {
+        setTimeout(() => { pageScrollable = true; }, 1000);
+    } else {
+        pageScrollable = false;
+    }
 }
 
 var timeouts = []
@@ -31,9 +37,17 @@ for (let i = 0; i < elements.length; i++) {
 }
 
 let scrollActive = true;
+let pageScrollable = false;
+
 
 function scrollHandler(e) {
+    if (!pageScrollable) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
   if (scrollActive) {
+
     scrollActive = false;
     if (e.deltaY > 0) {
         currentFrame = Math.min(currentFrame + 1, elements.length - 1);

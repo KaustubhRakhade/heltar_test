@@ -1,0 +1,10 @@
+/* root */
+:root {
+    --primary-accent-color: #34A9FF;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    font-family: sans-serif;
+}
