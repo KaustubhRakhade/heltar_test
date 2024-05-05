@@ -149,24 +149,24 @@
         display: none;
     }
 
-    #logoBox:focus-within ~ #nav-links {
+    #navbar:focus-within #nav-links {
         opacity: 1;
         row-gap: 2rem;
         max-height: 100vh;
         margin-bottom: 3rem;
     }
-    #logoBox:focus-within ~ #nav-links a {
+    #navbar:focus-within #nav-links a {
         transform: translateY(0);
     }
 
-    #logoBox:focus-within ~ #register-btn-pc {
+    #navbar:focus-within #register-btn-pc {
         opacity: 1;
         max-height: 4rem;
         padding: 1rem 2rem;
         margin: 2rem auto 3rem auto;
     }
 
-    #logoBox:focus-within #ham-menu {
+    #navbar:focus-within #ham-menu {
         pointer-events: none;
     }
 
@@ -177,7 +177,7 @@
 
 @media screen and (max-width: 360px) {
 
-    #logoBox:focus-within ~ #nav-links {
+    #navbar:focus-within #nav-links {
         margin-bottom: 1rem;
     }
     #navbar #logoBox {
@@ -193,7 +193,7 @@
         max-height: 0;
         padding: 0;
     }
-    
+
     #navbar img#logoPC { display: none; }
     #navbar #register-btn-pc { display: block; }
     #navbar #register-btn-mobile { display: none; }

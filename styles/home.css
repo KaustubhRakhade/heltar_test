@@ -457,10 +457,4 @@ body {
         row-gap: 2rem;
         column-gap: 0;
     }
-
-    /* #footer-links .footer-link-group {
-        flex-basis: 60%;
-        flex-shrink: 0;
-        flex-grow: 0;
-    } */
 }
