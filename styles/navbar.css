@@ -61,7 +61,7 @@
     text-decoration: none;
     color: black;
     font-size: 1rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Poppins", sans-serif;
     transition: all 0.2s;
 }
 
@@ -74,7 +74,7 @@
     border-radius: 1rem;
     border: none;
     background: var(--primary-accent-color);
-    font-family: "Inter", sans-serif;
+    font-family: "Poppins", sans-serif;
     color: white;
     font-weight: 600;
     font-size: 0.9rem;
