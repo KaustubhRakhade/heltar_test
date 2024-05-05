@@ -185,10 +185,70 @@ body {
 
 @media screen and (max-width: 920px) {
     #hero {
-        padding: 2rem;
+        padding: 0;
         box-sizing: border-box;
+        width: 40%;
     }
     #hero #features {
         display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #hero h3 {
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+
+    #hero #hero-text span {
+        font-size: 1rem;
+    }
+
+    #form form h1 {
+        font-size: 1.2rem;
+    }
+
+    #form form input[type=text],
+    #form form input[type=email],
+    #form form input[type=tel],
+    #form form input[type=date] {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    #main {
+        flex-direction: column;
+    }
+
+    #hero {
+        padding: 0 2rem 2rem 2rem;
+        box-sizing: border-box;
+        width: 100%;
+        text-align: center;
+    }
+
+    #hero h3 {
+        font-size: 1.2rem;
+        line-height: 1.3rem;
+    }
+
+    #hero #hero-text span {
+        font-size: 0.9rem;
+    }
+
+    #form form h1 {
+        font-size: 1rem;
+    }
+
+    #form {
+        width: calc(100% - 2rem);
+        border-radius: 0.5rem;
+    }
+    
+    #form form {
+        row-gap: 0.8rem;
+        padding: 1.5rem;
     }
 }
