@@ -213,13 +213,17 @@ body {
         width: 100%;
         flex-direction: row;
         margin: 0;
+        padding: 1rem 1rem 1rem 0;
+        box-sizing: border-box;
     }
     #hero-images img {
         position: absolute;
-        max-height: 100%;
-        transform: scale(0.9) !important;
-        transform-origin: bottom !important;
+        height: calc(100% - 2rem);
+        width: calc(100% - 2rem);
         right: auto !important;
+        transform: scale(1) !important;
+        object-fit: contain;
+        object-position: top;
     }
 }
 
@@ -243,9 +247,10 @@ body {
 }
 
 @media only screen and (max-width: 440px) {
-    #hero-images img {
+    /* #hero-images img {
         transform: scale(0.8) !important;
-    }
+        width: 100%;
+    } */
 }
 
 
