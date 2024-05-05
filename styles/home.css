@@ -79,9 +79,8 @@ body {
 }
 
 #hero #hero-btns input[type=button]:hover {
-    /* outline: solid var(--primary-accent-color) 0.1rem; */
-    /* color: var(--primary-accent-color) */
-    box-shadow: 0 0.1rem 0.3rem var(--primary-accent-color);
+    transform: scale(1.05) translateY(-0.25rem);
+    box-shadow: 0 0.2rem 0.5rem var(--primary-accent-color);
     /* box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5); */
 }
 
