@@ -1,0 +1,288 @@
+/* root */
+:root {
+    --primary-accent-color: #34A9FF;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+}
+
+#pricing {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    margin-top: 6rem;
+    height: calc(100vh - 6rem);
+    justify-content: center;
+    align-items: center;
+}
+
+
+#priceLegend {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+#price-duration {
+    border-radius: 1.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    align-items: center;
+    width: max-content;
+}
+
+#price-duration span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: -0.25rem;
+    color: var(--primary-accent-color)
+}
+
+#price-duration input[type="radio"] {
+    display: none;
+}
+
+#price-duration label {
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    padding: 0.65rem;
+    border: solid 0.1rem #e4e4e4;
+    text-align: center;
+    width: 6rem;
+}
+
+/* checked */
+#price-duration input[type="radio"]:checked + label {
+    background-color: var(--primary-accent-color);
+    border: solid 0.1rem var(--primary-accent-color);
+    color: white;
+    font-weight: 500;
+
+}
+
+
+#services {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+    background: #37a6f7;
+
+}
+
+#services span {
+    background: #5fb8f9;
+    color: white;
+    font-weight: 500;
+    border-radius: 1rem;
+    padding: 0.75rem;
+    text-align: center;
+    width: 6rem;
+}
+
+#plans {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+}
+
+.tier {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem 0 2rem;
+    border-radius: 1rem;
+    max-width: 22rem;
+    box-sizing: border-box;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    height: max-content;
+    transition: all 0.5s ease-in-out;
+}
+
+.tier:hover {
+    box-shadow: 0 0 2rem #34A9FF99;
+    transform: scale(1.01);
+
+}
+
+.tier h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.tier h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 0;
+    color: #7a7a7a;
+    margin: 0.5rem 0;
+}
+
+.tier h3 b {
+    font-weight: 600;
+    font-size: 3rem;
+    color: var(--primary-accent-color);
+
+}
+
+.tier ul {
+    padding: 1rem;
+}
+
+.tier ul li b {
+    font-weight: 500;
+    color: var(--primary-accent-color);
+}
+
+
+#separator {
+    height: 0.1rem;
+    margin: 1rem 0 1rem -1.5rem;
+    width: calc(2.5rem + 100%);
+    background-color: #e4e4e4;
+}
+
+@media screen and (max-width: 1300px) {
+
+    #price-duration label {
+        padding: 0.45rem;
+        width: 5.5rem;
+        font-size: 0.9rem;
+    }
+
+    #services {
+        row-gap: 1rem;
+    }
+
+    #services span {
+        padding: 0.55rem;
+        width: 5.5rem;
+        font-size: 0.9rem;
+    }
+
+    .tier {
+        max-width: 19.5rem;
+        padding: 1rem 1.5rem 0 1.5rem;
+    }
+
+    .tier ul li {
+        font-size: 0.9rem;
+    }
+
+    .tier h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+
+    .tier h3 b {
+        font-size: 2rem;
+    }
+
+    .tier h3 {
+        margin-bottom: -1rem;
+    }
+    
+}
+
+
+@media screen and (max-width: 1220px) {
+    #price-duration label {
+        padding: 0.65rem;
+        width: 6rem;
+        font-size: 1rem;
+    }
+
+    #pricing {
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+    #price-duration {
+        flex-direction: row;
+        column-gap: 1rem;
+    }
+    #price-duration span {
+        margin: 0 2rem;
+    }
+    #services { display: none; }
+}
+
+@media screen and (max-width: 1060px) {
+    #pricing {
+        margin-top: 8rem;
+        margin-bottom: 4rem;
+        height: max-content;
+    }
+    #plans {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        row-gap: 4rem;
+    }
+
+    .tier {
+        max-width: 22rem;
+        padding: 2rem 1rem 0 2rem;
+    }
+
+    .tier ul li {
+        font-size: 1rem;
+    }
+
+    .tier h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    .tier h3 b {
+        font-size: 3rem;
+    }
+
+    .tier h3 {
+        margin-bottom: -1rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .tier {
+        max-width: 19.5rem;
+        padding: 1rem 1.5rem 0 1.5rem;
+    }
+
+    .tier ul li {
+        font-size: 0.9rem;
+    }
+
+    .tier h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+
+    .tier h3 b {
+        font-size: 2rem;
+    }
+
+    #price-duration span {
+        display: none;
+    }
+
+    #price-duration {
+        box-shadow: none;
+        padding: 0;
+    }
+
+    #price-duration label {
+        padding: 0.55rem;
+        width: 5.5rem;
+        font-size: 0.9rem;
+    }
+
+}
