@@ -39,9 +39,15 @@ for (let i = 0; i < elements.length; i++) {
 let scrollActive = true;
 let pageScrollable = false;
 
-
+let lastScroll = 0;
 function scrollHandler(e) {
+    if (window.scrollY === 0) { window.scrollTo(0, 1);}
+    let direction = window.scrollY > lastScroll ? 1 : -1;
+    lastScroll = window.scrollY;
+
+
     if (!pageScrollable) {
+        window.scrollTo(0, 1);
         e.preventDefault();
         e.stopPropagation();
     }
@@ -49,7 +55,7 @@ function scrollHandler(e) {
   if (scrollActive) {
 
     scrollActive = false;
-    if (e.deltaY > 0) {
+    if (direction > 0) {
         currentFrame = Math.min(currentFrame + 1, elements.length - 1);
     }
     else {
@@ -72,6 +78,4 @@ function scrollHandler(e) {
   }
 }
 
-
-
-hero.addEventListener("wheel", scrollHandler);
+window.addEventListener("scroll", scrollHandler);
