@@ -101,33 +101,9 @@ body {
 }
 
 #hero-images img {
-    height: calc(100vh - 14rem);
-    opacity: 0.2;
+    height: calc(100vh - 14rem) !important;
     position: absolute;
-}
-/* 
-@keyframes comeToView {
-    from {
-        opacity: 0;
-        transform: scale(0.7)
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-        transform: scale(1);
-    }
-    to {
-        opacity: 0;
-        transform: scale(1);
-    }
-} */
 
-#hero-images img {
     visibility: hidden;
     opacity: 0;
     transition: all 0.5s;
