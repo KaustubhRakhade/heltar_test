@@ -217,7 +217,7 @@ body {
     }
     #hero-images img {
         position: absolute;
-        height: calc(100% - 2rem);
+        height: calc(100% - 2rem) !important;
         width: calc(100% - 2rem);
         right: auto !important;
         transform: scale(1) !important;
