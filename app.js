@@ -87,7 +87,7 @@ function handleTouchMove(e) {
         return;
     }
 
-  if (scrollActive && window.scrollY < 2) {
+  if (scrollActive && window.scrollY < 16) {
 
     scrollActive = false;
     if (e.touches[0].clientY < lastTouch) {
@@ -98,14 +98,14 @@ function handleTouchMove(e) {
     }
     setTimeout(() => {
         scrollActive = true;
-    }, 1000);
+    }, 400);
     timeouts.forEach(t => clearTimeout(t));
     timeouts = [];
     for (let i = currentFrame+1; i < elements.length; i++) {
         let t1 = setTimeout(() => {
             console.log(i);
             goToFrame(i);
-        }, 1000 + (i - currentFrame) * delay);
+        }, 100 + (i - currentFrame) * delay);
         timeouts.push(t1);
     }
     goToFrame(currentFrame);
