@@ -1,10 +1,12 @@
-const delay = 4000; //milliseconds
+const AUTO_DELAY = 4000; // time b/w auto slide change
+const SCROLL_DELAY = 300; // time b/w 2 consecutive scrolls
 let currentFrame = 0;
+
+let scrollActive = true;
+let pageScrollable = false;
 
 const elements = document.querySelectorAll('#hero-images img');
 const heroControl = document.querySelector('#hero-headers-controls');
-console.log(heroControl);
-
 
 function goToFrame(i) {
     heroControl.style.marginTop = `${-i * 6}rem`;
@@ -32,12 +34,11 @@ for (let i = 0; i < elements.length; i++) {
   let t1 = setTimeout(() => {
     console.log(i);
     goToFrame(i);
-  }, i * delay);
+  }, i * AUTO_DELAY);
     timeouts.push(t1);
 }
 
-let scrollActive = true;
-let pageScrollable = false;
+
 
 function handleWheel(e) {
 
@@ -58,14 +59,14 @@ function handleWheel(e) {
     }
     setTimeout(() => {
         scrollActive = true;
-    }, 400);
+    }, SCROLL_DELAY);
     timeouts.forEach(t => clearTimeout(t));
     timeouts = [];
     for (let i = currentFrame+1; i < elements.length; i++) {
         let t1 = setTimeout(() => {
             console.log(i);
             goToFrame(i);
-        }, 100 + (i - currentFrame) * delay);
+        }, 100 + (i - currentFrame) * AUTO_DELAY);
         timeouts.push(t1);
     }
     goToFrame(currentFrame);
@@ -98,14 +99,14 @@ function handleTouchMove(e) {
     }
     setTimeout(() => {
         scrollActive = true;
-    }, 400);
+    }, SCROLL_DELAY);
     timeouts.forEach(t => clearTimeout(t));
     timeouts = [];
     for (let i = currentFrame+1; i < elements.length; i++) {
         let t1 = setTimeout(() => {
             console.log(i);
             goToFrame(i);
-        }, 100 + (i - currentFrame) * delay);
+        }, 100 + (i - currentFrame) * AUTO_DELAY);
         timeouts.push(t1);
     }
     goToFrame(currentFrame);
