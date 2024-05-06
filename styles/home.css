@@ -41,7 +41,7 @@ body {
 }
 
 #hero h2 {
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
     font-size: 5rem;
     font-family: "Poppins", sans-serif;
     text-transform: uppercase;
@@ -132,11 +132,11 @@ body {
 }
 
 #hero-images img.visible {
-    animation: comeToView 1s forwards;
+    animation: comeToView 0.5s forwards;
 }
 
 #hero-images img.hidden {
-    animation: fadeOut 1s forwards;
+    animation: fadeOut 0.5s forwards;
 }
 
 @media only screen and (max-width: 1280px) {

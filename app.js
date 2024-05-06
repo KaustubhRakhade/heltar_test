@@ -20,7 +20,7 @@ function goToFrame(i) {
     })
 
     if (i === elements.length - 1) {
-        setTimeout(() => { pageScrollable = true; }, 1000);
+        setTimeout(() => { pageScrollable = true; }, 500);
     } else {
         pageScrollable = false;
     }
@@ -39,12 +39,7 @@ for (let i = 0; i < elements.length; i++) {
 let scrollActive = true;
 let pageScrollable = false;
 
-let lastScroll = 0;
 function handleWheel(e) {
-    // if (window.scrollY === 0) { window.scrollTo(0, 1);}
-    // let direction = window.scrollY > lastScroll ? 1 : -1;
-    // lastScroll = window.scrollY;
-
 
     if (!pageScrollable) {
         window.scrollTo(0, 1, {behavior: 'instant'});
@@ -52,7 +47,7 @@ function handleWheel(e) {
         e.stopPropagation();
     }
 
-  if (scrollActive) {
+  if (scrollActive && window.scrollY < 16) {
 
     scrollActive = false;
     if (e.deltaY > 0) {
@@ -63,14 +58,14 @@ function handleWheel(e) {
     }
     setTimeout(() => {
         scrollActive = true;
-    }, 1000);
+    }, 400);
     timeouts.forEach(t => clearTimeout(t));
     timeouts = [];
     for (let i = currentFrame+1; i < elements.length; i++) {
         let t1 = setTimeout(() => {
             console.log(i);
             goToFrame(i);
-        }, 1000 + (i - currentFrame) * delay);
+        }, 100 + (i - currentFrame) * delay);
         timeouts.push(t1);
     }
     goToFrame(currentFrame);

@@ -114,7 +114,8 @@ body {
     padding: 0.5rem;
     border: none;
     outline: none;
-    border-bottom: 0.2rem solid #ccc;
+    border-bottom: 0.1rem solid #ccc;
+    transition: all 0.2s;
     font-family: "poppins", sans-serif;
     font-size: 1.2rem;
 }
@@ -123,7 +124,7 @@ body {
 #form form input[type=email]:focus,
 #form form input[type=tel]:focus,
 #form form input[type=date]:focus {
-    border-bottom: 0.2rem solid var(--primary-accent-color);
+    border-bottom: 0.1rem solid var(--primary-accent-color);
 }
 
 #form form input[type=submit] {
