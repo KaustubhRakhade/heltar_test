@@ -391,7 +391,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     column-gap: 6rem;
-    padding: 2rem 4rem;
+    padding: 4rem;
     box-sizing: border-box;
 }
 
@@ -420,6 +420,7 @@ body {
     font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: 1rem;
+    margin-top: 0;
 }
 
 .footer-link-group a {
@@ -432,6 +433,8 @@ body {
 @media screen and (max-width: 1124px) {
     #footer {
         flex-direction: column;
+        row-gap: 2rem;
+        padding-top: 2rem
     } 
 }
 
