@@ -217,11 +217,14 @@ body {
 
     #hero h3 {
         font-size: 1.2rem;
-        box-shadow: 0 0 0.3rem 0rem #ffffff;
+        box-shadow: 0 0 0.2rem 0rem #ffffff;
         background: white;
     }
     #hero-headers { margin: -2.1rem 0; }
-    #hero h2 { font-size: 2.5rem; }
+    #hero h2 {
+        font-size: 2.5rem;
+        color: #33a0ef;
+    }
     #hero span {
         font-size: 0.8rem;
     }
