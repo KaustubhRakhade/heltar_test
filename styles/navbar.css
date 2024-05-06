@@ -33,7 +33,11 @@
 
 #logoBox #ham-menu {
     display: none;
-    background: none;
+    background: url(../assets/menu.svg);
+    width: 2.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     color: var(--primary-accent-color);
     font-weight: 900;
     font-size: 2rem;
