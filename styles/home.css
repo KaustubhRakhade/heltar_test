@@ -105,7 +105,7 @@ body {
     opacity: 0.2;
     position: absolute;
 }
-
+/* 
 @keyframes comeToView {
     from {
         opacity: 0;
@@ -125,18 +125,24 @@ body {
         opacity: 0;
         transform: scale(1);
     }
-}
+} */
 
 #hero-images img {
+    visibility: hidden;
     opacity: 0;
+    transition: all 0.5s;
 }
 
 #hero-images img.visible {
-    animation: comeToView 0.5s forwards;
+    visibility: visible;
+    opacity: 1;
 }
 
 #hero-images img.hidden {
-    animation: fadeOut 0.5s forwards;
+    opacity: 0;
+    transition-property: opacity, visibility;
+    transition-duration: 0.5s, 0s;
+    transition-delay: 0s, 0.5s;
 }
 
 @media only screen and (max-width: 1280px) {
