@@ -7,6 +7,7 @@ let pageScrollable = false;
 
 const elements = document.querySelectorAll('#hero-images img');
 const heroControl = document.querySelector('#hero-headers-controls');
+const trustedByControl = document.querySelector('#trustedBy');
 
 function goToFrame(i) {
     heroControl.style.marginTop = `${-i * 6}rem`;
@@ -42,7 +43,7 @@ for (let i = 0; i < elements.length; i++) {
 
 function handleWheel(e) {
 
-    if (!pageScrollable) {
+    if (!pageScrollable && window.scrollY < 16) {
         window.scrollTo(0, 1, {behavior: 'instant'});
         e.preventDefault();
         e.stopPropagation();
@@ -118,6 +119,11 @@ function handleTouchMove(e) {
 
 
 hero.addEventListener("wheel", handleWheel);
+trustedByControl.addEventListener("wheel", (e) => {
+    if (window.innerWidth > 800) handleWheel(e)
+});
+
+
 window.addEventListener("touchmove", handleTouchMove, {passive: false});
 window.addEventListener("touchstart", (e) => {
     lastTouch = e.touches[0].clientY;
