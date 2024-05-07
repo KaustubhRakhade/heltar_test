@@ -78,7 +78,7 @@ function handleWheel(e) {
 
 let lastTouch = -1;
 function handleTouchMove(e) {
-    if (!pageScrollable) {
+    if (!pageScrollable && window.scrollY < 16) {
         window.scrollTo(0, 1, {behavior: 'instant'});
         e.preventDefault();
         e.stopPropagation();

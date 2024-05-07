@@ -57,7 +57,16 @@
     column-gap: 2rem;
 }
 
-.dropdown:hover .dropdown-content {
+.dropbtn {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+}
+
+.dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content {
     max-height: 10rem;
     padding: 1rem;
     row-gap: 1rem;
@@ -172,15 +181,14 @@
     }
 
     #navbar .dropdown {
-        color: white;
+        color: white ;
     }
 
     .dropdown {
         text-align: center;
     }
 
-
-    .dropdown-content {
+    .dropdown-content, .dropbtn {
         position: static;
         background-color: #000000;
         box-shadow: none;
