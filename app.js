@@ -1,3 +1,5 @@
+// Scroll between the 4 frames
+
 const AUTO_DELAY = 4000; // time b/w auto slide change
 const SCROLL_DELAY = 300; // time b/w 2 consecutive scrolls
 let currentFrame = 0;
@@ -130,4 +132,72 @@ window.addEventListener("touchstart", (e) => {
 });   
 window.addEventListener("touchend", (e) => {
     lastTouch = -1;
-});                
+});
+
+
+
+
+// scrolling and text animates below it
+
+const message = "MARKETING IS A KEY TO YOUR BUSINESS"
+const messageContainer = document.querySelector('#message-container');
+const stickyContent = document.querySelector('#stickyContent');
+const tryNowBtn = document.querySelector('#tryNowBtn');
+const scrollingText = document.querySelector('#scrollingText');
+
+for (let i = 0; i < message.length; i++) {
+    let span = document.createElement('span');
+    span.innerText = message[i];
+    messageContainer.appendChild(span);
+}
+
+window.addEventListener("scroll", () => {
+    // top of the message container
+    let top = scrollingText.getBoundingClientRect().top;
+    let vh = window.innerHeight;
+
+    if (top > vh/2) {
+        
+    }
+
+    if (top < (3/4) * vh) {
+
+        // let progress = Math.min(1, (vh - top) / vh);
+        let progress = Math.min(1, ((3/4) * vh - top) / ((3/4) * vh));
+        stickyContent.style.opacity = progress;
+        stickyContent.style.transform = `scale(${0.9 + 0.1 * progress})`;
+        stickyContent.style.filter = `blur(${16 * (1-progress)}px)`;
+        tryNowBtn.classList.remove('active');
+    }
+    if (top < 0) {
+        let progress = Math.min(1.05, -top / (2.7*vh));
+        for (let i = 0; i < messageContainer.children.length; i++) {
+            if (i+1 < progress * message.length) {
+                messageContainer.children[i].style.color = '#34A9FF';
+            }
+            else {
+                messageContainer.children[i].style.color = '#CCCCCC';
+            }
+        }
+
+        if (progress > 1) {
+            tryNowBtn.classList.add('active');
+        }
+        else {
+            tryNowBtn.classList.remove('active');
+        }
+    }
+})
+
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    })
+}, {threshold: 0.5});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach(el => { observer.observe(el); })
+

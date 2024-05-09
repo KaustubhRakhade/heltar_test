@@ -3,6 +3,10 @@
     --primary-accent-color: #34A9FF;
 }
 
+html {
+    /* scroll-snap-type: y mandatory; */
+}
+
 body {
     margin: 0;
     width: 100%;
@@ -146,10 +150,13 @@ body {
 @media only screen and (max-width: 1024px) {
     #hero {
         padding: 0 3rem;
-        height: calc(100vh - 20rem);
     }
     #hero-images img {
         transform: scale(0.8) !important;
+    }
+
+    #hero-images {
+        width: 44vw;
     }
 }
 
@@ -234,15 +241,6 @@ body {
     }
 }
 
-@media only screen and (max-width: 440px) {
-    /* #hero-images img {
-        transform: scale(0.8) !important;
-        width: 100%;
-    } */
-}
-
-
-
 /* trusted By */
 
 #trustedBy {
@@ -273,52 +271,35 @@ body {
 #trustedBy #trustedBy-wall {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    row-gap: 0;
-    column-gap: 0;
+    overflow: hidden;
     width: 100%;
+}
+
+#trustedBy #trustedBy-wall #copy1, #trustedBy #trustedBy-wall #copy2 {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    animation: scroll-infinite 10s linear infinite;
 }
 
-#trustedBy #trustedBy-wall img {
-    width: min(15rem, 14vw);
-}
-
-@media only screen and (max-width: 1024px) {
-    #trustedBy #trustedBy-wall {
-        width: min(45rem, 60vw);
+@keyframes scroll-infinite {
+    0% {
+        transform: translateX(0);
     }
-    #trustedBy #trustedBy-wall img {
-        width: min(15rem, 20vw);
+    100% {
+        transform: translateX(-100%);
     }
 }
 
-@media only screen and (max-width: 570px) {
-
+@media screen and (max-width: 800px) {
     #trustedBy {
-        padding: 2rem 1rem;
+        padding: 1rem 0 4rem 0;
     }
 
-    #trustedBy #trustedBy-wall {
-        row-gap: 0;
-        column-gap: 3vw;
+    #trustedBy img {
+        width: 8rem;
     }
-
-    #trustedBy #trustedBy-wall img {
-        width: 40vw;
-    }    
-}
-
-@media only screen and (max-width: 360px) {
-
-    #trustedBy #trustedBy-wall {
-        row-gap: 0.1rem;
-    }
-
-    #trustedBy #trustedBy-wall img {
-        width: 67vw;
-    }    
+    
 }
 
 /* imgaeNtext */
@@ -343,6 +324,15 @@ body {
 .imageNtext img {
     width: 45%;
     max-width: 36rem;
+    opacity: 0;
+    transform: translateY(4rem);
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.1s;
+}
+
+.imageNtext.show img {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
@@ -355,6 +345,10 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     line-height: clamp(2.3rem, 5vw, 3.5rem);
+
+    opacity: 0;
+    transform: translateY(4rem);
+    transition: all 0.5s ease-in-out;
 }
 
 .imageNtext .text span {
@@ -362,6 +356,15 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     line-height: clamp(1.5rem, 3vw, 2rem);
+
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.2s;
+}
+
+.imageNtext.show .text h3, .imageNtext.show .text span{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @media only screen and (max-width: 880px) {
@@ -394,6 +397,113 @@ body {
         line-height: clamp(1.5rem, 6vw, 2rem);
     }
 }
+
+
+/* scrolling text */
+
+#scrollingText {
+    background: black;
+    height: 400vh;
+    width: 100%;
+}
+
+#stickyContent {
+    position: sticky;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 8rem;
+    left: 0;
+    top: 6rem;
+    height: calc(100vh - 6rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+}
+
+#message-container {
+    max-width: 43rem;
+}
+
+#message-container span {
+    font-size: 5.5rem;
+    line-height: 5.5rem;
+    color: #CCCCCC;
+    font-weight: 600;
+    transition: all 0.1s;
+}
+
+#tryNowBtn {
+    background: none;
+    color: white;
+    font-family: "poppins", sans-serif;
+    font-size: 1.5rem;
+    border: solid white 0.1rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: max-content;
+    margin-top: 1rem;
+    transition: all 0.2s;
+}
+
+#tryNowBtn.active {
+    background: white;
+    color: black;
+}
+
+@media screen and (max-width: 960px) {
+    #message-container {
+        max-width: 30rem;
+    }
+    
+    #message-container span {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    #message-container {
+        max-width: 24rem;
+    }
+    
+    #message-container span {
+        font-size: 3.1rem;
+        line-height: 3.1rem;
+    }
+
+    #tryNowBtn {
+        font-size: 1rem;
+        border-radius: 0.25rem;
+        padding: 0.25rem 0.75rem;
+    }
+}
+
+
+@media screen and (max-width: 640px) {
+    #stickyContent {
+        padding: 0 4rem;
+    }
+}
+
+
+@media screen and (max-width: 520px) {
+    
+    #message-container span {
+        font-size: 2.5em;
+        line-height: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #stickyContent {
+        padding: 0 2rem;
+    }
+}
+
+
+
+
 
 /* footer */
 
