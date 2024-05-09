@@ -170,7 +170,7 @@ window.addEventListener("scroll", () => {
         tryNowBtn.classList.remove('active');
     }
     if (top < 0) {
-        let progress = Math.min(1.05, -top / (2.7*vh));
+        let progress = Math.min(1.05, -top / (1.8*vh));
         for (let i = 0; i < messageContainer.children.length; i++) {
             if (i+1 < progress * message.length) {
                 messageContainer.children[i].style.color = '#34A9FF';
