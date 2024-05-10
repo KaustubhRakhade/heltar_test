@@ -659,8 +659,7 @@ body {
     box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.15);
     border-radius: 1rem;
     transition: all 0.3s;
-
-    transform: translate(-100%, 0);
+    margin-left: -20rem;
     opacity: 0;
     transform-origin: bottom left;
 }
@@ -679,7 +678,7 @@ body {
 }
 
 #chatWindow.show {
-    transform: translate(0, 0);
+    margin-left: 0;
     opacity: 1;
     transform-origin: bottom left;
 }
