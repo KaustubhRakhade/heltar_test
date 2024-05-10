@@ -1,7 +1,7 @@
 // Scroll between the 4 frames
 
 const AUTO_DELAY = 4000; // time b/w auto slide change
-const SCROLL_DELAY = 300; // time b/w 2 consecutive scrolls
+const SCROLL_DELAY = 750; // time b/w 2 consecutive scrolls
 let currentFrame = 0;
 
 let scrollActive = true;
