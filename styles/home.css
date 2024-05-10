@@ -129,7 +129,7 @@ body {
     #hero { padding: 0 4rem; }
 }
 
-@media only screen and (max-width: 1220px) {
+@media only screen and (max-width: 1220px), only screen and (max-height: 640px){
     #hero { padding: 0 5rem; }
     #hero h3 {
         font-size: 2rem;
@@ -147,6 +147,12 @@ body {
     }
 }
 
+@media only screen and (max-height: 600px){
+    #hero span {
+        margin: 0.5rem 0 1rem 0;
+    }
+}
+
 @media only screen and (max-width: 1024px) {
     #hero {
         padding: 0 3rem;
@@ -159,6 +165,29 @@ body {
         width: 44vw;
     }
 }
+
+@media (min-width: 800px) and (max-height: 600px) {
+    #hero {
+        height: calc(100vh - 14rem) !important;
+    }
+
+    
+    #hero-images img {
+        height: calc(100vh - 14rem) !important;
+    }
+}
+
+
+@media (min-width: 800px) and (max-height: 520px) {
+    #hero {
+        height: calc(100vh - 6rem) !important;
+    }
+
+    #hero-images img {
+        height: calc(100vh - 10rem) !important;
+    }
+}
+
 
 @media only screen and (max-width: 800px) {
     #hero { padding: 0; }
@@ -248,7 +277,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 1rem 2rem 4rem 2rem;
+    padding: 1rem 2rem 2rem 2rem;
     box-sizing: border-box;
     margin: 0 auto;
 }
@@ -281,6 +310,23 @@ body {
     align-items: center;
     animation: scroll-infinite 10s linear infinite;
 }
+
+@media only screen and (max-height: 600px){
+    #trustedBy #trustedBy-wall img {
+        height: 4rem;
+    }
+
+    #trustedBy h4 {
+        font-size: clamp(1rem, 5vw, 1rem);
+        line-height: clamp(1rem, 5vw, 1.5rem);
+        margin-bottom: -0.25rem;
+    }
+
+    #trustedBy {
+        padding: 1rem 2rem 0rem 2rem;
+    }
+}
+
 
 @keyframes scroll-infinite {
     0% {
@@ -590,4 +636,89 @@ body {
         row-gap: 2rem;
         column-gap: 0;
     }
+}
+
+#chatWithUs {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    z-index: 1000;
+}
+
+
+
+#chatActionButton {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    background: #25d366;
+    width: 2.5rem;
+    height: 2.5rem;
+    overflow: hidden;
+    transition: all 0.2s;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+#chatActionButton span {
+    font-size: 1.1rem;
+    padding-left: 0.5rem;
+    white-space: nowrap;
+    color: white;
+    font-weight: 500;
+}
+
+
+#chatActionButton img {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+}
+
+#chatActionButton:hover {
+    width: 11rem;
+}
+
+#chatWindow {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+    transition: all 0.5s;
+
+    transform: translate(1rem, 3rem) scale(0);
+    opacity: 0;
+    transform-origin: bottom left;
+}
+
+#chatWindow img#chatClose {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+    padding: 0.5rem;
+}
+
+#chatWindow.show {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+    transform-origin: bottom left;
+}
+
+#chatWindow a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    background: #25d366;
+    border-radius: 2rem;
+    color: white;
+    font-weight: 500;
+    margin: 1rem;
 }
