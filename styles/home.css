@@ -211,7 +211,7 @@ body {
     }
     #hero {
         flex-direction: column;
-        height: calc(100vh - 6rem);
+        height: max-content;
     }
 
     #hero-btns {
@@ -236,6 +236,7 @@ body {
         margin: 0;
         padding: 1rem 1rem 1rem 0;
         box-sizing: border-box;
+        height: min(100vh - 22rem, 100vw);
     }
     #hero-images img {
         position: absolute;
@@ -309,6 +310,12 @@ body {
     flex-direction: row;
     align-items: center;
     animation: scroll-infinite 10s linear infinite;
+}
+
+@media only screen and (max-width: 800px) {
+    #trustedBy {
+        padding: 0 2rem 0rem 2rem;
+    }
 }
 
 @media only screen and (max-height: 600px){
@@ -448,106 +455,67 @@ body {
 /* scrolling text */
 
 #scrollingText {
-    background: black;
-    height: 300vh;
-    width: 100%;
-}
-
-#stickyContent {
-    position: sticky;
+    height: calc(100vh - 12rem);
     width: 100%;
     box-sizing: border-box;
-    padding: 0 8rem;
-    left: 0;
-    top: 6rem;
-    height: calc(100vh - 6rem);
+    padding: 0 4rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    opacity: 0;
 }
 
-#message-container {
-    max-width: 43rem;
+#scrollingText h2 {
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 4.5rem;
+    text-align: center;
+    max-width: 72rem;
 }
 
-#message-container span {
-    font-size: 5.5rem;
-    line-height: 5.5rem;
-    color: #CCCCCC;
-    font-weight: 600;
-    transition: all 0.1s;
+#scrollingText h2 b {
+    font-weight: 500;
+    color: var(--primary-accent-color);
 }
 
 #tryNowBtn {
     background: none;
     color: white;
+    background: #000;
     font-family: "poppins", sans-serif;
     font-size: 1.5rem;
-    border: solid white 0.1rem;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    padding: 0.6rem 2rem;
     width: max-content;
     margin-top: 1rem;
+    font-weight: 500;
     transition: all 0.2s;
 }
 
-#tryNowBtn.active {
-    background: white;
-    color: black;
+#tryNowBtn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0.2rem 0.5rem var(--primary-accent-color);
 }
 
-@media screen and (max-width: 960px) {
-    #message-container {
-        max-width: 30rem;
+@media screen and (max-width: 500px) {
+    #scrollingText {
+        height: max-content;
+        padding: 0rem 0 4rem 0;
     }
-    
-    #message-container span {
-        font-size: 4rem;
-        line-height: 4rem;
-    }
-}
 
-@media screen and (max-width: 760px) {
-    #message-container {
-        max-width: 24rem;
-    }
-    
-    #message-container span {
-        font-size: 3.1rem;
-        line-height: 3.1rem;
+    #scrollingText h2 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        width: min-content;
     }
 
     #tryNowBtn {
         font-size: 1rem;
-        border-radius: 0.25rem;
-        padding: 0.25rem 0.75rem;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.5rem;
     }
-}
-
-
-@media screen and (max-width: 640px) {
-    #stickyContent {
-        padding: 0 4rem;
-    }
-}
-
-
-@media screen and (max-width: 520px) {
     
-    #message-container span {
-        font-size: 2.5em;
-        line-height: 2.5rem;
-    }
 }
-
-@media screen and (max-width: 400px) {
-    #stickyContent {
-        padding: 0 2rem;
-    }
-}
-
-
 
 
 
