@@ -4,8 +4,6 @@ const AUTO_DELAY = 4000; // time b/w auto slide change
 const SCROLL_DELAY = 400; // time b/w 2 consecutive scrolls
 let currentFrame = 0;
 
-let frames = ["WORKFLOWS", "MESSAGING", "ORDERS", "PAYMENTS"]
-
 let scrollActive = true;
 let pageScrollable = false;
 
