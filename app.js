@@ -1,6 +1,6 @@
 // Scroll between the 4 frames
 
-const AUTO_DELAY = 4000; // time b/w auto slide change
+const AUTO_DELAY = 3600; // time b/w auto slide change
 const SCROLL_DELAY = 400; // time b/w 2 consecutive scrolls
 let currentFrame = 0;
 
@@ -74,7 +74,7 @@ function handleWheel(e) {
             let t1 = setTimeout(() => {
                 console.log(i);
                 goToFrame(i);
-            }, 100 + (i - currentFrame) * AUTO_DELAY);
+            }, 10 + (i - currentFrame) * AUTO_DELAY);
             timeouts.push(t1);
         }
         goToFrame(currentFrame);
@@ -114,7 +114,7 @@ function handleTouchMove(e) {
             let t1 = setTimeout(() => {
                 console.log(i);
                 goToFrame(i);
-            }, 100 + (i - currentFrame) * AUTO_DELAY);
+            }, 10 + (i - currentFrame) * AUTO_DELAY);
             timeouts.push(t1);
         }
         goToFrame(currentFrame);
