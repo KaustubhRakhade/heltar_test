@@ -608,7 +608,7 @@ body {
 
 #chatWithUs {
     position: fixed;
-    bottom: 2rem;
+    bottom: 5rem;
     left: 2rem;
     display: flex;
     flex-direction: column;
@@ -658,7 +658,7 @@ body {
     background: white;
     box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.15);
     border-radius: 1rem;
-    transition: all 0.5s;
+    transition: all 0.3s;
 
     transform: translate(1rem, 3rem) scale(0);
     opacity: 0;
@@ -667,11 +667,15 @@ body {
 
 #chatWindow img#chatClose {
     position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
+    top: 1.5rem;
+    right: 1rem;
     height: 1rem;
     width: 1rem;
     padding: 0.5rem;
+}
+
+#chatWindow img#chatDemo {
+    width: 20rem;
 }
 
 #chatWindow.show {
