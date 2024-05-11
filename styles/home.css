@@ -3,10 +3,6 @@
     --primary-accent-color: #34A9FF;
 }
 
-html {
-    /* scroll-snap-type: y mandatory; */
-}
-
 body {
     margin: 0;
     width: 100%;
@@ -23,7 +19,9 @@ body {
     width: 100%;
     align-items: center;
     box-sizing: border-box;
-    padding: 0 calc(50vw - 35rem);
+    justify-content: center;
+    column-gap: 3rem;
+    padding: 0 6rem;
 }
 
 #hero h3 {
@@ -94,18 +92,20 @@ body {
 }
 
 #hero-images {
-    width: 50vw;
-    height: 100%;
+    height: min(32rem, 100vh - 16rem);
+    width: min(32rem, 100vh - 16rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     position: relative;
-    margin-right: -6rem;
 }
 
 #hero-images img {
-    height: calc(100vh - 20rem) !important;
+    height: 120%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
     position: absolute;
 
     visibility: hidden;
@@ -125,9 +125,141 @@ body {
     transition-delay: 0s, 0.5s;
 }
 
-@media only screen and (max-width: 1280px) {
-    #hero { padding: 0 4rem; }
+
+
+@media only screen and (max-height: 640px) {
+    #hero {
+        height: calc(100vh - 12rem) !important;
+    }
+
+    #hero-images {
+        height: min(40rem, 100vh - 12rem);
+        width: min(40rem, 100vh - 12rem);
+    }
 }
+
+
+@media only screen and (max-height: 640px), only screen and (max-width: 1180px) {
+
+    #hero {
+        column-gap: 2rem;
+    }
+
+
+    #hero h3 {
+        font-size: 2rem;
+        box-shadow: 0 0 0.4rem 0.4rem #ffffff;
+        background: white;
+    }
+    #hero-headers { margin: -1.2rem 0; }
+    #hero h2 { font-size: 3.6rem; }
+    #hero span {
+        width: 18rem;
+        margin: 0.5rem 0 1rem 0;
+    }
+    #hero #hero-btns input[type=button] {
+        padding: 0.6rem 0; width: 10rem;
+        border-radius: 0.5rem;
+    }
+}
+
+
+@media only screen and (max-height: 500px), only screen and (max-width: 920px) {
+    #hero h3 {
+        font-size: 1.8rem;
+        box-shadow: 0 0 0.1rem 0.1rem #ffffff;
+        background: white;
+    }
+    #hero-headers { margin: -1.8rem 0; }
+    #hero h2 { font-size: 3rem; }
+    #hero span {
+        width: 18rem;
+        margin: 0.4rem 0 0.8rem 0;
+    }
+    #hero #hero-btns input[type=button] {
+        padding: 0.5rem 0; width: 9rem;
+        border-radius: 0.5rem;
+    }
+}
+
+@media only screen and (max-height: 460px) {
+    #hero {
+        height: calc(100vh - 6rem) !important;
+    }
+
+    #hero-images {
+        height: min(40rem, 100vh - 6rem);
+        width: min(40rem, 100vh - 6rem);
+    }
+}
+ 
+
+@media only screen and (max-width: 840px) {
+    #hero {
+        padding: 0 3rem;
+    }
+}
+    
+
+@media only screen and (max-width: 760px) {
+    #hero {
+        height: 44rem !important;
+        flex-direction: column;
+    }
+
+    #hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #hero h3 {
+        width: 100%;
+    }
+
+
+    #hero-images {
+        height: min(24rem, calc(100vw - 2rem)) !important;
+        width: min(24rem, calc(100vw - 2rem)) !important;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    #hero {
+        height: max-content !important;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    #hero h3 {
+        font-size: 1.5rem;
+        box-shadow: 0 0 0rem 0rem #ffffff;
+        background: white;
+    }
+    #hero-headers { margin: -2rem 0; }
+    #hero h2 { font-size: 2.5rem; }
+    #hero span {
+        width: 16rem;
+        margin: 0.4rem 0 0.8rem 0;
+        font-size: 0.8rem;
+    }
+    #hero #hero-btns {
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 0.5rem;
+        width: 100%;
+    }
+    #hero #hero-btns input[type=button] {
+        font-size: 0.8rem;
+        padding: 0.5rem 0; width: 9rem;
+        border-radius: 0.5rem;
+    }
+}
+
+/* 
+
+
 
 @media only screen and (max-width: 1220px), only screen and (max-height: 640px){
     #hero { padding: 0 5rem; }
@@ -269,7 +401,7 @@ body {
     #hero span {
         font-size: 0.8rem;
     }
-}
+} */
 
 /* trusted By */
 
@@ -305,7 +437,7 @@ body {
     width: 100%;
 }
 
-#trustedBy #trustedBy-wall #copy1, #trustedBy #trustedBy-wall #copy2 {
+#trustedBy #trustedBy-wall #copy1, #trustedBy #trustedBy-wall #copy2, #trustedBy #trustedBy-wall #copy3 {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -318,7 +450,7 @@ body {
     }
 }
 
-@media only screen and (max-height: 600px){
+@media only screen and (max-height: 640px){
     #trustedBy #trustedBy-wall img {
         height: 4rem;
     }
