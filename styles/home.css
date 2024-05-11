@@ -300,7 +300,7 @@ body {
 
 @media only screen and (max-height: 640px){
     #trustedBy #trustedBy-wall img {
-        height: 4rem !important;
+        width: 8rem;
     }
 
     #trustedBy h4 {
