@@ -371,21 +371,30 @@ body {
 
 
 .imageNtext .text {
+    display: flex;
+    flex-direction: column;
     max-width: min(30rem, 40%);
 }
 
-.imageNtext .text h3 {
+.imageNtext .text h3, #catalog h3{
     font-size: clamp(2rem, 4vw, 3rem);
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     line-height: clamp(2.3rem, 5vw, 3.5rem);
+    margin-bottom: 0.5rem;
 
     opacity: 0;
     transform: translateY(4rem);
     transition: all 0.5s ease-in-out;
 }
 
-.imageNtext .text span {
+.imageNtext .text h3 b, #catalog h3 b {
+    color: var(--primary-accent-color);
+    font-weight: 600;
+
+}
+
+.imageNtext .text span, #catalog span {
     font-size: clamp(0.9rem, 2vw, 1.2rem);
     font-family: "Poppins", sans-serif;
     font-weight: 300;
@@ -396,7 +405,31 @@ body {
     transition-delay: 0.2s;
 }
 
-.imageNtext.show .text h3, .imageNtext.show .text span{
+.imageNtext .text input, #catalog input {
+    padding: 0.75rem 2.5rem;
+    width: max-content;
+    border-radius: 0.75rem;
+    border: solid black 0.1rem;
+    background: black;
+    font-family: "Inter", sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    margin-top: 1rem;
+}
+
+.imageNtext .text input:hover, #catalog input:hover {
+    transform: scale(1.05) translateY(-0.25rem);
+    box-shadow: 0 0.2rem 0.5rem var(--primary-accent-color);
+    /* box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5); */
+}
+
+.imageNtext.show .text h3,
+.imageNtext.show .text span,
+#catalog.show h3,
+#catalog.show span {
     opacity: 1;
     transform: translateY(0);
 }
@@ -414,17 +447,19 @@ body {
     
     .imageNtext .text {
         max-width: min(30rem, 90%);
+        text-align: center;
+        align-items: center;
     }
     
-    .imageNtext .text h3 {
-        margin-top: 0.5rem;
+    .imageNtext .text h3, #catalog h3 {
+        margin-top: 1rem;
         font-size: clamp(1.5rem, 6vw, 3rem);
         font-family: "Poppins", sans-serif;
         font-weight: 400;
         line-height: clamp(1.8rem, 8vw, 3.5rem);
     }
     
-    .imageNtext .text span {
+    .imageNtext .text span, #catalog span {
         font-size: clamp(0.9rem, 3vw, 1.2rem);
         font-family: "Poppins", sans-serif;
         font-weight: 300;
@@ -494,6 +529,62 @@ body {
         font-size: 1rem;
         padding: 0.5rem 1.5rem;
         border-radius: 0.5rem;
+    }
+    
+}
+
+
+#catalog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 4rem;
+    box-sizing: border-box;
+    row-gap: 1rem;
+}
+
+#catalog span, #catalog h3 {
+    text-align: center;
+}
+
+#catalogBtns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#catalog input:nth-child(2) {
+    background: white;
+    color: black;
+}
+
+#catalog img {
+    width: 100%;
+    max-width: 36rem;
+    opacity: 0;
+    transform: translateY(4rem);
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.1s;
+}
+
+#catalog.show img {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 800px) {
+    #catalog {
+        padding: 2rem;
+    }
+
+    #catalog input[type=button] {
+        padding: 0.5rem 2rem;
+        border-radius: 0.5rem;
+        font-size: 0.8rem;
     }
     
 }
