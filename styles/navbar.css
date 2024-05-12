@@ -1,3 +1,14 @@
+/* root */
+:root {
+    --primary-accent-color: #34A9FF;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+}
+
 /* NAVBAR */
 
 #navbar-container {
@@ -18,7 +29,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 1.5rem 6rem;
+    padding: 1rem 6rem;
     justify-content: space-between;
     width: min(80rem, 100%);
     box-sizing: border-box;
