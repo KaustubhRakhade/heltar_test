@@ -420,7 +420,7 @@ body {
     margin-top: 1rem;
 }
 
-.imageNtext .text input:hover, #catalog input:hover {
+.imageNtext .text input:hover, #catalog input[type=button]:hover {
     transform: scale(1.05) translateY(-0.25rem);
     box-shadow: 0 0.2rem 0.5rem var(--primary-accent-color);
     /* box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5); */
@@ -428,6 +428,8 @@ body {
 
 .imageNtext.show .text h3,
 .imageNtext.show .text span,
+.imageNtext.show input,
+#catalog.show input,
 #catalog.show h3,
 #catalog.show span {
     opacity: 1;
@@ -555,6 +557,15 @@ body {
     column-gap: 1rem;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transform: translateY(4rem);
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.2s;
+}
+
+#catalog.show #catalogBtns {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #catalog input:nth-child(2) {
