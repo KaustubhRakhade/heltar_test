@@ -120,10 +120,22 @@ body {
     font-size: 1.2rem;
 }
 
+#form form input[type=date] {
+    border: none;
+}
+
+#schedule-input {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 0.1rem solid #ccc;
+}
+
 #form form input[type=text]:focus,
 #form form input[type=email]:focus,
 #form form input[type=tel]:focus,
-#form form input[type=date]:focus {
+#schedule-input:focus-within {
     border-bottom: 0.1rem solid var(--primary-accent-color);
 }
 

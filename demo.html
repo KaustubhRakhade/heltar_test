@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/navbar.css">
-    <link rel="stylesheet" href="styles/book.css">
+    <link rel="stylesheet" href="styles/demo.css">
     <link rel="stylesheet" href="styles/footer.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,27 +27,29 @@
                 <img src="assets/logoDark.png" alt="Heltar" id="logoDark" onclick="window.location.href='/'">
                 <img src="assets/logoPC.png" alt="Heltar" id="logoPC" onclick="window.location.href='/'">
                 <img src="assets/logoMobile.png" alt="logo" id="logoMobile" onclick="window.location.href='/'">
-                <input id="register-btn-mobile" type="button" value="Book a Demo" onclick="window.location.href='book.html'">
+                <input id="register-btn-mobile" type="button" value="Register" onclick="window.location.href='demo.html'">
             </div>
 
 
             <div id="nav-links">
+                <a href="/">Home</a>
                 <div class="dropdown">
                     <input type="button" class="dropbtn" value="Solutions &#x25BE;">
                     <div class="dropdown-content">
-                        <a href="solution.html">AI Solutions</a>
-                        <a href="solution.html">WhatsApp Solution</a>
+                        <a href="marketing.html">Marketing</a>
+                        <a href="automation.html">Automation</a>
+                        <a href="customer-support.html">Customer Support</a>
+                        <a href="ai-solution.html">AI Solutions</a>
                     </div>
                 </div>
-                <a href="#">Resources</a>
                 <a href="/pricing.html">Pricing</a>
+                <a class="active" href="/demo.html">Demo</a>
             </div>
 
-            <input id="register-btn-pc" type="button" value="Book a Demo" onclick="window.location.href='book.html'">
+            <input id="register-btn-pc" type="button" value="Register" onclick="window.location.href='demo.html'">
 
         </div>
     </div>
-
 
 
     <div id="main">
@@ -87,14 +89,18 @@
                 <input type="text" placeholder="Your Name" required>
                 <input type="email" placeholder="Your Email" required>
                 <input type="tel" placeholder="Phone Number" required>
-                <input type="date" required placeholder="Schedule">
+
+                <div id="schedule-input">
+                    <label for="schedule">Schedule:</label>
+                    <input type="date" id="schedule" required placeholder="Schedule">
+                </div>
 
                 <input type="submit" value="Book Now"/>
             </form>
         </div>
     </div>
 
-    <div id="callToAction">
+    <div id="callToAction" class="hidden">
         <h2>Ready to get started?</h2>
         <span>Data analysis software is a type of software tool used for data analysis and reporting. It is designed to help businesses, organizations.Data analysis software is a type of software tool used for data analysis and reporting. It is designed to help businesses, organizations.</span>
         <div id="callToActionBtns">
@@ -136,6 +142,7 @@
 
             </div>
         </div>
+        <script src="scripts/scrollpop.js"></script>
 
 </body>
 </html>
