@@ -13,6 +13,41 @@
     padding: 0 6rem;
 }
 
+#hero-images {
+    overflow: hidden;
+    height: min(28rem, 100vh - 16rem);
+    width: min(28rem, 100vh - 16rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+#hero-images img {
+    height: 120%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    position: absolute;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+#hero-images img.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+#hero-images img.hidden {
+    opacity: 0;
+    transition-property: opacity, visibility;
+    transition-duration: 0.5s, 0s;
+    transition-delay: 0s, 0.5s;
+}
+
 #hero h3 {
     font-size: 2.5rem;
     font-family: "Poppins", sans-serif;
@@ -77,40 +112,6 @@
     background: white;
 }
 
-#hero-images {
-    overflow: hidden;
-    height: min(28rem, 100vh - 16rem);
-    width: min(28rem, 100vh - 16rem);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    position: relative;
-}
-
-#hero-images img {
-    height: 120%;
-    width: 100%;
-    object-fit: contain;
-    object-position: center;
-    position: absolute;
-
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.5s;
-}
-
-#hero-images img.visible {
-    visibility: visible;
-    opacity: 1;
-}
-
-#hero-images img.hidden {
-    opacity: 0;
-    transition-property: opacity, visibility;
-    transition-duration: 0.5s, 0s;
-    transition-delay: 0s, 0.5s;
-}
 
 
 

@@ -55,7 +55,7 @@ body {
  
 #navbar img#logoPC { height: 3rem; }
 #navbar img#logoDark {
-    height: 3rem;
+    height: 2.5rem;
     display: none;
 }
 #navbar img#logoMobile {
@@ -178,7 +178,6 @@ body {
 
     #navbar img#logoDark {
         display: block;
-        height: 2.5rem;
     }
 
     #navbar img#logoMobile { display: none; }
