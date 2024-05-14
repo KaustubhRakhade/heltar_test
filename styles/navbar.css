@@ -151,13 +151,13 @@ body {
     display: none;
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 880px) {
     #navbar {
         padding: 1rem 3rem;
     }    
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 760px) {
     #navbar { padding: 1rem 3rem; }
 
     #navbar img#logoPC { display: none; }
@@ -165,7 +165,7 @@ body {
 
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 680px) {
     #navbar {
         flex-direction: column;
         align-items: flex-start;
@@ -201,13 +201,9 @@ body {
 
     }
 
-    #navbar #nav-links a, #navbar .dropdown * {
+    #navbar #nav-links a, #navbar .dropbtn {
         transform: translateY(-2rem);
         color: white;
-    }
-
-    #navbar .dropdown {
-        color: white ;
     }
 
     .dropdown {
@@ -218,7 +214,9 @@ body {
         position: static;
         background-color: #000000;
         box-shadow: none;
-        transform: translateX(0) !important;
+        transform: translateY(-2rem);
+        transition: all 0.2s;
+        opacity: 0;
     }
 
     
@@ -230,14 +228,17 @@ body {
         display: none;
     }
 
-    #navbar:focus-within #nav-links {
+    #navbar:focus-within #nav-links, #navbar:focus-within .dropdown {
         opacity: 1;
         row-gap: 2rem;
         max-height: 100vh;
-        margin-bottom: 3rem;
     }
-    #navbar:focus-within #nav-links a {
+    #navbar:focus-within #nav-links a,
+    #navbar:focus-within .dropbtn,
+    #navbar:focus-within .dropdown-content{
         transform: translateY(0);
+        opacity: 1;
+        color: white;
     }
 
     #navbar:focus-within #register-btn-pc {
