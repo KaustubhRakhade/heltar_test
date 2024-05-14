@@ -30,22 +30,18 @@
     object-fit: contain;
     object-position: center;
     position: absolute;
-
-    visibility: hidden;
+    
     opacity: 0;
     transition: all 0.5s;
 }
 
 #hero-images img.visible {
-    visibility: visible;
     opacity: 1;
 }
 
 #hero-images img.hidden {
     opacity: 0;
-    transition-property: opacity, visibility;
-    transition-duration: 0.5s, 0s;
-    transition-delay: 0s, 0.5s;
+    transition-property: all 0.5s;
 }
 
 #hero h3 {
