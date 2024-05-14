@@ -223,6 +223,10 @@
         width: max-content;
         align-items: center;
     }
+    #hero h3 b {
+        height: 1.8rem;
+        min-height: 1.8rem;
+    }
     #hero span {
         width: 16rem;
         margin: 0.4rem 0 0.8rem 0;
