@@ -4,7 +4,7 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.add('show');
         }
     })
-}, { threshold: 0.5 });
+}, { threshold: 0.3 } );
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach(el => { observer.observe(el); })

@@ -100,6 +100,16 @@
     font-weight: 700;
     margin-bottom: 1rem;
     color: black;
+
+    opacity: 0;
+    transform: translateY(4rem);
+    transition: all 0.5s ease-in-out;
+}
+
+#callToAction.show h2 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s ease-in-out;
 }
 
 #callToAction span {
@@ -108,12 +118,34 @@
     font-weight: 300;
     margin-bottom: 2rem;
     max-width: 48rem;
+
+    opacity: 0;
+    transform: translateY(4rem);
+    transition: all 0.5s ease-in-out;
+}
+
+#callToAction.show span {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.2s;
 }
 
 #callToActionBtns {
     display: flex;
     flex-direction: row;
     column-gap: 1.5rem;
+
+    opacity: 0;
+    transform: translateY(4rem);
+    transition: all 0.5s ease-in-out;
+}
+
+#callToAction.show #callToActionBtns {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.4s;
 }
 
 #callToActionBtns a {
