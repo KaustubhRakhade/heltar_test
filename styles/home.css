@@ -326,69 +326,32 @@
     
 }
 
-
-/* scrolling text */
-
-#scrollingText {
-    height: calc(100vh - 12rem);
+#solutionsHeader {
+    text-align: center;
     width: 100%;
     box-sizing: border-box;
-    padding: 0 4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 4rem;
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    line-height: clamp(2.3rem, 5vw, 3.5rem);
+    background: #f1f9fe;
 }
 
-#scrollingText h2 {
-    font-size: 4rem;
-    font-weight: 500;
-    line-height: 4.5rem;
-    text-align: center;
-    max-width: 72rem;
-}
-
-#scrollingText h2 b {
-    font-weight: 500;
+#solutionsHeader b {
     color: var(--primary-accent-color);
+    font-weight: 400;
 }
 
-#tryNowBtn {
-    background: none;
-    color: white;
-    background: #000;
-    font-family: "poppins", sans-serif;
-    font-size: 1.5rem;
-    border-radius: 1rem;
-    padding: 0.6rem 2rem;
-    width: max-content;
-    margin-top: 1rem;
-    font-weight: 500;
-    transition: all 0.2s;
-}
-
-#tryNowBtn:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0.2rem 0.5rem var(--primary-accent-color);
-}
-
-@media screen and (max-width: 500px) {
-    #scrollingText {
-        height: max-content;
-        padding: 0rem 0 4rem 0;
+@media screen and (max-width: 800px) {
+    #solutionsHeader {
+        padding: 2rem;
+        font-size: clamp(1.5rem, 6vw, 3rem);
+        font-weight: 400;
+        line-height: clamp(1.8rem, 8vw, 3.5rem);
     }
 
-    #scrollingText h2 {
-        font-size: 2.5rem;
-        line-height: 3rem;
-        width: min-content;
-    }
-
-    #tryNowBtn {
-        font-size: 1rem;
-        padding: 0.5rem 1.5rem;
-        border-radius: 0.5rem;
-    }
+    
     
 }
 
@@ -548,3 +511,218 @@
 .imageNtext {
     background: #f1f9fe;
 }
+
+#features {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: center;
+    width: 100%;
+    padding: 4rem 2rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+#features h6 {
+    font-size: clamp(0.6rem, 3vw, 1rem);
+    font-weight: 500;
+    margin: 0;
+    line-height: 1rem;
+    text-align: center;
+    background: #c8e7ff;
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 4vw, 2rem);
+    border-radius: 2rem;
+    width: max-content;
+    text-transform: uppercase;
+}
+
+#features h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    line-height: clamp(2.3rem, 5vw, 3.5rem);
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+}
+
+/* 3 col, 2 row */
+#featureList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    width: min(100%, max-content);
+}
+
+.featureListItem {
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background: black;
+    position: relative;
+    color: white;
+    border-radius: 1.5rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+.featureListItem img {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: #fff;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 4rem;
+    object-fit: contain;
+}
+
+.featureListItem h4 {
+    width: calc(100% - 4rem);
+    height: 4rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.featureListItem span {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+}
+
+#featureBtns {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+}
+
+#featureBtns a {
+    text-decoration: none;
+    padding: 0.8rem 2.5rem;
+    border-radius: 1rem;
+    background: var(--primary-accent-color);
+    border: solid var(--primary-accent-color) 0.1rem;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#featureBtns a:nth-child(2) {
+    background: white;
+    color: var(--primary-accent-color);
+}
+
+#featureBtns a:hover {
+    transform: scale(1.05);
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 960px) {
+    #features {
+        padding: 2rem;
+    }
+
+    #featureList {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    
+}
+
+@media screen and (max-width: 660px) and (min-width: 580px){
+    #features h2 {
+        font-size: clamp(1.5rem, 6vw, 3rem);
+        line-height: clamp(1.8rem, 8vw, 3.5rem);
+    }
+
+    .featureListItem img {
+        top: 1rem;
+        right: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .featureListItem h4 {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        margin-bottom: 0;
+    }
+
+    .featureListItem span {
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+    }
+
+    #featureBtns a {
+        padding: 0.8rem 1.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    #features {
+        padding: 2rem;
+    }
+
+    #featureList {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    #featureBtns {
+        margin-top: 0;
+    }
+
+    #featureBtns a {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+        border-radius: 0.5rem;
+    }
+    
+}
+
+
+@media screen and (max-width: 360px) {
+    #features {
+        padding: 1rem;
+    }
+
+    #features h2 {
+        font-size: clamp(1.5rem, 6vw, 3rem);
+        line-height: clamp(1.8rem, 8vw, 3.5rem);
+    }
+
+    .featureListItem img {
+        top: 1rem;
+        right: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .featureListItem h4 {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        margin-bottom: 0;
+        width: calc(100% - 3rem);
+    }
+
+    .featureListItem span {
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+    }
+
+}
+
+
+
+
