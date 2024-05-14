@@ -1,20 +1,48 @@
 
 // Scroll between the 4 frames
 
-const AUTO_DELAY = 3600; // time b/w auto slide change
+const AUTO_DELAY = 4000; // time b/w auto slide change
 let currentFrame = 0;
 
-let frames = ["WORKFLOWS", "MESSAGING", "ORDERS", "PAYMENTS"]
+let frames = ["WORKFLOW", "MESSAGING", "ORDERS", "PAYMENTS"]
 
 let scrollActive = true;
 let pageScrollable = false;
 
 const elements = document.querySelectorAll('#hero-images img');
-const heroControl = document.querySelector('#hero-headers-controls');
+const typingText = document.querySelector('#typingText');
 const trustedByControl = document.querySelector('#trustedBy');
 
 function goToFrame(i) {
-    heroControl.style.marginTop = `${-i * 6}rem`;
+    // typing text effect
+    let text = frames[i];
+    let textElement = typingText;
+    let textIndex = 0;
+
+    let wait = typingText.innerText.length * 50;
+
+    let clearingInterval = setInterval(() => {
+        if (typingText.innerText.length > 0) {
+            textElement.innerHTML = textElement.innerHTML.slice(0, -1);
+        } else {
+            clearInterval(clearingInterval);
+        }
+    }, 40);
+
+        setTimeout(() => {
+
+        let textInterval = setInterval(() => {
+            if (textIndex < text.length) {
+                // use slice
+                textElement.innerHTML = text.slice(0, textIndex + 1);
+                textIndex++;
+            } else {
+                clearInterval(textInterval);
+            }
+        }, 80);
+    }, wait)
+
+
     elements.forEach((el, j) => {
         if (j === i) {
             el.classList.remove('hidden')
@@ -55,68 +83,6 @@ function toggleChat() {
         chatWindow.classList.remove('show');
     }
 }
-
-/* 
-    <div id="reviews">
-        <h2>What our customers say</h2>
-        <span>"Thank you for your trust in Crypt Land! We are grateful for your feedback and are committed to providing the best [products/services offered]. Read what our clients have to say about their experience with us.</span>
-
-        <div id="reviewList">
-
-                <div class="reviewListItem" id="review1">
-                    <img src="" alt="review1">
-                    <span>Teamollo delivered the site with inthe timeline as they requested. Inthe end, the client found a 50% increase in traffic with in days since its launch. They also had an impressive ability to use technologies that the company hasn`t used, which have also proved to be easy to use and reliable.</span>
-                    <h4>John Doe</h4>
-                    <div class="rating" style="width: 4.5rem;"></div>
-                </div>
-
-                <div class="reviewListItem" id="review2">
-                    <img src="" alt="review1">
-                    <span>Track connections in real time. See who your community being lead by and find the most active.</span>
-                    <h4>John Doe</h4>
-                    <div class="rating" style="width: 4.5rem;"></div>
-                </div>
-
-                <div class="reviewListItem" id="review3">
-                    <img src="" alt="review1">
-                    <span>Track connections in real time. See who your community being lead by and find the most active.</span>
-                    <h4>John Doe</h4>
-                    <div class="rating" style="width: 4.5rem;"></div>
-                </div>
-
-                <div class="reviewListItem" id="review4">
-                    <img src="" alt="review1">
-                    <span>Track connections in real time. See who your community being lead by and find the most active.</span>
-                    <h4>John Doe</h4>
-                    <div class="rating" style="width: 4.5rem;"></div>
-                </div>
-
-                <div class="reviewListItem" id="review5">
-                    <img src="" alt="review1">
-                    <span>Track connections in real time. See who your community being lead by and find the most active.</span>
-                    <h4>John Doe</h4>
-                    <div class="rating" style="width: 4.5rem;"></div>
-                </div>
-
-                <div class="reviewListItem" id="review6">
-                    <img src="" alt="review1">
-                    <span>Track connections in real time. See who your community being lead by and find the most active.</span>
-                    <h4>John Doe</h4>
-                    <div class="rating" style="width: 4.5rem;"></div>
-                </div>   
-        </div>
-
-        <div id="reviewpages">
-            <div id="r1"></div>
-            <div id="r2"></div>
-            <div id="r3"></div>
-            <div id="r4"></div>
-            <div id="r5"></div>
-            <div id="r6"></div>
-        </div>
-    </div>
-
-*/
 
 // scroll between reviews
 
