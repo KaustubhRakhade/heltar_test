@@ -724,36 +724,6 @@
 }
 
 
-/* 
-    <div id="howAIworks">
-        <h2>How AI Automation works</h2>
-        <span>Data analysis software is a type of software tool used for data analysis and reporting. It is designed to help businesses, organizations.</span>
-        <div id="howAIworksList">
-            <div class="howAIworksListItem">
-                <img src="" alt="howAIworks1">
-                <h4>Structured Data</h4>
-                <span class="AI_data">80% <img src="/assets/arrowUp.svg" alt=""></span>
-                <span>Ensuring data accuracy is crucial for making informed decisions and ensuring the reliability.</span>
-            </div>
-
-            <div class="howAIworksListItem">
-                <img src="" alt="howAIworks1">
-                <h4>Structured Data</h4>
-                <span class="AI_data">80% <img src="/assets/arrowDown.svg" alt=""></span>
-                <span>Ensuring data accuracy is crucial for making informed decisions and ensuring the reliability.</span>
-            </div>
-
-            <div class="howAIworksListItem">
-                <img src="" alt="howAIworks1">
-                <h4>Structured Data</h4>
-                <span class="AI_data">80% <img src="/assets/arrowUp.svg" alt=""></span>
-                <span>Ensuring data accuracy is crucial for making informed decisions and ensuring the reliability.</span>
-            </div>
-    </div>
-    
-    */
-
-
 #howAIworks {
     display: flex;
     flex-direction: column;
@@ -871,6 +841,195 @@
 }
 
 
+/*    <div id="reviews">
+        <h6>What our customers say</h6>
+        <span>"Thank you for your trust in Crypt Land! We are grateful for your feedback and are committed to providing the best [products/services offered]. Read what our clients have to say about their experience with us.</span>
 
+        <div id="reviewList">
+
+            <div id="col1">
+                <div class="reviewListItem">
+                    <img src="" alt="review1">
+                    <span>Track connections in real time. See who your community being lead by and find the most active.</span>
+                    <h4>John Doe</h4>
+                    <div class="rating" style="width: 4.5rem;"></div>
+                </div>
+
+                <div class="reviewListItem">
+                    <img src="" alt="review1">
+                    <span>Track connections in real time. See who your community being lead by and find the most active.</span>
+                    <h4>John Doe</h4>
+                    <div class="rating" style="width: 4.5rem;"></div>
+                </div>
+            </div>
+
+            <div id="col2">
+                <div class="reviewListItem">
+                    <img src="" alt="review1">
+                    <span>Track connections in real time. See who your community being lead by and find the most active.</span>
+                    <h4>John Doe</h4>
+                    <div class="rating" style="width: 4.5rem;"></div>
+                </div>
+
+                <div class="reviewListItem">
+                    <img src="" alt="review1">
+                    <span>Track connections in real time. See who your community being lead by and find the most active.</span>
+                    <h4>John Doe</h4>
+                    <div class="rating" style="width: 4.5rem;"></div>
+                </div>
+        </div> */
+
+
+#reviews {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: center;
+    width: 100%;
+    padding: 8rem 4rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background: #f2f4f5;
+}
+
+#reviews h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    line-height: clamp(2.3rem, 5vw, 3.5rem);
+    margin: 0;
+    text-align: center;
+}
+
+#reviews > span {
+    font-size: clamp(0.8rem, 3vw, 1rem);
+    margin: 0;
+    text-align: center;
+    font-weight: 400;
+    max-width: 60rem;
+}
+
+#reviewList {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    width: min(100%, max-content);
+}
+
+#col1, #col2, #col3 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    min-height: 100%;
+}
+
+.reviewListItem {
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background: white;
+    position: relative;
+    border-radius: 1.5rem;
+    height: 100%;
+}
+
+.reviewListItem img {
+    position: absolute;
+    bottom: 1.75rem;
+    left: 1.5rem;
+    background: #000;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 4rem;
+    object-fit: contain;
+}
+
+.reviewListItem h4 {
+    width: calc(100% - 4rem);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: clamp(1.2rem, 3vw, 1.5rem);
+    font-weight: 400;
+    margin: 1rem 0 0 3.25rem;
+}
+
+.reviewListItem span {
+    font-size: clamp(0.6rem, 3vw, 1rem);
+    margin: 0;
+    height: 100%;
+    color: #8A8A8A;
+}
+
+.rating {
+    background-image: url("/assets/star.svg");
+    background-repeat: repeat-x;
+    background-size: contain;
+    min-height: 1rem;
+    max-height: 1rem;
+    margin: 0.25rem 0 0.5rem 3.25rem;
+
+}
+
+@media screen and (max-width: 960px) {
+    #reviews {
+        padding: 6rem 2rem;
+    }
+
+    .reviewListItem img {
+        bottom: 1.5rem;
+        left: 1.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .reviewListItem span {
+        font-size: clamp(0.8rem, 2vw, 1rem);
+    }
+
+    .rating {
+        margin-bottom: 0;
+    }
+    
+}
+
+@media screen and (max-width: 720px) {
+    #reviewList {
+        width: calc(100% + 2rem);
+    }
+    #col3 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+    #reviewList {
+        overflow-x: scroll;
+        width: calc(100% + 4rem);
+        box-sizing: border-box;
+        padding: 0 2rem;
+        scroll-snap-type: x mandatory;
+    }
+
+    /* hide scrollbar */
+    #reviewList::-webkit-scrollbar {
+        display: none;
+    }
+
+    #col1, #col2, #col3 {
+        display: flex;
+        flex-direction: row;
+        column-gap: 1rem;
+        width: max-content;
+    }
+
+    .reviewListItem {
+        max-width: calc(100vw - 2rem);
+        width: calc(100vw - 2rem);
+        height: 100%;
+        box-sizing: border-box;
+        scroll-snap-align: start;
+        scroll-margin-left: 1rem;
+    }
+}
 
 
