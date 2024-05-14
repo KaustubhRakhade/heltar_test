@@ -724,5 +724,153 @@
 }
 
 
+/* 
+    <div id="howAIworks">
+        <h2>How AI Automation works</h2>
+        <span>Data analysis software is a type of software tool used for data analysis and reporting. It is designed to help businesses, organizations.</span>
+        <div id="howAIworksList">
+            <div class="howAIworksListItem">
+                <img src="" alt="howAIworks1">
+                <h4>Structured Data</h4>
+                <span class="AI_data">80% <img src="/assets/arrowUp.svg" alt=""></span>
+                <span>Ensuring data accuracy is crucial for making informed decisions and ensuring the reliability.</span>
+            </div>
+
+            <div class="howAIworksListItem">
+                <img src="" alt="howAIworks1">
+                <h4>Structured Data</h4>
+                <span class="AI_data">80% <img src="/assets/arrowDown.svg" alt=""></span>
+                <span>Ensuring data accuracy is crucial for making informed decisions and ensuring the reliability.</span>
+            </div>
+
+            <div class="howAIworksListItem">
+                <img src="" alt="howAIworks1">
+                <h4>Structured Data</h4>
+                <span class="AI_data">80% <img src="/assets/arrowUp.svg" alt=""></span>
+                <span>Ensuring data accuracy is crucial for making informed decisions and ensuring the reliability.</span>
+            </div>
+    </div>
+    
+    */
+
+
+#howAIworks {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: center;
+    width: 100%;
+    padding: 8rem 4rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background: #f2f4f5;
+}
+
+#howAIworks h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 600;
+    line-height: clamp(2.3rem, 5vw, 3.5rem);
+    margin: 0;
+    text-align: center;
+}
+
+#howAIworks > span {
+    font-size: calc(1.2 * clamp(0.6rem, 3vw, 1rem));
+    margin: 0;
+    text-align: center;
+    color: #8A8A8A;
+    max-width: 60rem;
+}
+
+#howAIworksList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: min(100%, max-content);
+}
+
+.howAIworksListItem {
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border: solid black 2px;
+    position: relative;
+    border-radius: 1.5rem;
+}
+
+.howAIworksListItem > img {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: #000;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 4rem;
+    object-fit: contain;
+}
+
+.howAIworksListItem h4 {
+    color: var(--primary-accent-color);
+    width: calc(100% - 4rem);
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    line-height: clamp(1.2rem, 4vw, 1.5rem);
+    height: calc(2 * clamp(1.2rem, 4vw, 1.5rem));
+    font-weight: 600;
+    margin: 0;
+}
+
+.howAIworksListItem span.AI_data {
+    font-size: clamp(1.5rem, 10vw, 3rem);
+    font-weight: 700;
+    color: black;
+}
+
+.howAIworksListItem span {
+    font-size: clamp(0.6rem, 3vw, 1rem);
+    margin: 0;
+    color: #8A8A8A;
+}
+
+@media screen and (max-width: 960px) {
+    #howAIworks {
+        padding: 6rem 2rem;
+    }
+
+    .howAIworksListItem > img {
+        top: 1rem;
+        right: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .howAIworksListItem h4 {
+        font-size: clamp(1rem, 3vw, 1.2rem);
+        line-height: clamp(1.2rem, 4vw, 1.5rem);
+        height: calc(2 * clamp(1.2rem, 4vw, 1.5rem));
+    }
+
+    .howAIworksListItem span {
+        font-size: clamp(0.6rem, 3vw, 1rem);
+    }
+
+    .howAIworksListItem span.AI_data {
+        font-size: clamp(1.5rem, 7vw, 2rem);
+    }
+}
+
+@media screen and (max-width: 840px) {
+
+    /* 1 col */
+
+    #howAIworksList {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    
+}
+
+
+
 
 
