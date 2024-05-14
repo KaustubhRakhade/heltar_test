@@ -1057,6 +1057,16 @@
     column-gap: 0.5rem;
     justify-content: center;
     margin-top: 1rem;
+
+    opacity: 0;
+    transform: translateY(4rem);
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.7s;
+}
+
+#reviews.show #reviewpages {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #reviewpages div {
