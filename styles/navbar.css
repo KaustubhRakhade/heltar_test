@@ -35,7 +35,7 @@ body {
     width: min(80rem, 100%);
     box-sizing: border-box;
     transition: padding 0.5s;
-    max-height: 5rem;
+    /* max-height: 5rem; */
 }
 
 #navbar #logoBox {
@@ -224,6 +224,10 @@ body {
         display: none;
     }
 
+    #navbar:focus-within #nav-links {
+        padding-bottom: 2rem;
+    }
+
     #navbar:focus-within #nav-links, #navbar:focus-within .dropdown {
         opacity: 1;
         row-gap: 2rem;
@@ -261,6 +265,10 @@ body {
     #navbar #logoBox {
         column-gap: 1.5rem;
         justify-content: flex-start;
+    }
+
+    #navbar:focus-within #nav-links {
+        padding-bottom: 0;
     }
 
     #navbar #register-btn-pc {

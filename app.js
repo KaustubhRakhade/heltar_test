@@ -71,15 +71,6 @@ function nextFrame() {
 
 setTimeout(() => { nextFrame(); }, AUTO_DELAY);
 
-let chatVisible = false;
-const chatWindow = document.querySelector("#chatWindow")
-
-function toggleChat() {
-    chatVisible = !chatVisible;
-    if (chatVisible) chatWindow.classList.add('show');
-    else chatWindow.classList.remove('show');
-}
-
 // scroll between reviews
 
 let currentReview = 1; 
