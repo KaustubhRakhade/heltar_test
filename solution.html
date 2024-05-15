@@ -150,5 +150,15 @@
         </div>
     </div>
     <script src="scripts/scrollpop.js"></script>
+<script>
+let chatVisible = false;
+const chatWindow = document.querySelector("#chatWindow")
+
+toggleChat = () => {
+    chatVisible = !chatVisible;
+    if (chatVisible) chatWindow.classList.add('show');
+    else chatWindow.classList.remove('show');
+}
+</script>
 </body>
 </html>

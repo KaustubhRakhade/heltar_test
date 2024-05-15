@@ -76,12 +76,8 @@ const chatWindow = document.querySelector("#chatWindow")
 
 function toggleChat() {
     chatVisible = !chatVisible;
-    if (chatVisible) {
-        chatWindow.classList.add('show');
-    }
-    else {
-        chatWindow.classList.remove('show');
-    }
+    if (chatVisible) chatWindow.classList.add('show');
+    else chatWindow.classList.remove('show');
 }
 
 // scroll between reviews

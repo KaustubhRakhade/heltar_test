@@ -150,6 +150,29 @@
 
         </div>
     </div>
+    <div id="chatWithUs">
+        
+        <div id="chatWindow">
+            <img id="chatDemo" src="/assets/chatDemo.webp" alt="">
+            <a href="https://api.whatsapp.com/send" target="_blank">Start Chat</a>
+            <img id="chatClose" src="/assets/close.svg" alt="X" onclick="toggleChat()">
+        </div>
+
+        <div id="chatActionButton" onclick="toggleChat()">
+            <img src="/assets/whatsapp.svg" alt="">
+            <span>Chat with us</span>
+        </div>
+    </div>
     <script src="scripts/scrollpop.js"></script>
+<script>
+let chatVisible = false;
+const chatWindow = document.querySelector("#chatWindow")
+
+toggleChat = () => {
+    chatVisible = !chatVisible;
+    if (chatVisible) chatWindow.classList.add('show');
+    else chatWindow.classList.remove('show');
+}
+</script>
 </body>
 </html>

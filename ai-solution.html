@@ -64,40 +64,40 @@
             <a href="#">Book a demo</a>
             <a href="#">Start a free trial</a>
         </div>
-        <img src="assets/solutionCover.webp" alt="">
+        <img src="assets/AI_cover.webp" alt="">
     </div>
 
 
-    <div class="imageNtext leftImage hidden">
+    <div class="imageNtext rightImage hidden">
 
-        <img loading="lazy" sizes="70vw" srcset="assets/homeImg3.webp 700w, assetsMobile/homeImg3.webp 400w" alt="hero2">
+        <img loading="lazy" sizes="70vw" srcset="assets/AI_1.webp 700w, assetsMobile/AI_2.webp 400w" alt="hero2">
 
         <div class="text">
             <h6>Marketing</h6>
             <h3>Send <b>Targetted Bulk</b> Messaging</h4>
             <span>Track connections in real time. See who your community being lead by and find the most activeTrack connections in real time. See who your community being lead by and find the most active</span>
             <a href="#">Check Marketing <img src="/assets/arrowRight.svg" alt=">"></a>
+        </div>
+
+    </div>
+
+    <div class="imageNtext leftImage hidden">
+
+        <img loading="lazy" sizes="70vw" srcset="assets/AI_2.webp 700w, assetsMobile/AI_2.webp 400w" alt="hero2">
+
+        <div class="text">
+            <h6>Marketing</h6>
+            <h3>Send <b>Targetted Bulk</b> Messaging</h4>
+            <span>Track connections in real time. See who your community being lead by and find the most activeTrack connections in real time. See who your community being lead by and find the most active</span>
+            <a href="#">Check Marketing <img src="/assets/arrowRight.svg" alt=">"></a>
+
         </div>
 
     </div>
 
     <div class="imageNtext rightImage hidden">
 
-        <img loading="lazy" sizes="70vw" srcset="assets/homeImg3.webp 700w, assetsMobile/homeImg3.webp 400w" alt="hero2">
-
-        <div class="text">
-            <h6>Marketing</h6>
-            <h3>Send <b>Targetted Bulk</b> Messaging</h4>
-            <span>Track connections in real time. See who your community being lead by and find the most activeTrack connections in real time. See who your community being lead by and find the most active</span>
-            <a href="#">Check Marketing <img src="/assets/arrowRight.svg" alt=">"></a>
-
-        </div>
-
-    </div>
-
-    <div class="imageNtext leftImage hidden">
-
-        <img loading="lazy" sizes="70vw" srcset="assets/homeImg3.webp 700w, assetsMobile/homeImg3.webp 400w" alt="hero2">
+        <img loading="lazy" sizes="70vw" srcset="assets/AI_3.webp 700w, assetsMobile/AI_3.webp 400w" alt="hero2">
 
         <div class="text">
             <h6>Marketing</h6>
@@ -150,6 +150,30 @@
 
         </div>
     </div>
+
+    <div id="chatWithUs">
+        
+        <div id="chatWindow">
+            <img id="chatDemo" src="/assets/chatDemo.webp" alt="">
+            <a href="https://api.whatsapp.com/send" target="_blank">Start Chat</a>
+            <img id="chatClose" src="/assets/close.svg" alt="X" onclick="toggleChat()">
+        </div>
+
+        <div id="chatActionButton" onclick="toggleChat()">
+            <img src="/assets/whatsapp.svg" alt="">
+            <span>Chat with us</span>
+        </div>
+    </div>
     <script src="scripts/scrollpop.js"></script>
+<script>
+let chatVisible = false;
+const chatWindow = document.querySelector("#chatWindow")
+
+toggleChat = () => {
+    chatVisible = !chatVisible;
+    if (chatVisible) chatWindow.classList.add('show');
+    else chatWindow.classList.remove('show');
+}
+</script>
 </body>
 </html>

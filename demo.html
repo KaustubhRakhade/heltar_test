@@ -100,15 +100,6 @@
         </div>
     </div>
 
-    <div id="callToAction" class="hidden">
-        <h2>Ready to get started?</h2>
-        <span>Data analysis software is a type of software tool used for data analysis and reporting. It is designed to help businesses, organizations.Data analysis software is a type of software tool used for data analysis and reporting. It is designed to help businesses, organizations.</span>
-        <div id="callToActionBtns">
-            <a href="#">Book a demo</a>
-            <a href="#">Start a free trial</a>
-        </div>
-    </div>
-
         <div id="footer">
             <img src="assets/logoDark.png" alt="Heltar">
             <div id="footer-links">
@@ -142,7 +133,31 @@
 
             </div>
         </div>
+
+        <div id="chatWithUs">
+        
+            <div id="chatWindow">
+                <img id="chatDemo" src="/assets/chatDemo.webp" alt="">
+                <a href="https://api.whatsapp.com/send" target="_blank">Start Chat</a>
+                <img id="chatClose" src="/assets/close.svg" alt="X" onclick="toggleChat()">
+            </div>
+    
+            <div id="chatActionButton" onclick="toggleChat()">
+                <img src="/assets/whatsapp.svg" alt="">
+                <span>Chat with us</span>
+            </div>
+        </div>
         <script src="scripts/scrollpop.js"></script>
 
+<script>
+let chatVisible = false;
+const chatWindow = document.querySelector("#chatWindow")
+
+toggleChat = () => {
+    chatVisible = !chatVisible;
+    if (chatVisible) chatWindow.classList.add('show');
+    else chatWindow.classList.remove('show');
+}
+</script>
 </body>
 </html>
