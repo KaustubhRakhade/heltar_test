@@ -44,7 +44,7 @@
     max-width: min(30rem, 40%);
 }
 
-.imageNtext .text h6 {
+.imageNtext .text h2 {
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
     color: var(--primary-accent-color);
@@ -60,7 +60,7 @@
     transition-delay: 0.1s;
 }
 
-.imageNtext.show .text h6 {
+.imageNtext.show .text h2 {
     opacity: 1;
     transform: translateY(0);
 }

@@ -249,7 +249,8 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 1rem 2rem 2rem 2rem;
+    padding: 1rem 6rem 2rem 6rem;
+    max-width: 72rem;
     box-sizing: border-box;
     margin: 0 auto;
 }
@@ -316,7 +317,7 @@
 
 @media screen and (max-width: 800px) {
     #trustedBy {
-        padding: 1rem 0 4rem 0;
+        padding: 1rem 2rem 4rem 2rem;
     }
 
     #trustedBy img {
@@ -435,7 +436,7 @@
     margin: 0 auto;
 }
 
-#features h6 {
+#features h1 {
     font-size: clamp(0.6rem, 3vw, 1rem);
     font-weight: 500;
     margin: 0;
@@ -457,7 +458,7 @@
     transition-duration: 0.5s, 0.5s, 0.2s;
 }
 
-#features.show h6 {
+#features.show h1 {
     max-width: 12rem;
     color: #000000;
     transform: scale(1);

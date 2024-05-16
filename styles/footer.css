@@ -268,7 +268,8 @@
     flex-direction: column;
     background: white;
     box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.15);
-    border-radius: 1rem;
+    border-radius: 1.25rem;
+    overflow: hidden;
     transition: all 0.3s;
     margin-left: -20rem;
     opacity: 0;
@@ -277,7 +278,7 @@
 
 #chatWindow img#chatClose {
     position: absolute;
-    top: 1.5rem;
+    top: 1rem;
     right: 1rem;
     height: 1rem;
     width: 1rem;
