@@ -7,4 +7,4 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 } );
 
 const hiddenElements = document.querySelectorAll('.hidden');
-// hiddenElements.forEach(el => { observer.observe(el); })
+hiddenElements.forEach(el => { observer.observe(el); })
