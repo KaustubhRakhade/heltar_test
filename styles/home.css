@@ -4,7 +4,7 @@
     margin: 5rem auto 0 auto;
     display: flex;
     flex-direction: row;
-    /* height: calc(100vh - 16rem); */
+    height: calc(100vh - 11rem);
     width: min(80rem, 100%);
     align-items: center;
     box-sizing: border-box;
@@ -294,7 +294,7 @@
 }
 
 #trustedBy h4 {
-    font-size: clamp(1rem, 5vw, 1.25rem);
+    font-size: clamp(1rem, 5vw, 1.5rem);
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     margin: 0;
