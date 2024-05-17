@@ -273,7 +273,7 @@
     padding: 0 4rem 2rem 4rem;
     max-width: 80rem;
     box-sizing: border-box;
-    margin: -2rem auto 6rem auto;
+    margin: -1.5rem auto 6rem auto;
 }
 
 #trustedBy h4 {
@@ -378,7 +378,7 @@
 #solutionsHeader {
     text-align: center;
     box-sizing: border-box;
-    padding: 6rem;
+    padding: 6rem 6rem 2rem 6rem;
     background: #f1f9fe;
 }
 
@@ -404,9 +404,6 @@
         font-weight: 400;
         line-height: clamp(1.8rem, 8vw, 3.5rem);
     }
-
-    
-    
 }
 
 
