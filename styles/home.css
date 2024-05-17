@@ -377,14 +377,17 @@
 }
 #solutionsHeader {
     text-align: center;
-    width: 100%;
     box-sizing: border-box;
-    padding: 4rem;
-    margin: 0;
+    padding: 6rem;
+    background: #f1f9fe;
+}
+
+#solutionsHeader h2 {
+    max-width: 75rem;
+    margin: 0 auto;
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 400;
     line-height: clamp(2.3rem, 5vw, 3.5rem);
-    background: #f1f9fe;
 }
 
 #solutionsHeader b {
@@ -395,6 +398,8 @@
 @media screen and (max-width: 800px) {
     #solutionsHeader {
         padding: 2rem;
+    }
+    #solutionsHeader h2 {
         font-size: clamp(1.5rem, 6vw, 3rem);
         font-weight: 400;
         line-height: clamp(1.8rem, 8vw, 3.5rem);
