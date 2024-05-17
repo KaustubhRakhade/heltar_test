@@ -32,7 +32,7 @@
     min-width: 11.5rem;
 }
 
-.footer-link-group h4 {
+.footer-link-group span {
     color: var(--primary-accent-color);
     font-size: 1.2rem;
     font-weight: 400;

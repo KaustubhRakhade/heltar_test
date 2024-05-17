@@ -587,7 +587,7 @@
     object-fit: contain;
 }
 
-.featureListItem h4 {
+.featureListItem h3 {
     width: calc(100% - 4rem);
     height: 4rem;
     font-size: 1.5rem;
@@ -673,7 +673,7 @@
         height: 2.5rem;
     }
 
-    .featureListItem h4 {
+    .featureListItem h3 {
         font-size: 1.2rem;
         line-height: 1.4rem;
         margin-bottom: 0;
@@ -730,7 +730,7 @@
         height: 2.5rem;
     }
 
-    .featureListItem h4 {
+    .featureListItem h3 {
         font-size: 1.2rem;
         line-height: 1.4rem;
         margin-bottom: 0;
@@ -832,7 +832,7 @@
     object-fit: contain;
 }
 
-.howAIworksListItem h4 {
+.howAIworksListItem h3 {
     color: var(--primary-accent-color);
     width: calc(100% - 4rem);
     font-size: clamp(1rem, 3vw, 1.2rem);
@@ -866,7 +866,7 @@
         height: 2.5rem;
     }
 
-    .howAIworksListItem h4 {
+    .howAIworksListItem h3 {
         font-size: clamp(1rem, 3vw, 1.2rem);
         line-height: clamp(1.2rem, 4vw, 1.5rem);
         height: calc(2 * clamp(1.2rem, 4vw, 1.5rem));
@@ -996,7 +996,7 @@
     object-fit: contain;
 }
 
-.reviewListItem h4 {
+.reviewListItem h3 {
     width: calc(100% - 4rem);
     font-size: clamp(1rem, 2vw, 1.2rem);
     line-height: clamp(1.2rem, 3vw, 1.5rem);
