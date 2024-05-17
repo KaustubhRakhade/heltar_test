@@ -10,8 +10,8 @@ body {
 }
 
 #main {
-    margin-top: 6rem;
-    height: calc(100vh - 6rem);
+    margin-top: 5rem;
+    height: calc(100vh - 5rem);
 
     display: flex;
     justify-content: center;
@@ -80,9 +80,12 @@ body {
 }
 
 #form {
-    max-width: 24rem;
+    max-width: 25rem;
+    width: 25rem;
+    height: 32rem;
     box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
+    /* overflow: hidden; */
 }
 
 #form form {
@@ -91,7 +94,15 @@ body {
     align-items: center;
     row-gap: 1rem;
     box-sizing: border-box;
-    padding: 2rem;
+    /* overflow: hidden; */
+}
+
+.calendly-inline-widget {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 #form form h1 {

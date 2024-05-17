@@ -219,7 +219,7 @@
 
 #chatWithUs {
     position: fixed;
-    bottom: 5rem;
+    bottom: 2rem;
     left: 2rem;
     display: flex;
     flex-direction: column;
