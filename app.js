@@ -4,7 +4,7 @@
 const AUTO_DELAY = 4000; // time b/w auto slide change
 let currentFrame = 0;
 
-let frames = ["MESSAGING","ORDERS","PAYMENTS","WORKFLOW"]
+let frames = ["MESSAGING","ORDERS","PAYMENTS","WORKFLOWS"]
 
 let scrollActive = true;
 let pageScrollable = false;
