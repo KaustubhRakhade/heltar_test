@@ -81,6 +81,7 @@
 }
 
 #footerBottom {
+    margin-top: -1px;
     display: flex;
     background: black;
     width: 100%;
