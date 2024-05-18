@@ -67,6 +67,12 @@
     font-weight: 400;
 }
 
+.footer-link-group a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+
 #footerbreak {
     height: 0;
     outline: solid 0.05rem #E2E8F0;
@@ -90,6 +96,12 @@
     color: #E2E8F0;
 }
 
+#footerBottom a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+
+}
+
 #footerBottomMid {
     display: flex;
     flex-direction: row;
@@ -99,7 +111,16 @@
 #socials {
     display: flex;
     flex-direction: row;
-    column-gap: 1.5rem;
+    column-gap: 0.5rem;
+}
+
+#socials a {
+    padding: 0.5rem;
+    transition: all 0.15s;
+}
+
+#socials a:hover {
+    transform: scale(1.2);
 }
 
 @media screen and (max-width: 1278px) {
