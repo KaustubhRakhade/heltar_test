@@ -751,10 +751,10 @@
     row-gap: 2rem;
     align-items: center;
     width: 100%;
-    padding: 8rem 4rem;
+    padding: 8rem 4rem 4rem 4rem;
     box-sizing: border-box;
     margin: 0 auto;
-    background: #f2f4f5;
+    /* background: #f2f4f5; */
 }
 
 #howAIworks h2 {
