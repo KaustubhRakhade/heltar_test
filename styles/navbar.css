@@ -81,6 +81,7 @@ body {
 }
 
 .active .dropbtn {
+    color: var(--primary-accent-color);
     font-weight: 600;
 }
 
@@ -119,6 +120,7 @@ body {
 }
 
 #navbar #nav-links a.active {
+    color: var(--primary-accent-color);
     font-weight: 600;
 }
 

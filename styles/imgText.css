@@ -152,6 +152,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: max-content;
 
     opacity: 0;
     transform: translateY(4rem);
@@ -226,7 +227,7 @@
 
     .bulletPoint span {
         text-align: left !important;
-        line-height: calc(1.25 * clamp(0.9rem, 3vw, 1.2rem)) !important;
+        line-height: calc(1.3 * clamp(0.9rem, 3vw, 1.2rem)) !important;
     }
 }
 
@@ -240,6 +241,10 @@
     .bulletPoint img {
         width: 1.5rem;
         height: 1.5rem;
+    }
+
+    .bulletPoint span {
+        line-height: calc(1.4 * clamp(0.9rem, 3vw, 1.2rem)) !important;
     }
     
 }
