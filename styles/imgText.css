@@ -46,7 +46,7 @@
 
 .imageNtext .text h2 {
     padding: 0.5rem 1rem;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--primary-accent-color);
     background: #c8e7ff;
     border-radius: 2rem;
@@ -66,9 +66,9 @@
 }
 
 .imageNtext .text h3 {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: 400;
-    line-height: clamp(2.3rem, 5vw, 3.5rem);
+    line-height: clamp(2rem, 5vw, 2.5rem);
     margin: 0;
 
     opacity: 0;
@@ -90,7 +90,7 @@
 .bulletPoints {
     display: flex;
     flex-direction: column;
-    margin: 0.5rem 0;
+    margin: 0.4rem 0;
 }
 
 .bulletPoint {
@@ -117,10 +117,10 @@
 }
 
 .imageNtext .text span {
-    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    line-height: clamp(1.2rem, 3vw, 1.8rem);
+    line-height: clamp(1.2rem, 3vw, 1.6rem);
 
     opacity: 0;
     transform: translateY(4rem);
@@ -131,7 +131,7 @@
 .bulletPoint span {
     font-weight: 400 !important;
     color: #707070;
-    line-height: calc(0.9 * clamp(1.2rem, 3vw, 1.8rem)) !important;
+    line-height: calc(0.9 * clamp(1.2rem, 3vw, 1.6rem)) !important;
     letter-spacing: -0.1px;
 }
 
@@ -148,7 +148,7 @@
     text-decoration: none;
     font-weight: 600;
     color: var(--primary-accent-color);
-    font-size: clamp(0.9rem, 2vw, 1.4rem);
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -206,9 +206,9 @@
     }
     
     .imageNtext .text h3 {
-        font-size: clamp(1.5rem, 6vw, 3rem);
+        font-size: clamp(1.5rem, 6vw, 2rem);
         font-weight: 400;
-        line-height: clamp(1.8rem, 8vw, 3.5rem);
+        line-height: clamp(1.8rem, 8vw, 2.5rem);
     }
     
     .imageNtext .text span {
