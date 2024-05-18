@@ -46,7 +46,7 @@
 
 .imageNtext .text h2 {
     padding: 0.5rem 1rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--primary-accent-color);
     background: #c8e7ff;
     border-radius: 2rem;
@@ -148,7 +148,7 @@
     text-decoration: none;
     font-weight: 600;
     color: var(--primary-accent-color);
-    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    font-size: clamp(0.9rem, 2vw, 1.4rem);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -232,6 +232,10 @@
 }
 
 @media screen and (max-width: 480px) {
+
+    .imageNtext .text h2 {
+        font-size: 0.8rem;
+    }
 
     .bulletPoint {
         column-gap: 0.66rem;
