@@ -599,7 +599,8 @@
 }
 
 .featureListItem h3 {
-    width: calc(100% - 4rem);
+    width: calc(100% - 5rem);
+    letter-spacing: 0.5px;
     height: 4rem;
     font-size: 1.5rem;
     font-weight: 500;
@@ -671,14 +672,14 @@
     
 }
 
-@media screen and (max-width: 660px) and (min-width: 580px){
+@media screen and (max-width: 720px) and (min-width: 580px){
     #features h2 {
         font-size: clamp(1.5rem, 6vw, 3rem);
         line-height: clamp(1.8rem, 8vw, 3.5rem);
     }
 
     .featureListItem img {
-        top: 1rem;
+        top: 1.5rem;
         right: 1rem;
         width: 2.5rem;
         height: 2.5rem;
@@ -735,7 +736,7 @@
     }
 
     .featureListItem img {
-        top: 1rem;
+        top: 1.5rem;
         right: 1rem;
         width: 2.5rem;
         height: 2.5rem;
