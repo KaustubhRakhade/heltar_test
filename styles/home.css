@@ -944,10 +944,12 @@
     border-bottom: solid 0.1rem #707070;
     cursor: pointer;
     user-select: none;
+    opacity: 0.5;
+    transition: all 0.1s;
 }
 
 #featureDrawer input[type=button].active {
-    border-bottom: solid 0.1rem #ffffff;
+    opacity: 1;
 }
 
 .featureWindowItem img {
@@ -994,12 +996,25 @@
         flex-direction: column-reverse;
     }
 
+    
+    #featureCTA a.ctaButton {
+        font-size: 1rem;
+        padding: 0.7rem 1.5rem;
+    }
+    
+
 }
 
 
 @media screen and (max-width: 540px) {
     #featureCTA h2 {
         font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    #featureDrawer input[type=button] {
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.2rem 1rem;
     }
     #featureWindow {
         min-height: 32rem;
@@ -1013,7 +1028,6 @@
         margin-bottom: 2rem;  
      }
     
-
     .featureWindowItem ul {
         max-width: 100%;
     }
@@ -1021,6 +1035,10 @@
     .featureWindowItem img {
         height: 18rem;
         width: 18rem;
+    }
+
+    #featureDrawer {
+        max-width: calc(100%);
     }
 }
 
