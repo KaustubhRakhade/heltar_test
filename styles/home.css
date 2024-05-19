@@ -104,14 +104,25 @@
 }
 
 #hero #hero-btns input[type=button]:hover {
-    transform: scale(1.05) translateY(-0.25rem);
-    box-shadow: 0 0.2rem 0.5rem var(--primary-accent-color);
-    /* box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5); */
+    color: black;
+    background: white;
+    /* transform: scale(1.05) translateY(-0.25rem); */
+    /* box-shadow: 0 0.2rem 0.5rem var(--primary-accent-color); */
+    color: white;
+    background: var(--primary-accent-color);
+    border-color: var(--primary-accent-color);
 }
 
 #hero #hero-btns input[type=button]:nth-child(2) {
     color: black;
     background: white;
+}
+
+#hero #hero-btns input[type=button]:nth-child(2):hover {
+    color: white;
+    background: var(--primary-accent-color);
+    border-color: var(--primary-accent-color);
+
 }
 
 @media only screen and (max-width: 1140px) {
@@ -758,9 +769,8 @@
 }
 
 #howAIworks h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: 3rem;
     font-weight: 600;
-    line-height: clamp(2.3rem, 5vw, 3.5rem);
     margin: 0;
     text-align: center;
 
@@ -769,22 +779,35 @@
     transition: all 0.5s ease-in-out; 
 }
 
+#howAIworks h2 b {
+    color: var(--primary-accent-color);
+    font-weight: 600;
+}
+
 #howAIworks.show h2 {
     opacity: 1;
     transform: translateY(0);
 }
 
 #howAIworks > span {
-    font-size: calc(1.2 * clamp(0.6rem, 3vw, 1rem));
+    font-size: 1.2rem;
     margin: 0;
     text-align: center;
-    color: #8A8A8A;
+    font-weight: 300;
     max-width: 60rem;
+
+    color: black;
 
     opacity: 0;
     transform: translateY(4rem);
     transition: all 0.5s ease-in-out;
     transition-delay: 0.2s;
+}
+
+#howAIworks > span a {
+    text-decoration: none;
+    color: var(--primary-accent-color);
+    font-weight: 700;
 }
 
 #howAIworks.show > span {
@@ -795,18 +818,20 @@
 #howAIworksList {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 4rem;
     width: min(100%, max-content);
 }
 
 .howAIworksListItem {
     max-width: 20rem;
+    width: 18rem;
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
-    border: solid black 2px;
+    padding: 1rem 2rem;
+    border: solid #37a6f7 0.1rem;
     position: relative;
-    border-radius: 1.5rem;
+    border-radius: 1rem;
+    position: relative;
 
     opacity: 0;
     transform: scale(0.95) translateY(4rem);
@@ -822,75 +847,129 @@
 .howAIworksListItem:nth-child(2) { transition-delay: 0.6s; }
 .howAIworksListItem:nth-child(3) { transition-delay: 0.7s; }
 
-.howAIworksListItem > img {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    /* background: #000; */
-    width: 3rem;
-    height: 3rem;
+.howAIworksListItem img.client {
+    height: 4rem;
     object-fit: contain;
+    object-position: left;
+    border-bottom: solid 0.1rem #c4c4c4;
+}
+
+.howAIworksListItem img.promiseIcon {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.howAIworksListItem span {
+    padding: 0.1rem 0.7rem;
+    border-radius: 3rem;
+    font-size: 0.75rem;
+    background: #c8e7ff;
+    color: var(--primary-accent-color);
+    font-weight: 500;
+    width: max-content;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
 }
 
 .howAIworksListItem h3 {
     color: var(--primary-accent-color);
-    width: calc(100% - 4rem);
-    font-size: clamp(1rem, 3vw, 1.2rem);
-    line-height: clamp(1.2rem, 4vw, 1.5rem);
-    height: calc(2 * clamp(1.2rem, 4vw, 1.5rem));
+    font-size: 3rem;
     font-weight: 600;
     margin: 0;
 }
 
-.howAIworksListItem span.AI_data {
-    font-size: clamp(1.5rem, 10vw, 3rem);
-    font-weight: 700;
-    color: black;
+.howAIworksListItem h3 img {
+    width: 1.5rem;
+    height: 2rem;
+    object-fit: contain;
+    object-position: center;
+    margin-left: 0.5rem;
+
 }
 
-.howAIworksListItem span {
-    font-size: clamp(0.6rem, 3vw, 1rem);
-    margin: 0;
-    color: #8A8A8A;
+@media screen and (max-width: 1278px) {
+    #howAIworksList {
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 1178px) {
+    .howAIworksListItem {
+        width: 14rem;
+    }
+    .howAIworksListItem h3 {
+        margin: 0.5rem 0;
+    }
+
+    .howAIworksListItem img.promiseIcon {
+        width: 4rem;
+        height: 4rem;
+        bottom: 1.75rem;
+    }
 }
 
 @media screen and (max-width: 960px) {
-    #howAIworks {
-        padding: 6rem 2rem;
+
+    #howAIworks h2 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-bottom: 0;
     }
 
-    .howAIworksListItem > img {
-        top: 1rem;
-        right: 1rem;
-        width: 2.5rem;
-        height: 2.5rem;
+    #howAIworks > span {
+        font-size: 1rem;
     }
-
-    .howAIworksListItem h3 {
-        font-size: clamp(1rem, 3vw, 1.2rem);
-        line-height: clamp(1.2rem, 4vw, 1.5rem);
-        height: calc(2 * clamp(1.2rem, 4vw, 1.5rem));
-    }
-
-    .howAIworksListItem span {
-        font-size: clamp(0.6rem, 3vw, 1rem);
-    }
-
-    .howAIworksListItem span.AI_data {
-        font-size: clamp(1.5rem, 7vw, 2rem);
-    }
-}
-
-@media screen and (max-width: 840px) {
-
-    /* 1 col */
 
     #howAIworksList {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(3, 1fr);
+        gap: 2rem;
     }
-    
+
+    .howAIworksListItem {
+        width: 20rem;
+    }
+    .howAIworksListItem h3 {
+        margin: 0;
+    }
+
+    .howAIworksListItem img.promiseIcon {
+        width: 5rem;
+        height: 5rem;
+        bottom: 2em;
+    }
 }
+
+
+@media screen and (max-width: 480px) {
+
+    #howAIworks {
+        padding: 6rem 2rem 3rem 2rem;
+    }
+
+    #howAIworksList {
+        gap: 1rem;
+    }
+    .howAIworksListItem {
+        padding: 1rem 1.5rem;
+        width: 14rem;
+    }
+    .howAIworksListItem h3 {
+        margin: 0.5rem 0;
+    }
+
+    .howAIworksListItem img.promiseIcon {
+        width: 4rem;
+        height: 4rem;
+        bottom: 1.75rem;
+        right: 1.5rem;
+    }
+}
+
+
 
 #reviews {
     display: flex;

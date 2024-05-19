@@ -139,11 +139,14 @@ body {
     font-weight: 600;
     font-size: 1rem;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.15s;
 }
 
 #navbar #register-btn-pc:hover, #navbar #register-btn-mobile:hover {
     background: #33a0ef;
+    background: white;
+    color: var(--primary-accent-color);
+    outline: solid 0.1rem var(--primary-accent-color);
 }
 
 #navbar #register-btn-mobile {
