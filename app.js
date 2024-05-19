@@ -115,3 +115,21 @@ document.querySelector('#reviewList').addEventListener('scroll', () => {
     }, 5000);
     getCurrentReview();
 })
+
+
+
+function setFeature(i) {
+    let btns = document.querySelectorAll('#featureDrawer input');
+
+    btns.forEach((btn, j) => {
+        if (j+1 === i) { btn.classList.add('active'); }
+        else { btn.classList.remove('active'); }
+    })
+
+    let features = document.querySelectorAll('#featureWindow .featureWindowItem');
+
+    features.forEach((feature, j) => {
+        if (j+1 === i) { feature.classList.add('active'); }
+        else { feature.classList.remove('active'); }
+    })
+} 
