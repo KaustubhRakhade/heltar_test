@@ -132,4 +132,16 @@ function setFeature(i) {
         if (j+1 === i) { feature.classList.add('active'); }
         else { feature.classList.remove('active'); }
     })
+
+
+    // scroll the button to middle
+    let drawer = document.querySelector('#featureDrawer');
+    let btn = btns[i-1];
+    let drawerWidth = drawer.clientWidth;
+    let drawerScroll = drawer.scrollLeft;
+    let btnWidth = btn.clientWidth;
+    let btnOffset = btn.offsetLeft;
+    let btnMiddle = btnOffset - drawerWidth/2 + btnWidth/2;
+    drawer.scrollTo({left: btnMiddle, behavior: 'smooth'});
+    
 } 
