@@ -246,6 +246,9 @@
 }
 
 @media only screen and (max-width: 420px) {
+    #hero {
+        margin-top: 5rem;
+    }
     #hero h3 {
         font-size: 1.5rem;
         line-height: 1.8rem;
@@ -262,7 +265,7 @@
         min-height: 1.8rem;
     }
     #hero span {
-        width: 16rem;
+        width: calc(100% - 2rem);
         margin: 0.4rem 0 0.8rem 0;
         font-size: 0.9rem;
     }
@@ -346,24 +349,23 @@
     }
 }
 
-@media only screen and (max-height: 640px){
+@media only screen and (max-height: 720px){
     #trustedBy #trustedBy-wall img {
         height: 4rem;
     }
 
     #trustedBy h4 {
         font-size: clamp(1rem, 5vw, 1.25rem);
-        line-height: clamp(1rem, 5vw, 1.5rem);
+        line-height: clamp(1rem, 7vw, 1.5rem) !important;
         margin-bottom: -0.25rem;
         margin-top: 0;
     }
 
     #trustedBy {
-        padding: 0 2rem 0rem 2rem;
+        padding: 0 2rem 0rem 2rem !important;
         margin-top: 0;
     }
 }
-
 
 @keyframes scroll-infinite {
     0% {
