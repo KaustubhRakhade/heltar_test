@@ -24,6 +24,11 @@ body {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.03);
+    transition: all 0.5s;
+}
+
+#navbar-container.black {
+    background: #000000AA;
 }
 
 #navbar {
@@ -54,11 +59,19 @@ body {
     border: none;
 }
  
-#navbar img#logoPC { height: 3rem; }
+#navbar img#logoPC { height: 2.5rem; }
 #navbar img#logoDark {
     height: 2.5rem;
     display: none;
 }
+
+#navbar-container.black #navbar img#logoPC {
+    display: none;
+}
+#navbar-container.black #navbar img#logoDark {
+    display: block;
+}
+
 #navbar img#logoMobile {
     height: 2rem;
     display: none;
@@ -80,9 +93,17 @@ body {
     font-size: 1rem;
 }
 
+#navbar-container.black .dropbtn {
+    color: white;
+}
+
 .active .dropbtn {
     color: var(--primary-accent-color);
     font-weight: 600;
+}
+
+#navbar-container.black .active .dropbtn {
+    color: var(--primary-accent-color);
 }
 
 .dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content {
@@ -111,6 +132,10 @@ body {
     opacity: 0;
 }
 
+#navbar-container.black .dropdown-content {
+    background-color: #000000;
+}
+
 #navbar #nav-links a {
     text-decoration: none;
     color: black;
@@ -119,9 +144,17 @@ body {
     transition: all 0.2s;
 }
 
+#navbar-container.black #navbar #nav-links a {
+    color: white;
+}
+
 #navbar #nav-links a.active {
     color: var(--primary-accent-color);
     font-weight: 600;
+}
+
+#navbar-container.black #navbar #nav-links a.active {
+    color: var(--primary-accent-color);
 }
 
 
@@ -159,15 +192,7 @@ body {
     }    
 }
 
-@media screen and (max-width: 760px) {
-    #navbar { padding: 1rem 3rem; }
-
-    #navbar img#logoPC { display: none; }
-    #navbar img#logoMobile { display: block; }
-
-}
-
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 750px) {
     #navbar {
         flex-direction: column;
         align-items: flex-start;
@@ -183,6 +208,7 @@ body {
     }
 
     #navbar img#logoMobile { display: none; }
+    #navbar img#logoPC { display: none; }
 
     #logoBox {
         width: 100%;
