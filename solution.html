@@ -117,38 +117,74 @@
     </div>
 
     <div id="footer">
-        <img src="assets/logoDark.png" alt="Heltar">
-        <div id="footer-links">
-
-            <div class="footer-link-group">
-                <span>COMPANY</span>
-                <a href="#">Solution</a>
-                <a href="#">Resource</a>
-                <a href="#">Pricing</a>
-            </div>
-
-            <div class="footer-link-group">
-                <span>LEGAL</span>
-                <a href="#">Terms & Conditions</a>
-                <a href="#">Privacy Policy</a>
-            </div>
-
-            <div class="footer-link-group">
-                <span>SOCIAL</span>
-                <a href="#">LinkedIn</a>
-                <a href="#">Facebook</a>
-            </div>
-
-            <div class="footer-link-group">
-                <span>CONTACT</span>
-                <a href="#">info@mysite.com</a>
-                <a href="#">Tel: 123-456-7890</a>
-                <a href="#">500 Terry Francine St.</a>
-                <a href="#">San Francisco CA 9415</a>
-            </div>
-
+        <div id="footerLogo">
+            <img src="assets/logoDark.png" alt="Heltar">
+            <span>XYZ Area, near ABC road, Gurgaon, New Delhi, India - 122345</span>
         </div>
+
+        <div class="footer-link-group g1">
+            <span>Product</span>
+            <a href="#">Home</a>
+            <a href="#">Pricing</a>
+            <a href="#">Demo</a>
+            <a href="#">Accessibility</a>
+        </div>
+
+        <div class="footer-link-group g2">
+            <span>Solutions</span>
+            <a href="#">Brainstorming</a>
+            <a href="#">Ideation</a>
+            <a href="#">Wireframing</a>
+            <a href="#">Research</a>
+        </div>
+
+        <div class="footer-link-group g3">
+            <span>Support</span>
+            <a href="#">Contact Us</a>
+            <a href="#">Developers</a>
+            <a href="#">Documentation</a>
+            <a href="#">Integrations</a>
+        </div>
+
+        <div class="footer-link-group g4">
+            <span>Company</span>
+            <a href="#">About</a>
+            <a href="#">Press</a>
+            <a href="#">Events</a>
+            <a href="#">Request Demo</a>
+        </div>
+</div>
+
+<div id="footerbreak"></div>
+
+<div id="footerBottom">
+    <span>© Heltar, 2024. All rights reserved.</span>
+    <div id="footerBottomMid">
+        <a href="">Terms</a>
+        <a href="">Privacy</a>
+        <a href="">Contact</a>
     </div>
+    <div id="socials">
+        <a href=""><img src="assets/facebook.svg" alt="facebook"></a>
+        <a href=""><img src="assets/twitter.svg" alt="twitter"></a>
+        <a href=""><img src="assets/instagram.svg" alt="instagram"></a>
+        <a href=""><img src="assets/linkedin.svg" alt="linkedin"></a>
+    </div>
+</div>
+
+<div id="chatWithUs">
+    
+    <div id="chatWindow">
+        <img id="chatDemo" src="/assets/chatDemo.webp" alt="">
+        <a href="https://api.whatsapp.com/send" target="_blank">Start Chat</a>
+        <img id="chatClose" src="/assets/close.svg" alt="X" onclick="toggleChat()">
+    </div>
+
+    <div id="chatActionButton" onclick="toggleChat()">
+        <img src="/assets/whatsapp.svg" alt="">
+        <span>Chat with us</span>
+    </div>
+</div>
     <script src="scripts/scrollpop.js"></script>
 <script>
 let chatVisible = false;
