@@ -52,9 +52,9 @@
         <div id="priceLegend">
             <div id="price-duration">
                 <span>Plan</span>
-                <input type="radio" name="duration" id="monthly" checked>
+                <input type="radio" name="duration" id="monthly" checked onchange="updatePrice(this)">
                 <label for="monthly">Monthly</label>
-                <input type="radio" name="duration" id="yearly">
+                <input type="radio" name="duration" id="yearly" onchange="updatePrice(this)">
                 <label for="yearly">Yearly</label>
             </div>
 
@@ -218,6 +218,18 @@ toggleChat = () => {
     chatVisible = !chatVisible;
     if (chatVisible) chatWindow.classList.add('show');
     else chatWindow.classList.remove('show');
+}
+
+function updatePrice(elem) {
+    if (elem.id == "monthly") {
+        document.querySelectorAll(".tier h3")[0].innerHTML = "<b>₹499</b>/month";
+        document.querySelectorAll(".tier h3")[1].innerHTML = "<b>₹2499</b>/month";
+        document.querySelectorAll(".tier h3")[2].innerHTML = "<b>Contact Us</b>";
+    } else {
+        document.querySelectorAll(".tier h3")[0].innerHTML = "<b>₹4999</b>/year";
+        document.querySelectorAll(".tier h3")[1].innerHTML = "<b>₹24999</b>/year";
+        document.querySelectorAll(".tier h3")[2].innerHTML = "<b>Contact Us</b>";
+    }
 }
 </script>
 </body>
