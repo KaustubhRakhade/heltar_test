@@ -188,6 +188,10 @@
         flex-direction: column;
     }
 
+    .imageNtext {
+        padding: 2rem 0;
+    }
+
     .imageNtext > img {
         width: 90%;
         max-width: 30rem;
@@ -236,6 +240,11 @@
     .imageNtext .text h2 {
         font-size: 0.8rem;
     }
+
+    .imageNtext {
+        padding: 1.5rem 0;
+    }
+
 
     .bulletPoint {
         column-gap: 0.66rem;

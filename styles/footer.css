@@ -220,19 +220,47 @@
 }
 
 #callToAction {
-    background: var(--primary-accent-color);
+    background: black;
     color: white;
-    padding: 8rem;
+    padding: 6rem;
+    width: 100%;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+    margin-bottom: -1px;
 }
 
-#callToAction h2 {
+#cta {
+    background: #171717;
+    /* background: red; */
+    border-radius: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    column-gap: 4rem;
+}
+
+#cta img {
+    width: calc(50% - 2rem);
+    object-fit: contain;
+    object-position: center;
+}
+#ctaText {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    max-width: 32rem;
+}
+
+#cta h2 {
     font-size: 3rem;
+    line-height: 3.7rem;
     font-weight: 700;
-    margin-bottom: 1rem;
-    color: black;
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+
 
     opacity: 0;
     transform: translateY(4rem);
@@ -245,12 +273,12 @@
     transition: all 0.5s ease-in-out;
 }
 
-#callToAction span {
-    font-size: 1.2rem;
-    line-height: 2rem;
-    font-weight: 300;
-    margin-bottom: 2rem;
+#cta span {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin-bottom: 1rem;
     max-width: 48rem;
+    color: #B3B3B3;
 
     opacity: 0;
     transform: translateY(4rem);
@@ -264,88 +292,146 @@
     transition-delay: 0.2s;
 }
 
-#callToActionBtns {
+#cta a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
     display: flex;
     flex-direction: row;
-    column-gap: 1.5rem;
+    align-items: center;
+    column-gap: 1rem;
+    background: var(--primary-accent-color);
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    width: max-content;
 
     opacity: 0;
     transform: translateY(4rem);
     transition: all 0.5s ease-in-out;
 }
 
-#callToAction.show #callToActionBtns {
+#cta a img {
+    height: 1rem;
+    width: 1rem;
+    object-fit: contain;
+    object-position: center;
+}
+
+#callToAction.show #cta a {
     opacity: 1;
     transform: translateY(0);
     transition: all 0.5s ease-in-out;
     transition-delay: 0.4s;
 }
 
-#callToActionBtns a {
-    text-decoration: none;
-    padding: 0.5rem 2rem;
-    font-size: 1rem;
-    font-weight: 500;
-    text-align: center;
-    border-radius: 0.5rem;
-    background-color: black;
-    color: white;
-    transition: all 0.1s ease-in-out;
-    border: 2px solid black;
-}
 
-#callToActionBtns a:nth-child(2) {
-    background-color: transparent;
-    color: black;
-}
-
-#callToActionBtns a:hover {
-    transform: translateY(-0.2rem) scale(1.05);
-    box-shadow: 0 0.25rem 0.5rem #13476f;
-}
-
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 1280px) {
     #callToAction {
-        padding: 4rem;
+        padding: 3rem;
+    }
+
+    #cta {
+        padding: 3rem;
+        column-gap: 2rem;
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1080px) {
+
+    #callToAction h2 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    
+    #cta a {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 960px){
     #callToAction {
         padding: 2rem;
     }
 
+    #cta {
+        padding: 2rem;
+        column-gap: 1.5rem;
+    }
+
     #callToAction h2 {
-        font-size: 2rem;
+        font-size: 2.25rem;
+        line-height: 2.6rem;
     }
 
     #callToAction span {
-        font-size: 1rem;
+        font-size: 0.9rem;
+        line-height: 1.4rem;
     }
 
-    #callToActionBtns {
-        flex-wrap: wrap;
-        row-gap: 1rem;
+    #ctaText {
+        max-width: 24rem;
     }
 
-    #callToActionBtns a {
-        padding: 0.5rem 1rem;
+    #cta a {
+        font-size: 1.2rem;
+        padding: 0.75rem 1.5rem;
+        column-gap: 0.8rem
+    }
+
+    #cta a img {
+        height: 0.9rem;
+        width: 0.9rem;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    #cta {
+        flex-direction: column-reverse;
+        row-gap: 4rem;
+        padding: 5rem;
+        align-items: center;
+    }
+
+    #ctaText {
+        max-width: 100%;
+    }
+
+    #callToAction {
+        padding: 5rem;
+    }
+
+    #cta img {
+        width: 100%;
     }
 }
 
-@media screen and (max-width: 400px){
+
+@media screen and (max-width: 680px) {
+    #cta {
+        row-gap: 3rem;
+        padding: 3rem;
+    }
+
+    #callToAction {
+        padding: 3rem;
+    }
+}
+
+@media screen and (max-width: 496px) {
+    #cta {
+        row-gap: 2rem;
+        padding: 2rem 1.5rem;
+    }
+
+    #callToAction {
+        padding: 1.5rem;
+    }
+
+    
     #callToAction h2 {
-        font-size: 1.5rem;
-    }
-
-    #callToAction span {
-        font-size: 0.8rem;
-        line-height: 1.5rem;
-    }
-
-    #callToActionBtns a {
-        padding: 0.5rem 1rem;
-        font-size: 0.8rem;
+        font-size: 2rem;
+        line-height: 2.4rem;
     }
 }
 
