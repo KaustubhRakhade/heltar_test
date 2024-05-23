@@ -73,48 +73,48 @@ setTimeout(() => { nextFrame(); }, AUTO_DELAY);
 
 // scroll between reviews
 
-let currentReview = 1; 
+// let currentReview = 1; 
 
-for (let i = 1; i <= 6; i++) {
-    document.querySelector(`#r${i}`).addEventListener('click', () => {
-        goToReview(i);
-    })
-}
+// for (let i = 1; i <= 6; i++) {
+//     document.querySelector(`#r${i}`).addEventListener('click', () => {
+//         goToReview(i);
+//     })
+// }
 
-let reviewInterval = setInterval(() => {
-    if (currentReview < 6) {
-        goToReview(currentReview + 1);
-    } else {
-        goToReview(1);
-    }
-}, 5000);
+// let reviewInterval = setInterval(() => {
+//     if (currentReview < 6) {
+//         goToReview(currentReview + 1);
+//     } else {
+//         goToReview(1);
+//     }
+// }, 5000);
 
-function goToReview(i) {
-    document.querySelector('#reviewList').scrollTo({ left: (i - 1) * window.innerWidth, behavior: 'smooth' });
-    for (let j = 1; j <= 6; j++) {
-        if (j === i) { document.querySelector(`#r${j}`).classList.add('active'); }
-        else { document.querySelector(`#r${j}`).classList.remove('active'); }
-    }
-}
+// function goToReview(i) {
+//     document.querySelector('#reviewList').scrollTo({ left: (i - 1) * window.innerWidth, behavior: 'smooth' });
+//     for (let j = 1; j <= 6; j++) {
+//         if (j === i) { document.querySelector(`#r${j}`).classList.add('active'); }
+//         else { document.querySelector(`#r${j}`).classList.remove('active'); }
+//     }
+// }
 
-function getCurrentReview() {
-    currentReview = Math.round(document.querySelector('#reviewList').scrollLeft / window.innerWidth) + 1;
-    for (let j = 1; j <= 6; j++) {
-        if (j === currentReview) { document.querySelector(`#r${j}`).classList.add('active'); }
-        else { document.querySelector(`#r${j}`).classList.remove('active'); }
-    }
-}
-document.querySelector('#reviewList').addEventListener('scroll', () => {
-    clearInterval(reviewInterval);
-    reviewInterval = setInterval(() => {
-        if (currentReview < 6) {
-            goToReview(currentReview + 1);
-        } else {
-            goToReview(1);
-        }
-    }, 5000);
-    getCurrentReview();
-})
+// function getCurrentReview() {
+//     currentReview = Math.round(document.querySelector('#reviewList').scrollLeft / window.innerWidth) + 1;
+//     for (let j = 1; j <= 6; j++) {
+//         if (j === currentReview) { document.querySelector(`#r${j}`).classList.add('active'); }
+//         else { document.querySelector(`#r${j}`).classList.remove('active'); }
+//     }
+// }
+// document.querySelector('#reviewList').addEventListener('scroll', () => {
+//     clearInterval(reviewInterval);
+//     reviewInterval = setInterval(() => {
+//         if (currentReview < 6) {
+//             goToReview(currentReview + 1);
+//         } else {
+//             goToReview(1);
+//         }
+//     }, 5000);
+//     getCurrentReview();
+// })
 
 
 
