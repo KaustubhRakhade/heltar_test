@@ -1,7 +1,7 @@
 
 // Scroll between the 4 frames
 
-const AUTO_DELAY = 4000; // time b/w auto slide change
+const AUTO_DELAY = 5000; // time b/w auto slide change
 let currentFrame = 0;
 
 let frames = ["MESSAGES","ORDERS","PAYMENTS","WORKFLOWS"]
@@ -27,7 +27,7 @@ function goToFrame(i) {
         } else {
             clearInterval(clearingInterval);
         }
-    }, 40);
+    }, 30);
 
         setTimeout(() => {
 
@@ -39,7 +39,7 @@ function goToFrame(i) {
             } else {
                 clearInterval(textInterval);
             }
-        }, 80);
+        }, 70);
     }, wait)
 
 
