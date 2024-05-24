@@ -416,7 +416,7 @@
 
 #solutionsHeader b {
     color: var(--primary-accent-color);
-    font-weight: 400;
+    font-weight: 700;
 }
 
 @media screen and (max-width: 800px) {
@@ -789,7 +789,7 @@
 
 #featureCTA h2 {
     color: #37a6f7;
-    font-weight: 400;
+    font-weight: 700;
     text-align: center;
     margin: 0;
     font-size: 3rem;
@@ -1502,6 +1502,7 @@
 }
 #callToAction {
     margin-bottom: 400px !important;
+    padding-top: 0 !important;
 }
 #callToAction, #cta {
     background: white !important;
