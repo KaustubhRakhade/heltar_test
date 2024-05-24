@@ -16,6 +16,7 @@
     text-align: center;
     margin: 0;
     max-width: 70rem;
+    text-transform: capitalize;
 }
 
 #hero h1 b {
