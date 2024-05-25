@@ -34,7 +34,7 @@
     row-gap: 1rem;
 }
 
-#pagesummary a {
+#pagesummary span {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -47,7 +47,7 @@
     font-weight: 400;
 }
 
-#hero span {
+#hero > span {
     font-size: clamp(0.9rem, 3vw, 1.2rem);
     line-height: clamp(1.2rem, 6vw, 1.8rem);
     font-weight: 300;

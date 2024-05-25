@@ -125,6 +125,12 @@ body {
     border: none;
 }
 
+#form label {
+    font-family: "poppins", sans-serif;
+    font-size: 1.2rem;
+    color: #757575;
+}
+
 #schedule-input {
     display: flex;
     width: 100%;
@@ -232,6 +238,9 @@ body {
     #form form input[type=tel],
     #form form input[type=date] {
         padding: 0.5rem;
+        font-size: 1rem;
+    }
+    #form label {
         font-size: 1rem;
     }
 }
