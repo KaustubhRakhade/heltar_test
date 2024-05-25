@@ -4,7 +4,7 @@
 const AUTO_DELAY = 5000; // time b/w auto slide change
 let currentFrame = 0;
 
-let frames = ["MESSAGES","ORDERS","PAYMENTS","WORKFLOWS"]
+let frames = ["MESSAGES", "ORDERS", "PAYMENTS", "WORKFLOWS"]
 
 let scrollActive = true;
 let pageScrollable = false;
@@ -29,7 +29,7 @@ function goToFrame(i) {
         }
     }, 30);
 
-        setTimeout(() => {
+    setTimeout(() => {
 
         let textInterval = setInterval(() => {
             if (textIndex < text.length) {
@@ -122,28 +122,28 @@ function setFeature(i) {
     let btns = document.querySelectorAll('#featureDrawer input');
 
     btns.forEach((btn, j) => {
-        if (j+1 === i) { btn.classList.add('active'); }
+        if (j + 1 === i) { btn.classList.add('active'); }
         else { btn.classList.remove('active'); }
     })
 
     let features = document.querySelectorAll('#featureWindow .featureWindowItem');
 
     features.forEach((feature, j) => {
-        if (j+1 === i) { feature.classList.add('active'); }
+        if (j + 1 === i) { feature.classList.add('active'); }
         else { feature.classList.remove('active'); }
     })
 
 
     // scroll the button to middle
     let drawer = document.querySelector('#featureDrawer');
-    let btn = btns[i-1];
+    let btn = btns[i - 1];
     let drawerWidth = drawer.clientWidth;
     let drawerScroll = drawer.scrollLeft;
     let btnWidth = btn.clientWidth;
     let btnOffset = btn.offsetLeft;
-    let btnMiddle = btnOffset - drawerWidth/2 + btnWidth/2;
-    drawer.scrollTo({left: btnMiddle, behavior: 'smooth'});
-    
+    let btnMiddle = btnOffset - drawerWidth / 2 + btnWidth / 2;
+    drawer.scrollTo({ left: btnMiddle, behavior: 'smooth' });
+
 }
 
 
@@ -172,19 +172,35 @@ document.addEventListener('scroll', () => {
     checkBlackSections();
 })
 
-
+let promiseInterval;
 let currP = 0;
 function setPromise(n) {
+
+    // claer the interval
+    clearInterval(promiseInterval);
+    promiseInterval = setInterval(() => {
+        setPromise((currP + 1) % 3);
+    }, 5000);
+
     let ps = document.querySelectorAll('.promiseSliderItem');
     let pg = document.querySelectorAll('#pageControls div');
 
     if (currP === n) return;
 
-    
+
     let dir = -1;
     if ((n - currP + 3) % 3 == 1) dir = 1;
 
     currP = n;
+
+    for (let i = 0; i < 3; i++) {
+        if (i === n) {
+            pg[i].classList.add('active');
+        }
+        else {
+            pg[i].classList.remove('active');
+        }
+    }
 
     card1 = document.querySelectorAll('.card1')[0];
     card2 = document.querySelectorAll('.card2')[0];
@@ -216,3 +232,7 @@ function setPromise(n) {
         card3.classList.add("card2");
     }
 }
+
+promiseInterval = setInterval(() => {
+    setPromise((currP + 1) % 3);
+}, 5000);
