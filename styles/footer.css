@@ -24,12 +24,14 @@
 /* 5 * 15 */
 #footerLogo img {
     height: 5rem;
-    width: 11.36rem;
+    width: 12rem;
+    object-fit: contain;
+    object-position: center;
 }
 
 #footerLogo span {
     color: #B3B3B3;
-    max-width: 10rem;
+    max-width: 12rem;
     text-align: center;
 }
 
@@ -131,7 +133,12 @@
 
     #footerLogo img {
         height: 4rem;
-        width: 9.1rem;
+        width: 11rem;
+    }
+
+    #footerLogo span {
+        font-size: 0.9rem;
+        max-width: 11rem;
     }
 
     #footerLogo {
@@ -187,7 +194,6 @@
 
     #footerLogo {
         grid-area: 1 / 1 / 2 / 2;
-        row-gap: 3rem;
         justify-content: flex-start;
         width: 100%;
     }
