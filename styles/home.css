@@ -1593,7 +1593,7 @@
     }
 }
 #callToAction {
-    margin-bottom: 400px !important;
+    /* margin-bottom: 400px !important; */
     padding-top: 0 !important;
     display: flex;
     align-items: center;
@@ -1604,14 +1604,14 @@
 }
 #callToAction, #cta {
     background: white !important;
-    padding-bottom: 0 !important;
+    padding-bottom: 3rem !important;
 }
 
 #cta h2 { color: var(--primary-accent-color) !important; }
 #cta span { color: black !important; }
 #cta a { background: black !important; }
 
-#pcEmbed {
+/* #pcEmbed {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -1625,4 +1625,4 @@
 
 #footer {
     padding-top: 400px !important;
-}
+} */
