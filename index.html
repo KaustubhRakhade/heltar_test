@@ -67,7 +67,7 @@
         <div id="hero-text">
             <h3>Automate</h3>
             <h3><b id="typingText">MESSAGING</b></h3>
-            <h3>within 24 hours</h3>
+            <h3>On WhatsApp</h3>
             <span>Get new users, notify users, support users, at scale efficiently using Heltar's suite of CRM, EM and
                 Automation tools.</span>
 
@@ -294,30 +294,42 @@
         <a class="ctaButton" href="">Ready to get started? <img src="assets/arrowRight.svg" alt=">"></a>
     </div>
 
-    <div id="howAIworks" class="hidden show">
-        <h2>Are our promises fake? <b>No!</b></h2>
-        <span>We are dedicated to change the life of our customers. <a href="/demo.html">Book a demo</a> now to change
-            yours.</span>
-        <div id="howAIworksList">
-            <div class="howAIworksListItem">
+    <div id="promise">
+        <div id="promiseText">
+            <h2>Are our promises fake? <b>No!</b></h2>
+            <span>We are dedicated to change the life of our customers. <a href="/demo.html">Book a demo</a> now to change yours.</span>
+        </div>
+        <div id="promiseSlider">
+        
+            <div class="promiseSliderItem card1">
                 <img class="client" src="/assets/indiamartClient.webp" alt="indiamart">
                 <span>Fill rates</span>
                 <h3>90%<img src="assets/arrowUp.svg" alt="increase"></h3>
                 <img class="promiseIcon" src="assets/promise1.svg" alt="Fill rates">
             </div>
 
-            <div class="howAIworksListItem">
+            <div class="promiseSliderItem card2">
                 <img class="client" src="/assets/smartoClient.webp" alt="Smarto">
                 <span>Customer support workforce</span>
                 <h3>50%<img src="assets/arrowDown.svg" alt="decrease"></h3>
                 <img class="promiseIcon" src="assets/promise2.svg" alt="CX Support">
             </div>
 
-            <div class="howAIworksListItem">
+            <div class="promiseSliderItem card3">
                 <img class="client" src="/assets/sunstoneClient.webp" alt="Sunstone">
                 <span>Information for internal teams</span>
                 <h3>5X<img src="assets/arrowUp.svg" alt="increase"></h3>
                 <img class="promiseIcon" src="assets/promise3.svg" alt="Information">
+            </div>
+
+            <div id="controls">
+                <input type="image" src="/assets/icons/previous.svg" alt="prev" onclick="setPromise((currP+2) % 3)">
+                <div id="pageControls">
+                    <div class="active" id="pg1" onclick="setPromise(0)"></div>
+                    <div id="pg2" onclick="setPromise(1)"></div>
+                    <div id="pg3" onclick="setPromise(2)"></div>
+                </div>
+                <input type="image" src="/assets/icons/next.svg" alt="next" onclick="setPromise((currP+1) % 3)">
             </div>
         </div>
     </div>
@@ -392,8 +404,7 @@
 
             <div id="ctaText">
                 <h2>Ready to get started?</h2>
-                <span>Lorem ipsum is a placeholder text commonly used in web design and typography. It is a latin text
-                    that has no meaning and is used as a placeholder</span>
+                <span>Unleash the Power of Automated Business Communications witHearar Transform your Journey to Effortless Efficiency and Hyper-Personalized Customer Experiences Starts Now.</span>
                 <a href="/demo.html">Try it now <img src="/assets/try.svg" alt="->"></a>
             </div>
 

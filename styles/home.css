@@ -788,6 +788,7 @@
 }
 
 #featureCTA h2 {
+    text-transform: capitalize;
     color: #37a6f7;
     font-weight: 700;
     text-align: center;
@@ -1049,103 +1050,174 @@
     }
 }
 
+#promise {
+    display: flex;
+    flex-direction: row;
+    column-gap: 6rem;
+    align-items: center;
+    /* justify-content: space-between; */
+    width: 100%;
+    padding: 8rem 0 4rem 0;
+    padding-left: max(4rem, calc(50vw - 35rem));
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow: hidden;
+}
 
-
-
-
-
-#howAIworks {
+#promiseText {
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
-    align-items: center;
-    width: 100%;
-    padding: 8rem 4rem 4rem 4rem;
-    box-sizing: border-box;
-    margin: 0 auto;
-    /* background: #f2f4f5; */
+    max-width: 30rem;
 }
 
-#howAIworks h2 {
+#promiseText h2 {
     font-size: 3rem;
+    line-height: 4rem;
     font-weight: 600;
     margin: 0;
-    text-align: center;
-
-    opacity: 0;
-    transform: translateY(4rem);
-    transition: all 0.5s ease-in-out; 
+    text-transform: capitalize;
 }
 
-#howAIworks h2 b {
+#promiseText h2 b {
     color: var(--primary-accent-color);
     font-weight: 600;
 }
 
-#howAIworks.show h2 {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-#howAIworks > span {
+#promiseText > span {
     font-size: 1.2rem;
     margin: 0;
-    text-align: center;
     font-weight: 300;
     max-width: 60rem;
-
     color: black;
-
-    opacity: 0;
-    transform: translateY(4rem);
-    transition: all 0.5s ease-in-out;
-    transition-delay: 0.2s;
 }
 
-#howAIworks > span a {
+#promiseText > span a {
     text-decoration: none;
     color: var(--primary-accent-color);
     font-weight: 700;
 }
 
-#howAIworks.show > span {
-    opacity: 1;
-    transform: translateY(0);
+#promiseSlider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 36rem;
+    height: 24rem;
+    position: relative;
 }
 
-#howAIworksList {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
-    width: min(100%, max-content);
-}
-
-.howAIworksListItem {
+.promiseSliderItem {
+    position: absolute;
     max-width: 20rem;
     width: 18rem;
     display: flex;
     flex-direction: column;
     padding: 1rem 2rem;
-    border: solid #37a6f7 0.1rem;
-    position: relative;
+    background: white;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
     border-radius: 1rem;
-    position: relative;
+}
 
-    opacity: 0;
-    transform: scale(0.95) translateY(4rem);
+@keyframes card12 {
+    0% {
+        filter: blur(0);
+        transform: translateX(0rem) scale(1);
+        z-index: 1;
+    }
+    100% {
+        filter: blur(4px);
+        transform: translateX(20rem) scale(0.65);
+        z-index: 0;
+    }
+}
+
+@keyframes card21 {
+    0% {
+        filter: blur(4px);
+        transform: translateX(20rem) scale(0.65);
+        z-index: 0;
+    }
+    100% {
+        filter: blur(0);
+        transform: translateX(0rem) scale(1);
+        z-index: 1;
+    }
+
+} 
+
+@keyframes card23 {
+    0% {
+        filter: blur(4px);
+        transform: translateX(20rem) scale(0.65);
+        z-index: 0;
+    }
+    100% {
+        filter: blur(4px);
+        transform: translateX(20rem) scale(0.65);
+        z-index: -1;
+    }
+}
+
+@keyframes card32 {
+    0% {
+        filter: blur(4px);
+        transform: translateX(20rem) scale(0.65);
+        z-index: -1;
+    }
+    100% {
+        filter: blur(4px);
+        transform: translateX(20rem) scale(0.65);
+        z-index: 0;
+    }
+}
+
+@keyframes card31 {
+    0% {
+        filter: blur(4px);
+        transform: translateX(20rem) scale(0.65);
+        z-index: -2;
+    }
+    0.01% {
+        filter: blur(2px);
+        transform: translateX(0rem) scale(0.25);
+        z-index: -2;
+    }
+    100% {
+        filter: blur(0);
+        transform: translateX(0rem) scale(1);
+        z-index: -1;
+    }
+}
+
+@keyframes card13 {
+    0% {
+        filter: blur(0);
+        transform: translateX(0rem) scale(1);
+        z-index: -1;
+    }
+    99.99% {
+        filter: blur(2px);
+        transform: translateX(-2rem) scale(0.25);
+        z-index: -1;
+    }
+    100% {
+        filter: blur(4px);
+        transform: translateX(20rem) scale(0.65);
+        z-index: -1;
+    }
+}
+
+.card1 { animation: card31 0s forwards; }
+.card2 { animation: card12 0s forwards; }
+.card3 { animation: card23 0s forwards; }
+
+.promiseSliderItem.hide * {
     transition: all 0.5s ease-in-out;
+    opacity: 0.5;
 }
 
-#howAIworks.show .howAIworksListItem {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-}
-
-.howAIworksListItem:nth-child(1) { transition-delay: 0.5s; }
-.howAIworksListItem:nth-child(2) { transition-delay: 0.6s; }
-.howAIworksListItem:nth-child(3) { transition-delay: 0.7s; }
-
-.howAIworksListItem img.client {
+.promiseSliderItem img.client {
     width: 100%;
     height: 4rem;
     padding-bottom: 0.25rem;
@@ -1154,7 +1226,7 @@
     border-bottom: solid 0.1rem #c4c4c4;
 }
 
-.howAIworksListItem img.promiseIcon {
+.promiseSliderItem img.promiseIcon {
     width: 5rem;
     height: 5rem;
     position: absolute;
@@ -1162,7 +1234,7 @@
     right: 2rem;
 }
 
-.howAIworksListItem span {
+.promiseSliderItem span {
     padding: 0.1rem 0.7rem;
     border-radius: 3rem;
     font-size: 0.75rem;
@@ -1174,14 +1246,14 @@
     margin-bottom: 0.5rem;
 }
 
-.howAIworksListItem h3 {
+.promiseSliderItem h3 {
     color: var(--primary-accent-color);
     font-size: 3rem;
     font-weight: 600;
     margin: 0;
 }
 
-.howAIworksListItem h3 img {
+.promiseSliderItem h3 img {
     width: 1.5rem;
     height: 2rem;
     object-fit: contain;
@@ -1190,78 +1262,98 @@
 
 }
 
+#controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transform: translateY(10rem);
+    width: 22rem;
+    box-sizing: border-box;
+    padding: 0 2rem;
+    align-items: center;
+}
+
+#pageControls {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5rem;
+    align-items: center;
+}
+
+#pageControls div {
+    background: var(--primary-accent-color);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.5s;
+}
+
+#pageControls div.active {
+    opacity: 1;
+}
+
 @media screen and (max-width: 1278px) {
-    #howAIworksList {
-        gap: 1rem;
+    #promise {
+        column-gap: 2rem;
     }
 }
 
-@media screen and (max-width: 1178px) {
-    .howAIworksListItem {
-        width: 14rem;
-    }
-    .howAIworksListItem h3 {
-        margin: 0.5rem 0;
+@media screen and (max-width: 1078px) {
+    #promiseText {
+        max-width: 24rem;
     }
 
-    .howAIworksListItem img.promiseIcon {
-        width: 4rem;
-        height: 4rem;
-        bottom: 1.75rem;
+    #promiseText h2 {
+        font-size: 2.5rem;
+        line-height: 3rem;
     }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 958px) {
 
-    #howAIworks h2 {
+    #promise {
+        flex-direction: column;
+        align-items: center;
+        padding: 4rem 2rem;
+    }
+
+    #promiseText {
+        max-width: 34rem;
+        text-align: center;
+    }
+
+    #promiseSlider {
+        width: 22rem;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+    #promiseSlider {
+        width: 17rem;
+    }
+
+    #promiseText h2 {
         font-size: 2rem;
-        line-height: 2.5rem;
-        margin-bottom: 0;
+        line-height: 2.4rem;
     }
 
-    #howAIworks > span {
+    #promiseText span {
         font-size: 1rem;
+        line-height: 1.4rem;
     }
 
-    #howAIworksList {
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        gap: 2rem;
-    }
-
-    .howAIworksListItem {
-        width: 20rem;
-    }
-    .howAIworksListItem h3 {
-        margin: 0;
-    }
-
-    .howAIworksListItem img.promiseIcon {
-        width: 5rem;
-        height: 5rem;
-        bottom: 2em;
-    }
-}
-
-
-@media screen and (max-width: 480px) {
-
-    #howAIworks {
-        padding: 6rem 2rem 3rem 2rem;
-    }
-
-    #howAIworksList {
-        gap: 1rem;
-    }
-    .howAIworksListItem {
+    .promiseSliderItem {
         padding: 1rem 1.5rem;
         width: 14rem;
     }
-    .howAIworksListItem h3 {
+    .promiseSliderItem h3 {
         margin: 0.5rem 0;
     }
 
-    .howAIworksListItem img.promiseIcon {
+    .promiseSliderItem img.promiseIcon {
         width: 4rem;
         height: 4rem;
         bottom: 1.75rem;
@@ -1503,6 +1595,12 @@
 #callToAction {
     margin-bottom: 400px !important;
     padding-top: 0 !important;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#cta {
+    max-width: 81rem;
 }
 #callToAction, #cta {
     background: white !important;

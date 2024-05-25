@@ -171,3 +171,48 @@ function checkBlackSections() {
 document.addEventListener('scroll', () => {
     checkBlackSections();
 })
+
+
+let currP = 0;
+function setPromise(n) {
+    let ps = document.querySelectorAll('.promiseSliderItem');
+    let pg = document.querySelectorAll('#pageControls div');
+
+    if (currP === n) return;
+
+    
+    let dir = -1;
+    if ((n - currP + 3) % 3 == 1) dir = 1;
+
+    currP = n;
+
+    card1 = document.querySelectorAll('.card1')[0];
+    card2 = document.querySelectorAll('.card2')[0];
+    card3 = document.querySelectorAll('.card3')[0];
+
+    if (dir === -1) {
+        card1.style.animation = 'card12 0.5s forwards';
+        card1.classList.remove("card1");
+        card1.classList.add("card2");
+
+        card2.style.animation = 'card23 0.5s forwards';
+        card2.classList.remove("card2");
+        card2.classList.add("card3");
+
+        card3.style.animation = 'card31 0.5s forwards';
+        card3.classList.remove("card3");
+        card3.classList.add("card1");
+    } else {
+        card1.style.animation = 'card13 0.5s forwards';
+        card1.classList.remove("card1");
+        card1.classList.add("card3");
+
+        card2.style.animation = 'card21 0.5s forwards';
+        card2.classList.remove("card2");
+        card2.classList.add("card1");
+
+        card3.style.animation = 'card32 0.5s forwards';
+        card3.classList.remove("card3");
+        card3.classList.add("card2");
+    }
+}
