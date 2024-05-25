@@ -80,9 +80,7 @@ body {
 }
 
 #form {
-    max-width: 25rem;
-    width: 25rem;
-    height: 32rem;
+    max-width: 24rem;
     box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
     /* overflow: hidden; */
@@ -94,15 +92,7 @@ body {
     align-items: center;
     row-gap: 1rem;
     box-sizing: border-box;
-    /* overflow: hidden; */
-}
-
-.calendly-inline-widget {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    padding: 2rem;
 }
 
 #form form h1 {
