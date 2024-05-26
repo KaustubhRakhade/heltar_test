@@ -202,9 +202,18 @@ body {
     width: 10rem;
 }
 
+#navbar-container.black {
+    color: white;
+}
+
 #backedBy img {
     height: 1.5rem;
     object-fit: contain;
+}
+
+
+#navbar-container.black #backedBy img:last-child {
+    filter: invert(1) saturate(0) brightness(1.5);
 }
 
 @media screen and (max-width: 1020px) {
