@@ -836,6 +836,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    width: max-content;
+    max-width: 100%;
 
 }
 
