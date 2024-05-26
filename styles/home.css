@@ -831,6 +831,14 @@
     filter: brightness(0);
 }
 
+#featureDrawerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
 #featureDrawer {
     max-width: 72rem;
     display: flex;
@@ -839,10 +847,28 @@
     scrollbar-width: none;
     /* border-bottom: solid 0.1rem #707070; */
 }
+
 /* hide scrollbar */
 #featureDrawer::-webkit-scrollbar {
     display: none;
 }
+
+#prevBtn, #nextBtn {
+    width: 2rem;
+    height: 2rem;
+    filter: brightness(2);
+    background: black;
+    box-shadow: 0 0 1rem 1rem black;
+    z-index: 10;
+}
+
+
+#prevBtn.disabled, #nextBtn.disabled {
+    display: none;
+}
+
+#prevBtn { transform: translateX(2rem); }
+#nextBtn { transform: translateX(-2rem); }
 
 #featureWindow {
     display: flex;

@@ -56,13 +56,26 @@ body {
     border: solid 0.1rem #e4e4e4;
     text-align: center;
     width: 6rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 0.5rem;
+}
+
+#price-duration label #discount {
+    font-size: 0.7rem;
+    color: #40d41d;
+    width: max-content;
 }
 
 /* checked */
 #price-duration input[type="radio"]:checked + label {
-    background-color: var(--primary-accent-color);
-    border: solid 0.1rem var(--primary-accent-color);
-    color: white;
+    /* background-color: var(--primary-accent-color); */
+    background: #f5f5f5;
+    /* border: solid 0.1rem var(--primary-accent-color); */
+    /* border: solid 0.1rem #f5f5f5; */
+    /* color: white; */
     font-weight: 500;
 
 }

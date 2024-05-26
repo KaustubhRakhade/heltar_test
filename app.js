@@ -117,8 +117,12 @@ setTimeout(() => { nextFrame(); }, AUTO_DELAY);
 // })
 
 
-
+let currF = 1;
 function setFeature(i) {
+    i = Math.max(1, Math.min(6, i))
+    console.log(i);
+    currF = i;
+
     let btns = document.querySelectorAll('#featureDrawer input');
 
     btns.forEach((btn, j) => {
@@ -132,6 +136,12 @@ function setFeature(i) {
         if (j + 1 === i) { feature.classList.add('active'); }
         else { feature.classList.remove('active'); }
     })
+
+    if (i === 1) { document.querySelector('#prevBtn').classList.add('disabled'); }
+    else { document.querySelector('#prevBtn').classList.remove('disabled'); }
+
+    if (i === 6) { document.querySelector('#nextBtn').classList.add('disabled'); }
+    else { document.querySelector('#nextBtn').classList.remove('disabled'); }
 
 
     // scroll the button to middle
