@@ -862,15 +862,14 @@
     background: black;
     box-shadow: 0 0 1rem 1rem black;
     z-index: 10;
+    transition: all 0.2s;
 }
 
 
 #prevBtn.disabled, #nextBtn.disabled {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
 }
-
-#prevBtn { transform: translateX(2rem); }
-#nextBtn { transform: translateX(-2rem); }
 
 #featureWindow {
     display: flex;

@@ -183,9 +183,8 @@ function setFeature(i) {
     let drawer = document.querySelector('#featureDrawer');
     let btn = btns[i - 1];
     let drawerWidth = drawer.clientWidth;
-    let drawerScroll = drawer.scrollLeft;
     let btnWidth = btn.clientWidth;
-    let btnOffset = btn.offsetLeft;
+    let btnOffset = btn.offsetLeft - drawer.offsetLeft;
     let btnMiddle = btnOffset - drawerWidth / 2 + btnWidth / 2;
     drawer.scrollTo({ left: btnMiddle, behavior: 'smooth' });
 

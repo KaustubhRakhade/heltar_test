@@ -514,7 +514,7 @@
 }
 
 #chatWindow {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     background: white;
@@ -522,8 +522,9 @@
     border-radius: 1.25rem;
     overflow: hidden;
     transition: all 0.3s;
-    margin-left: -20rem;
+    left: -24rem;
     opacity: 0;
+    bottom: 5rem;
     transform-origin: bottom left;
 }
 
@@ -541,7 +542,7 @@
 }
 
 #chatWindow.show {
-    margin-left: 0;
+    left: 0rem;
     opacity: 1;
     transform-origin: bottom left;
 }
