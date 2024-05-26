@@ -119,6 +119,13 @@
 #socials a {
     padding: 0.5rem;
     transition: all 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#socials a img {
+    object-position: center;
 }
 
 #socials a:hover {
