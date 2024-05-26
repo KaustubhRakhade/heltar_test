@@ -16,7 +16,7 @@
 
 /* add boder to not last .imagetext */
 .imageNtext {
-    border-bottom: solid 0.2rem white;
+    border-bottom: solid 0.4rem white;
 }
 
 .imageNtext.rightImage {
