@@ -34,7 +34,7 @@ function submitForm() {
   };
 
   $.ajax({
-    url: 'https://script.google.com/a/macros/heltar.com/s/AKfycbzw-URsjcRhMRH1tmt_F4Jp298fxAaDx1dBT4FSDZpYeJKyCf07a1drr5YvkYHltlMI/exec',
+    url: 'https://script.google.com/macros/s/AKfycbzw-URsjcRhMRH1tmt_F4Jp298fxAaDx1dBT4FSDZpYeJKyCf07a1drr5YvkYHltlMI/exec',
     method: 'POST',
     data: formData,
     success: function(response) {
@@ -137,13 +137,21 @@ function submitForm() {
         </div>
     </div>
 
-    <div id="success">
+    <!-- <div id="success">
         <div id="success-text">
-            <img src="assets/check.svg" alt="Success">
+            <img src="assets/icons/check.png" alt="Success">
             <h2>Success!</h2>
             <p>We will get back to you shortly to confirm the schedule.</p>
         </div>
     </div>
+
+    <div id="error">
+        <div id="error-text">
+            <img src="assets/icons/error.png" alt="Success">
+            <h2>Error!</h2>
+            <p>Try again!</p>
+        </div>
+    </div> -->
     
     <div id="footer" class="blackBG">
         <div id="footerLogo">
