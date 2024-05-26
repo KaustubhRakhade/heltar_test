@@ -66,7 +66,9 @@ body {
 #price-duration label #discount {
     font-size: 0.7rem;
     color: #40d41d;
-    width: max-content;
+    width: max-content !important;
+    margin: 0 !important;
+    display: block !important;
 }
 
 /* checked */

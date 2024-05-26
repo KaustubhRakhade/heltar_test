@@ -23,31 +23,50 @@
     <title>Heltar - Book a Demo</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-function submitForm() {
-  var formData = {
-    name: $('#name').val(),
-    companyName: $('#companyName').val(),
-    email: $('#email').val(),
-    phone: $('#phone').val(),
-    date: $('#date').val()
-  };
+    <script>
+        function submitForm() {
 
-  $.ajax({
-    url: 'https://script.google.com/macros/s/AKfycbzw-URsjcRhMRH1tmt_F4Jp298fxAaDx1dBT4FSDZpYeJKyCf07a1drr5YvkYHltlMI/exec',
-    method: 'POST',
-    data: formData,
-    success: function(response) {
-      alert('Form submitted successfully!');
-    },
-    error: function() {
-      alert('Error submitting form');
-    }
-  });
+            document.getElementById("submitBtn").value = "Submitting...";
+            var formData = {
+                name: $('#name').val(),
+                companyName: $('#companyName').val(),
+                email: $('#email').val(),
+                phone: $('#phone').val(),
+                date: $('#date').val()
+            };
 
-  return false; // Prevent page refresh
-}
-</script>
+            $.ajax({
+                url: 'https://script.google.com/macros/s/AKfycbx1lITO5-mYUuWpxtA6lw3t2pUbZR7cR0BlKrv1sAX9fHJl7JLXpQSdQg94cN7tjrsG/exec',
+                method: 'POST',
+                data: formData,
+                success: function (response) {
+                    // play keyframe animation fromk css
+                    document.getElementById("success").style.display = "flex";
+                    document.getElementById("success").style.animation = "fade-in 0.5s ease-in-out forwards";
+                    setTimeout(() => {
+                        document.getElementById("success").style.animation = "fade-out 0.5s ease-in-out forwards";
+                        setTimeout(() => {
+                            document.getElementById("success").style.display = "none";
+                        }, 500)
+                    }, 2000);
+                    document.getElementById("submitBtn").value = "Book Now";
+                },
+                error: function () {
+                    document.getElementById("error").style.display = "flex";
+                    document.getElementById("error").style.animation = "fade-in 0.5s ease-in-out forwards";
+                    setTimeout(() => {
+                        document.getElementById("error").style.animation = "fade-out 0.5s ease-in-out forwards";
+                        setTimeout(() => {
+                            document.getElementById("error").style.display = "none";
+                        }, 500)
+                    }, 2000);
+                    document.getElementById("submitBtn").value = "Book Now";
+                }
+            });
+
+            return false; // Prevent page refresh
+        }
+    </script>
 
 
 </head>
@@ -79,7 +98,8 @@ function submitForm() {
                     </div>
                 </div>
                 <a href="/pricing.html">Pricing</a>
-                <input id="register-btn-pc" type="button" value="Book a Demo" onclick="window.location.href='demo.html'">
+                <input id="register-btn-pc" type="button" value="Book a Demo"
+                    onclick="window.location.href='demo.html'">
             </div>
 
             <div id="backedBy">
@@ -122,22 +142,22 @@ function submitForm() {
         <div id="form">
             <form onsubmit="return submitForm();">
                 <h1>Book your <b>live demo</b> now!</h1>
-                <input type="text" placeholder="Your Name" required>
-                <input type="text" placeholder="Company Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <input type="tel" placeholder="Phone Number" required>
+                <input id="name" type="text" placeholder="Your Name" required>
+                <input id="companyName" type="text" placeholder="Company Name" required>
+                <input id="email" type="email" placeholder="Your Email" required>
+                <input id="phone" type="tel" placeholder="Phone Number" required>
 
                 <div id="schedule-input">
                     <label for="schedule">Schedule:</label>
-                    <input type="date" id="schedule" required placeholder="Schedule">
+                    <input id="date" type="date" id="schedule" required placeholder="Schedule">
                 </div>
 
-                <input type="submit" value="Book Now"/>
+                <input id="submitBtn" type="submit" value="Book Now" />
             </form>
         </div>
     </div>
 
-    <!-- <div id="success">
+    <div id="success">
         <div id="success-text">
             <img src="assets/icons/check.png" alt="Success">
             <h2>Success!</h2>
@@ -149,10 +169,10 @@ function submitForm() {
         <div id="error-text">
             <img src="assets/icons/error.png" alt="Success">
             <h2>Error!</h2>
-            <p>Try again!</p>
+            <p>Something went wrong. Please try again later.</p>
         </div>
-    </div> -->
-    
+    </div>
+
     <div id="footer" class="blackBG">
         <div id="footerLogo">
             <img src="assets/logoDark.svg" alt="Heltar">
@@ -188,14 +208,18 @@ function submitForm() {
     <div id="footerBottom">
         <span>© Heltar, 2024. All rights reserved.</span>
         <div id="footerBottomMid">
-            <a target="_blank" href="https://www.heltar.com/_files/ugd/cd0dcd_9d0b5dfa6e9f4b88933a639239f817be.pdf">Terms</a>
-            <a target="_blank" href="https://www.heltar.com/_files/ugd/cd0dcd_f8ed8989f1304d04bb91539d103c1d37.pdf">Privacy</a>
+            <a target="_blank"
+                href="https://www.heltar.com/_files/ugd/cd0dcd_9d0b5dfa6e9f4b88933a639239f817be.pdf">Terms</a>
+            <a target="_blank"
+                href="https://www.heltar.com/_files/ugd/cd0dcd_f8ed8989f1304d04bb91539d103c1d37.pdf">Privacy</a>
             <a href="tel:+918005756750">Contact Us</a>
         </div>
         <div id="socials">
-            <a target="_blank"  href="mailto:prashant.jangid@heltar.com"><img src="assets/icons/mail.svg" alt="Mail"></a>
-            <a target="_blank" href="https://www.instagram.com/heltar_ai"><img src="assets/icons/instagram.svg" alt="instagram"></a>
-            <a target="_blank" href="https://www.linkedin.com/company/heltar"><img src="assets/icons/linkedin.svg" alt="linkedin"></a>
+            <a target="_blank" href="mailto:prashant.jangid@heltar.com"><img src="assets/icons/mail.svg" alt="Mail"></a>
+            <a target="_blank" href="https://www.instagram.com/heltar_ai"><img src="assets/icons/instagram.svg"
+                    alt="instagram"></a>
+            <a target="_blank" href="https://www.linkedin.com/company/heltar"><img src="assets/icons/linkedin.svg"
+                    alt="linkedin"></a>
         </div>
     </div>
 
