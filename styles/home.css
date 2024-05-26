@@ -1053,6 +1053,9 @@
         font-weight: 500;
         padding: 0.2rem 1rem;
     }
+    #featureDrawerContainer {
+        max-width: calc(100% + 2.5rem);
+    }
     #featureWindow {
         min-height: 32rem;
     }
