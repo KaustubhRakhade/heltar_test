@@ -14,6 +14,11 @@
     overflow: hidden;
 }
 
+/* add boder to not last .imagetext */
+.imageNtext {
+    border-bottom: solid 0.2rem white;
+}
+
 .imageNtext.rightImage {
     flex-direction: row-reverse;
 }
