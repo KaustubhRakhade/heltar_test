@@ -59,7 +59,10 @@ body {
     border: none;
 }
  
-#navbar img#logoPC { height: 2.5rem; }
+#navbar img#logoPC {
+    height: 2.5rem;
+    transform: scale(1.25);
+}
 #navbar img#logoDark {
     height: 2.5rem;
     display: none;
@@ -163,8 +166,8 @@ body {
 }
 
 #navbar #register-btn-pc, #navbar #register-btn-mobile {
-    padding: 0.9rem 2rem;
-    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5rem;
     border: none;
     background: var(--primary-accent-color);
     font-family: "Poppins", sans-serif;
@@ -186,13 +189,34 @@ body {
     display: none;
 }
 
-@media screen and (max-width: 960px) {
+#backedBy {
+    display: flex;
+    font-size: 0.9rem;
+    flex-direction: row;
+    column-gap: 1rem;
+    flex-wrap: wrap;
+    width: 14rem;
+}
+
+#backedBy span {
+    width: 10rem;
+}
+
+#backedBy img {
+    height: 1.5rem;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 1020px) {
     #navbar {
         padding: 1rem 3rem;
     }    
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 960px) {
+    #backedBy {
+        display: none;
+    }
     #navbar {
         flex-direction: column;
         align-items: flex-start;

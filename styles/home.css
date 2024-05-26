@@ -1383,7 +1383,9 @@
     flex-direction: column;
 }
 #cta {
-    max-width: 81rem;
+    padding: 0 !important;
+    justify-content: space-between !important;
+    max-width: 69rem;
 }
 #callToAction, #cta {
     background: white !important;

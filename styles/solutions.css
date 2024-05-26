@@ -87,7 +87,7 @@
 #hero > img {
     box-sizing: border-box;
     width: min(72rem, 100%);
-    aspect-ratio: 2.6;
+    /* aspect-ratio: 2.6; */
     object-position: center;
     object-fit: cover;
     border-radius: 2rem;
@@ -106,7 +106,6 @@
     }
 
     #hero > img {
-        aspect-ratio: 2;
         border-radius: 1rem;
     }
     
