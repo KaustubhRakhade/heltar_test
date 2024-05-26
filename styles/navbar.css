@@ -65,6 +65,7 @@ body {
 }
 #navbar img#logoDark {
     height: 2.5rem;
+    transform: scale(1.25);
     display: none;
 }
 
