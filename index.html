@@ -1,450 +1,665 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta property="og:title" content="”Heltar”" />
+    <meta property="og:description" content="”yAutomating" WhatsApp for YOU!” />
+    <meta property=og:image
+    content=”https://heltar-chat-s3.s3.ap-south-1.amazonaws.com/Group+1707478199.svg”
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Heltar</title>
-    <meta name="description" content="Empower your business, Elevate your reach.">
-    <link rel="icon" href="fav.png" type="image/x-icon">
+    <meta
+      name="description"
+      content="Empower your business, Elevate your reach."
+    />
+    <link rel="icon" href="fav.png" type="image/x-icon" />
 
-    <link rel="stylesheet" href="styles/navbar.css">
-    <link rel="stylesheet" href="styles/home.css">
-    <link rel="stylesheet" href="styles/imgText.css">
-    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/imgText.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
     <noscript>
-        <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="styles.css" />
     </noscript>
+  </head>
 
-</head>
-
-<body>
-
-    <div id="navbar-container" style="position: fixed;">
-        <div id="navbar" tabindex="0">
-
-            <div id="logoBox">
-                <input id="ham-menu" alt="menu" type="image" src="assets/menu.svg">
-                <img src="assets/logoDark.svg" alt="Heltar" id="logoDark" onclick="window.location.href='/'">
-                <img src="assets/logoPC.svg" alt="Heltar" id="logoPC" onclick="window.location.href='/'">
-                <img src="assets/logoMobile.png" alt="Heltar" id="logoMobile" onclick="window.location.href='/'">
-                <input id="register-btn-mobile" type="button" value="Book a Demo"
-                    onclick="window.location.href='demo.html'">
-            </div>
-
-
-            <div id="nav-links">
-                <a class="active" href="/">Home</a>
-                <div class="dropdown">
-                    <input type="button" class="dropbtn" value="Solutions &#x25BE;">
-                    <div class="dropdown-content">
-                        <a href="marketing.html">Marketing</a>
-                        <a href="automation.html">Automation</a>
-                        <a href="customer-support.html">Customer Support</a>
-                        <a href="ai-solution.html">AI Solutions</a>
-                    </div>
-                </div>
-                <a href="/pricing.html">Pricing</a>
-                <input id="register-btn-pc" type="button" value="Book a Demo" onclick="window.location.href='demo.html'">
-            </div>
-
-            <div id="backedBy">
-                <span>backed by</span>
-                <img src="assets/antler.png" alt="Antler">
-                <img src="assets/gradcapital.png" alt="gradCapital">
-            </div>
-
+  <body>
+    <div id="navbar-container" style="position: fixed">
+      <div id="navbar" tabindex="0">
+        <div id="logoBox">
+          <input id="ham-menu" alt="menu" type="image" src="assets/menu.svg" />
+          <img
+            src="assets/logoDark.svg"
+            alt="Heltar"
+            id="logoDark"
+            onclick="window.location.href='/'"
+          />
+          <img
+            src="assets/logoPC.svg"
+            alt="Heltar"
+            id="logoPC"
+            onclick="window.location.href='/'"
+          />
+          <img
+            src="assets/logoMobile.png"
+            alt="Heltar"
+            id="logoMobile"
+            onclick="window.location.href='/'"
+          />
+          <input
+            id="register-btn-mobile"
+            type="button"
+            value="Book a Demo"
+            onclick="window.location.href='demo.html'"
+          />
         </div>
+
+        <div id="nav-links">
+          <a class="active" href="/">Home</a>
+          <div class="dropdown">
+            <input type="button" class="dropbtn" value="Solutions &#x25BE;" />
+            <div class="dropdown-content">
+              <a href="marketing.html">Marketing</a>
+              <a href="automation.html">Automation</a>
+              <a href="customer-support.html">Customer Support</a>
+              <a href="ai-solution.html">AI Solutions</a>
+            </div>
+          </div>
+          <a href="/pricing.html">Pricing</a>
+          <input
+            id="register-btn-pc"
+            type="button"
+            value="Book a Demo"
+            onclick="window.location.href='demo.html'"
+          />
+        </div>
+
+        <div id="backedBy">
+          <span>backed by</span>
+          <img src="assets/antler.png" alt="Antler" />
+          <img src="assets/gradcapital.png" alt="gradCapital" />
+        </div>
+      </div>
     </div>
 
     <div id="hero">
+      <div id="hero-text">
+        <h3>Automate</h3>
+        <h3><b id="typingText">MESSAGING</b></h3>
+        <h3>On WhatsApp</h3>
+        <span
+          >Get new users, notify and support them at scale efficiently using
+          Heltar's suite of CRM, EM and Automation tools.</span
+        >
 
-        <div id="hero-text">
-            <h3>Automate</h3>
-            <h3><b id="typingText">MESSAGING</b></h3>
-            <h3>On WhatsApp</h3>
-            <span>Get new users, notify and support them at scale efficiently using Heltar's suite of CRM, EM and
-                Automation tools.</span>
-
-            <div id="hero-btns">
-                <input type="button" value="Book a Demo" onclick="window.location.href='demo.html'">
-                <input type="button" value="Start a free trial" onclick="window.location.href=`https://app.heltar.com/register`">
-            </div>
+        <div id="hero-btns">
+          <input
+            type="button"
+            value="Book a Demo"
+            onclick="window.location.href='demo.html'"
+          />
+          <input
+            type="button"
+            value="Start a free trial"
+            onclick="window.location.href=`https://app.heltar.com/register`"
+          />
         </div>
+      </div>
 
-        <div id="hero-images">
-            <img class="visible" sizes="70vw" srcset="assets/home/frame3.webp 700w, assetsMobile/home/frame3.webp 400w"
-                alt="MESSAGES" id="hero-f1">
-            <img class="hidden show" sizes="70vw"
-                srcset="assets/home/frame2.webp 700w, assetsMobile/home/frame2.webp 400w" alt="ORDERS" id="hero-f2">
+      <div id="hero-images">
+        <img
+          class="visible"
+          sizes="70vw"
+          srcset="
+            assets/home/frame3.webp       700w,
+            assetsMobile/home/frame3.webp 400w
+          "
+          alt="MESSAGES"
+          id="hero-f1"
+        />
+        <img
+          class="hidden show"
+          sizes="70vw"
+          srcset="
+            assets/home/frame2.webp       700w,
+            assetsMobile/home/frame2.webp 400w
+          "
+          alt="ORDERS"
+          id="hero-f2"
+        />
 
-            <img class="hidden show" sizes="70vw"
-                srcset="assets/home/frame4.webp 700w, assetsMobile/home/frame4.webp 400w" alt="PAYMENTS" id="hero-f3">
+        <img
+          class="hidden show"
+          sizes="70vw"
+          srcset="
+            assets/home/frame4.webp       700w,
+            assetsMobile/home/frame4.webp 400w
+          "
+          alt="PAYMENTS"
+          id="hero-f3"
+        />
 
-            <img class="hidden show" sizes="70vw"
-                srcset="assets/home/frame1.webp 700w, assetsMobile/home/frame1.webp 400w" alt="WORKFLOWS" id="hero-f4">
-        </div>
-
+        <img
+          class="hidden show"
+          sizes="70vw"
+          srcset="
+            assets/home/frame1.webp       700w,
+            assetsMobile/home/frame1.webp 400w
+          "
+          alt="WORKFLOWS"
+          id="hero-f4"
+        />
+      </div>
     </div>
 
     <div id="trustedBy">
-        <h4>Trusted By <b>300+ businesses</b></h4>
-        <div id="trustedBy-wall">
-            <div id="copy1">
-                <img src="assets/covrzy.webp" alt="Covrzy">
-                <img src="assets/indiamart.webp" alt="Indiamart">
-                <img src="assets/sunstone.webp" alt="Sunstone">
-                <img src="assets/superfone.webp" alt="Superfone">
-                <img src="assets/bambinos.webp" alt="Bambinos">
-                <img src="assets/mesa.webp" alt="Mesa">
-            </div>
-
-            <div id="copy2">
-                <img src="assets/covrzy.webp" alt="Covrzy">
-                <img src="assets/indiamart.webp" alt="Indiamart">
-                <img src="assets/sunstone.webp" alt="Sunstone">
-                <img src="assets/superfone.webp" alt="Superfone">
-                <img src="assets/bambinos.webp" alt="Bambinos">
-                <img src="assets/mesa.webp" alt="Mesa">
-            </div>
-
+      <h4>Trusted By <b>300+ businesses</b></h4>
+      <div id="trustedBy-wall">
+        <div id="copy1">
+          <img src="assets/covrzy.webp" alt="Covrzy" />
+          <img src="assets/indiamart.webp" alt="Indiamart" />
+          <img src="assets/sunstone.webp" alt="Sunstone" />
+          <img src="assets/superfone.webp" alt="Superfone" />
+          <img src="assets/bambinos.webp" alt="Bambinos" />
+          <img src="assets/mesa.webp" alt="Mesa" />
         </div>
+
+        <div id="copy2">
+          <img src="assets/covrzy.webp" alt="Covrzy" />
+          <img src="assets/indiamart.webp" alt="Indiamart" />
+          <img src="assets/sunstone.webp" alt="Sunstone" />
+          <img src="assets/superfone.webp" alt="Superfone" />
+          <img src="assets/bambinos.webp" alt="Bambinos" />
+          <img src="assets/mesa.webp" alt="Mesa" />
+        </div>
+      </div>
     </div>
 
     <div id="solutionsHeader">
-        <h2>
-            Smart Business Owners Are Doubling Their Revenue By <b>Automating WhatsApp</b>
-        </h2>
+      <h2>
+        Smart Business Owners Are Doubling Their Revenue By
+        <b>Automating WhatsApp</b>
+      </h2>
     </div>
 
     <div class="imageNtext leftImage hidden show">
+      <img
+        loading="lazy"
+        sizes="70vw"
+        srcset="assets/home/home1.webp 700w, assetsMobile/home/home1.webp 400w"
+        alt="Landing_1"
+      />
 
-        <img loading="lazy" sizes="70vw" srcset="assets/home/home1.webp 700w, assetsMobile/home/home1.webp 400w"
-            alt="Landing_1">
-
-        <div class="text">
-            <h2>Marketing</h2>
-            <h3>Send <b>Targeted Bulk</b> Messaging</h3>
-            <div class="bulletPoints">
-                <div class="bulletPoint">
-                    <img src="/assets/home/b1.svg" alt="check">
-                    <span><b>1,000,000s of messages</b> in one click without getting banned.</span>
-                </div>
-                <div class="bulletPoint">
-                    <img src="/assets/home/b2.svg" alt="check">
-                    <span><b>See how your campaigns are doing</b> with easy-to-read stats like opens, deliveries, reads,
-                        and reply rates.</span>
-                </div>
-                <div class="bulletPoint">
-                    <img src="/assets/home/b3.svg" alt="check">
-                    <span><b>Schedule your messages</b> for any time of the day.</span>
-                </div>
-                <div class="bulletPoint">
-                    <img src="/assets/home/b4.svg" alt="check">
-                    <span><b>Chat with your contacts</b> in their first language, no matter what it is.</span>
-                </div>
-            </div>
-            <a href="/marketing.html">Check Marketing <img src="/assets/arrowRight.svg" alt=">"></a>
-
+      <div class="text">
+        <h2>Marketing</h2>
+        <h3>Send <b>Targeted Bulk</b> Messaging</h3>
+        <div class="bulletPoints">
+          <div class="bulletPoint">
+            <img src="/assets/home/b1.svg" alt="check" />
+            <span
+              ><b>1,000,000s of messages</b> in one click without getting
+              banned.</span
+            >
+          </div>
+          <div class="bulletPoint">
+            <img src="/assets/home/b2.svg" alt="check" />
+            <span
+              ><b>See how your campaigns are doing</b> with easy-to-read stats
+              like opens, deliveries, reads, and reply rates.</span
+            >
+          </div>
+          <div class="bulletPoint">
+            <img src="/assets/home/b3.svg" alt="check" />
+            <span><b>Schedule your messages</b> for any time of the day.</span>
+          </div>
+          <div class="bulletPoint">
+            <img src="/assets/home/b4.svg" alt="check" />
+            <span
+              ><b>Chat with your contacts</b> in their first language, no matter
+              what it is.</span
+            >
+          </div>
         </div>
-
+        <a href="/marketing.html"
+          >Check Marketing <img src="/assets/arrowRight.svg" alt=">"
+        /></a>
+      </div>
     </div>
 
     <div class="imageNtext rightImage hidden show">
+      <img
+        loading="lazy"
+        sizes="70vw"
+        srcset="assets/home/home2.webp 700w, assetsMobile/home/home2.webp 400w"
+        alt="Landing_2"
+      />
 
-        <img loading="lazy" sizes="70vw" srcset="assets/home/home2.webp 700w, assetsMobile/home/home2.webp 400w"
-            alt="Landing_2">
-
-        <div class="text">
-            <h2>Automation</h2>
-            <h3>Money <b>saved =</b> Money <b>earned</b></h3>
-            <div class="bulletPoints">
-                <div class="bulletPoint">
-                    <img src="/assets/home/b5.svg" alt="check">
-                    <span><b>Build complex chatbots</b> without coding.</span>
-                </div>
-                <div class="bulletPoint">
-                    <img src="/assets/home/b6.svg" alt="check">
-                    <span><b>Connect your apps,</b> Google Sheets or custom backend to WhatsApp.</span>
-                </div>
-                <div class="bulletPoint">
-                    <img src="/assets/home/b3.svg" alt="check">
-                    <span><b>Automate anything</b> you can imagine.</span>
-                </div>
-            </div>
-            <a href="/automation.html">Check Automation <img src="/assets/arrowRight.svg" alt=">"></a>
-
+      <div class="text">
+        <h2>Automation</h2>
+        <h3>Money <b>saved =</b> Money <b>earned</b></h3>
+        <div class="bulletPoints">
+          <div class="bulletPoint">
+            <img src="/assets/home/b5.svg" alt="check" />
+            <span><b>Build complex chatbots</b> without coding.</span>
+          </div>
+          <div class="bulletPoint">
+            <img src="/assets/home/b6.svg" alt="check" />
+            <span
+              ><b>Connect your apps,</b> Google Sheets or custom backend to
+              WhatsApp.</span
+            >
+          </div>
+          <div class="bulletPoint">
+            <img src="/assets/home/b3.svg" alt="check" />
+            <span><b>Automate anything</b> you can imagine.</span>
+          </div>
         </div>
-
+        <a href="/automation.html"
+          >Check Automation <img src="/assets/arrowRight.svg" alt=">"
+        /></a>
+      </div>
     </div>
 
     <div class="imageNtext leftImage hidden show">
+      <img
+        loading="lazy"
+        sizes="70vw"
+        srcset="assets/home/home3.webp 700w, assetsMobile/home/home3.webp 400w"
+        alt="Landing_3"
+      />
 
-        <img loading="lazy" sizes="70vw" srcset="assets/home/home3.webp 700w, assetsMobile/home/home3.webp 400w"
-            alt="Landing_3">
-
-        <div class="text">
-            <h2>Customer Support</h2>
-            <h3><b>Engage your consumer</b> by interactive AI Customer support</h3>
-            <div class="bulletPoints">
-                <div class="bulletPoint">
-                    <img src="/assets/home/b7.svg" alt="check">
-                    <span><b>Team Inbox</b> - Visibility to agent’s conversations, track agent productivity, customer
-                        satisfaction score, resolution time.</span>
-                </div>
-                <div class="bulletPoint">
-                    <img src="/assets/home/b8.svg" alt="check">
-                    <span><b>Android, iOS, Web App</b>, answer anywhere, anytime!</span>
-                </div>
-                <div class="bulletPoint">
-                    <img src="/assets/home/b9.svg" alt="check">
-                    <span><b>Seamless bot-to-agent handoff instantly</b>.</span>
-                </div>
-            </div>
-            <a href="/customer-support.html">Check Customer Support <img src="/assets/arrowRight.svg" alt=">"></a>
-
+      <div class="text">
+        <h2>Customer Support</h2>
+        <h3><b>Engage your consumer</b> by interactive AI Customer support</h3>
+        <div class="bulletPoints">
+          <div class="bulletPoint">
+            <img src="/assets/home/b7.svg" alt="check" />
+            <span
+              ><b>Team Inbox</b> - Visibility to agent’s conversations, track
+              agent productivity, customer satisfaction score, resolution
+              time.</span
+            >
+          </div>
+          <div class="bulletPoint">
+            <img src="/assets/home/b8.svg" alt="check" />
+            <span><b>Android, iOS, Web App</b>, answer anywhere, anytime!</span>
+          </div>
+          <div class="bulletPoint">
+            <img src="/assets/home/b9.svg" alt="check" />
+            <span><b>Seamless bot-to-agent handoff instantly</b>.</span>
+          </div>
         </div>
-
+        <a href="/customer-support.html"
+          >Check Customer Support <img src="/assets/arrowRight.svg" alt=">"
+        /></a>
+      </div>
     </div>
 
     <div id="featureCTA" class="blackBG">
-        <h1>Features</h1>
-        <h2>Accelerate your business with our highly advanced CRM and chatbot features</h2>
-        <a target="_blank" href="https://documenter.getpostman.com/view/21364364/2s93zCYL9G">Explore documentation <img src="assets/arrowRight.svg" alt=">"></a>
+      <h1>Features</h1>
+      <h2>
+        Accelerate your business with our highly advanced CRM and chatbot
+        features
+      </h2>
+      <a
+        target="_blank"
+        href="https://documenter.getpostman.com/view/21364364/2s93zCYL9G"
+        >Explore documentation <img src="assets/arrowRight.svg" alt=">"
+      /></a>
 
-        <div id="featureDrawerContainer">
-            <input class="disabled" id="prevBtn" alt="prev" type="image" src="/assets/icons/previous.svg" onclick="setFeature(currF-1)">
-            <div id="featureDrawer">
-                <input class="active" type="button" value="Unified Team Inbox" onclick="setFeature(1)">
-                <input type="button" value="Android, iOS, WebApp" onclick="setFeature(2)">
-                <input type="button" value="No Code Chatbot" onclick="setFeature(3)">
-                <input type="button" value="Comprehensive API Suite" onclick="setFeature(4)">
-                <input type="button" value="Broadcast Campaign" onclick="setFeature(5)">
-                <input type="button" value="Custom Integrations" onclick="setFeature(6)">
-            </div>
-            <input id="nextBtn" type="image" alt="next" src="/assets/icons/next.svg"  onclick="setFeature(currF+1)">
+      <div id="featureDrawerContainer">
+        <input
+          class="disabled"
+          id="prevBtn"
+          alt="prev"
+          type="image"
+          src="/assets/icons/previous.svg"
+          onclick="setFeature(currF-1)"
+        />
+        <div id="featureDrawer">
+          <input
+            class="active"
+            type="button"
+            value="Unified Team Inbox"
+            onclick="setFeature(1)"
+          />
+          <input
+            type="button"
+            value="Android, iOS, WebApp"
+            onclick="setFeature(2)"
+          />
+          <input
+            type="button"
+            value="No Code Chatbot"
+            onclick="setFeature(3)"
+          />
+          <input
+            type="button"
+            value="Comprehensive API Suite"
+            onclick="setFeature(4)"
+          />
+          <input
+            type="button"
+            value="Broadcast Campaign"
+            onclick="setFeature(5)"
+          />
+          <input
+            type="button"
+            value="Custom Integrations"
+            onclick="setFeature(6)"
+          />
         </div>
-            
-            <div id="featureWindow">
-            <div class="featureWindowItem active">
-                <ul>
-                    <li>Streamline your customer interactions with a unified team inbox on WhatsApp.</li>
-                    <li>Manage all your messages in one place, ensuring efficient and seamless communication.</li>
-                </ul>
-                <img src="/assets/f1.webp" alt="Feature 1">
-            </div>
+        <input
+          id="nextBtn"
+          type="image"
+          alt="next"
+          src="/assets/icons/next.svg"
+          onclick="setFeature(currF+1)"
+        />
+      </div>
 
-            <div class="featureWindowItem">
-                <ul>
-                    <li>Stay connected with our app, available on both iOS and Android.</li>
-                    <li>Enjoy seamless access to all features, anytime, anywhere.</li>
-                </ul>
-                <img src="/assets/f2.webp" style="transform: scale(0.9);" alt="Feature 2">
-            </div>
-
-
-            <div class="featureWindowItem">
-                <ul>
-                    <li>Create powerful chatbots without any coding required. Our intuitive platform lets you design and
-                        deploy chatbots effortlessly.</li>
-                    <!-- <li>Manage all your messages in one place, ensuring efficient and seamless communication.</li> -->
-                </ul>
-                <img src="/assets/f3.svg" style="transform: scale(0.9);" alt="Feature 3">
-            </div>
-
-
-            <div class="featureWindowItem">
-                <ul>
-                    <li>Unlock endless possibilities with our comprehensive API suite.</li>
-                    <li>Integrate seamlessly with your systems for enhanced functionality and performance.</li>
-                </ul>
-                <img src="/assets/f4.webp" style="transform: scale(0.9);" alt="Feature 4">
-            </div>
-
-
-            <div class="featureWindowItem">
-                <ul>
-                    <li>Reach a vast audience with our broadcast campaign feature.</li>
-                    <li>Send targeted messages to millions with just a few clicks.</li>
-                </ul>
-                <img src="/assets/f5.svg" alt="Feature 5">
-            </div>
-
-            <div class="featureWindowItem">
-                <ul>
-                    <li>Stay updated in real-time with our webhook integrations.</li>
-                    <li>Receive instant notifications and automate workflows effortlessly.</li>
-                </ul>
-                <img src="/assets/f6.webp" alt="Feature 6">
-            </div>
-
-
+      <div id="featureWindow">
+        <div class="featureWindowItem active">
+          <ul>
+            <li>
+              Streamline your customer interactions with a unified team inbox on
+              WhatsApp.
+            </li>
+            <li>
+              Manage all your messages in one place, ensuring efficient and
+              seamless communication.
+            </li>
+          </ul>
+          <img src="/assets/f1.webp" alt="Feature 1" />
         </div>
 
-        <a class="ctaButton" href="/demo.html">Ready to get started? <img src="assets/arrowRight.svg" alt=">"></a>
+        <div class="featureWindowItem">
+          <ul>
+            <li>
+              Stay connected with our app, available on both iOS and Android.
+            </li>
+            <li>Enjoy seamless access to all features, anytime, anywhere.</li>
+          </ul>
+          <img
+            src="/assets/f2.webp"
+            style="transform: scale(0.9)"
+            alt="Feature 2"
+          />
+        </div>
+
+        <div class="featureWindowItem">
+          <ul>
+            <li>
+              Create powerful chatbots without any coding required. Our
+              intuitive platform lets you design and deploy chatbots
+              effortlessly.
+            </li>
+            <!-- <li>Manage all your messages in one place, ensuring efficient and seamless communication.</li> -->
+          </ul>
+          <img
+            src="/assets/f3.svg"
+            style="transform: scale(0.9)"
+            alt="Feature 3"
+          />
+        </div>
+
+        <div class="featureWindowItem">
+          <ul>
+            <li>
+              Unlock endless possibilities with our comprehensive API suite.
+            </li>
+            <li>
+              Integrate seamlessly with your systems for enhanced functionality
+              and performance.
+            </li>
+          </ul>
+          <img
+            src="/assets/f4.webp"
+            style="transform: scale(0.9)"
+            alt="Feature 4"
+          />
+        </div>
+
+        <div class="featureWindowItem">
+          <ul>
+            <li>Reach a vast audience with our broadcast campaign feature.</li>
+            <li>Send targeted messages to millions with just a few clicks.</li>
+          </ul>
+          <img src="/assets/f5.svg" alt="Feature 5" />
+        </div>
+
+        <div class="featureWindowItem">
+          <ul>
+            <li>Stay updated in real-time with our webhook integrations.</li>
+            <li>
+              Receive instant notifications and automate workflows effortlessly.
+            </li>
+          </ul>
+          <img src="/assets/f6.webp" alt="Feature 6" />
+        </div>
+      </div>
+
+      <a class="ctaButton" href="/demo.html"
+        >Ready to get started? <img src="assets/arrowRight.svg" alt=">"
+      /></a>
     </div>
 
     <div id="promise">
-        <div id="promiseText">
-            <h2>Are our promises fake? <b>No!</b></h2>
-            <span>We are dedicated to changing the lives of our customers. <a href="/demo.html">Book a demo</a> now to change yours.</span>
-            <div id="promiseSummary">
-                <img src="/assets/promise1.svg" alt="1">
-                <img src="/assets/promise2.svg" alt="2">
-                <img src="/assets/promise3.svg" alt="3">
-            </div>
+      <div id="promiseText">
+        <h2>Are our promises fake? <b>No!</b></h2>
+        <span
+          >We are dedicated to changing the lives of our customers.
+          <a href="/demo.html">Book a demo</a> now to change yours.</span
+        >
+        <div id="promiseSummary">
+          <img src="/assets/promise1.svg" alt="1" />
+          <img src="/assets/promise2.svg" alt="2" />
+          <img src="/assets/promise3.svg" alt="3" />
         </div>
-        <div id="promiseSlider">
-        
-            <div class="promiseSliderItem card1">
-                <img class="client" src="/assets/indiamartClient.webp" alt="indiamart">
-                <span>Fill rates</span>
-                <h3>90%<img src="assets/arrowUp.svg" alt="increase"></h3>
-                <img class="promiseIcon" src="assets/promise1.svg" alt="Fill rates">
-            </div>
-
-            <div class="promiseSliderItem card2">
-                <img class="client" src="/assets/smartoClient.webp" alt="Smarto">
-                <span>Customer support workforce</span>
-                <h3>50%<img src="assets/arrowDown.svg" alt="decrease"></h3>
-                <img class="promiseIcon" src="assets/promise2.svg" alt="CX Support">
-            </div>
-
-            <div class="promiseSliderItem card3">
-                <img class="client" src="/assets/sunstoneClient.webp" alt="Sunstone">
-                <span>Information for internal teams</span>
-                <h3>5X<img src="assets/arrowUp.svg" alt="increase"></h3>
-                <img class="promiseIcon" src="assets/promise3.svg" alt="Information">
-            </div>
-
-            <div id="controls">
-                <input type="image" src="/assets/icons/previous.svg" alt="prev" onclick="setPromise((currP+2) % 3)">
-                <div id="pageControls">
-                    <div class="active" id="pg1" onclick="setPromise(0)"></div>
-                    <div id="pg2" onclick="setPromise(1)"></div>
-                    <div id="pg3" onclick="setPromise(2)"></div>
-                </div>
-                <input type="image" src="/assets/icons/next.svg" alt="next" onclick="setPromise((currP+1) % 3)">
-            </div>
+      </div>
+      <div id="promiseSlider">
+        <div class="promiseSliderItem card1">
+          <img
+            class="client"
+            src="/assets/indiamartClient.webp"
+            alt="indiamart"
+          />
+          <span>Fill rates</span>
+          <h3>90%<img src="assets/arrowUp.svg" alt="increase" /></h3>
+          <img class="promiseIcon" src="assets/promise1.svg" alt="Fill rates" />
         </div>
+
+        <div class="promiseSliderItem card2">
+          <img class="client" src="/assets/smartoClient.webp" alt="Smarto" />
+          <span>Customer support workforce</span>
+          <h3>50%<img src="assets/arrowDown.svg" alt="decrease" /></h3>
+          <img class="promiseIcon" src="assets/promise2.svg" alt="CX Support" />
+        </div>
+
+        <div class="promiseSliderItem card3">
+          <img
+            class="client"
+            src="/assets/sunstoneClient.webp"
+            alt="Sunstone"
+          />
+          <span>Information for internal teams</span>
+          <h3>5X<img src="assets/arrowUp.svg" alt="increase" /></h3>
+          <img
+            class="promiseIcon"
+            src="assets/promise3.svg"
+            alt="Information"
+          />
+        </div>
+
+        <div id="controls">
+          <input
+            type="image"
+            src="/assets/icons/previous.svg"
+            alt="prev"
+            onclick="setPromise((currP+2) % 3)"
+          />
+          <div id="pageControls">
+            <div class="active" id="pg1" onclick="setPromise(0)"></div>
+            <div id="pg2" onclick="setPromise(1)"></div>
+            <div id="pg3" onclick="setPromise(2)"></div>
+          </div>
+          <input
+            type="image"
+            src="/assets/icons/next.svg"
+            alt="next"
+            onclick="setPromise((currP+1) % 3)"
+          />
+        </div>
+      </div>
     </div>
 
     <div id="callToAction" class="hidden show">
-        <div id="cta">
-
-            <div id="ctaText">
-                <h2>Ready to Automate your Business on WhatsApp?</h2>
-                <span>Scale your business effortlessly with our Dynamic WhatsApp Ecosystem, a hub for innovation!</span>
-                <div id="homeCtaGrid">
-                    <div class="ctaGridItem">
-                        <img src="/assets/home/cta1.svg" alt="1">
-                        <span>WhatsApp Business Messaging</span>
-                    </div>
-                    <div class="ctaGridItem">
-                        <img src="/assets/home/cta2.svg" alt="2">
-                        <span>AI-Powered Chatbots</span>
-                    </div>
-                    <div class="ctaGridItem">
-                        <img src="/assets/home/cta3.svg" alt="3">
-                        <span>24/7 Customer Support</span>
-                    </div>
-                    <div class="ctaGridItem">
-                        <img src="/assets/home/cta4.svg" alt="4">
-                        <span>Streamlined Business Operations</span>
-                    </div>
-                </div>
-                <a href="tel:+918005756750">Call Us</a>
+      <div id="cta">
+        <div id="ctaText">
+          <h2>Ready to Automate your Business on WhatsApp?</h2>
+          <span
+            >Scale your business effortlessly with our Dynamic WhatsApp
+            Ecosystem, a hub for innovation!</span
+          >
+          <div id="homeCtaGrid">
+            <div class="ctaGridItem">
+              <img src="/assets/home/cta1.svg" alt="1" />
+              <span>WhatsApp Business Messaging</span>
             </div>
-
-            <img src="assets/home/cta.svg" alt="Heltar">
+            <div class="ctaGridItem">
+              <img src="/assets/home/cta2.svg" alt="2" />
+              <span>AI-Powered Chatbots</span>
+            </div>
+            <div class="ctaGridItem">
+              <img src="/assets/home/cta3.svg" alt="3" />
+              <span>24/7 Customer Support</span>
+            </div>
+            <div class="ctaGridItem">
+              <img src="/assets/home/cta4.svg" alt="4" />
+              <span>Streamlined Business Operations</span>
+            </div>
+          </div>
+          <a href="tel:+918005756750">Call Us</a>
         </div>
+
+        <img src="assets/home/cta.svg" alt="Heltar" />
+      </div>
     </div>
 
-
     <div id="footer" class="blackBG">
-        <div id="footerLogo">
-            <img src="assets/logoDark.svg" alt="Heltar">
-            <span>153, 1st floor, Cedar Crest, Nirvana Country, Sector-50, Gurugram</span>
-        </div>
+      <div id="footerLogo">
+        <img src="assets/logoDark.svg" alt="Heltar" />
+        <span
+          >153, 1st floor, Cedar Crest, Nirvana Country, Sector-50,
+          Gurugram</span
+        >
+      </div>
 
-        <div class="footer-link-group g1">
-            <span>Quick Links</span>
-            <a href="/">Home</a>
-            <a href="/pricing.html">Pricing</a>
-            <a href="http://blog.heltar.com" target="_blank">Blogs</a>
-            <a href="/demo.html">Demo</a>
-        </div>
+      <div class="footer-link-group g1">
+        <span>Quick Links</span>
+        <a href="/">Home</a>
+        <a href="/pricing.html">Pricing</a>
+        <a href="http://blog.heltar.com" target="_blank">Blogs</a>
+        <a href="/demo.html">Demo</a>
+      </div>
 
-        <div class="footer-link-group g2">
-            <span>Solutions</span>
-            <a href="/marketing.html">Marketing</a>
-            <a href="/automation.html">Automation</a>
-            <a href="/customer-support.html">Customer Support</a>
-            <a href="/ai-solution.html">AI Solutions</a>
-        </div>
+      <div class="footer-link-group g2">
+        <span>Solutions</span>
+        <a href="/marketing.html">Marketing</a>
+        <a href="/automation.html">Automation</a>
+        <a href="/customer-support.html">Customer Support</a>
+        <a href="/ai-solution.html">AI Solutions</a>
+      </div>
 
-        <div class="footer-link-group g3">
-            <span>Support</span>
-            <a href="tel:+918005756750">Contact Us</a>
-            <a target="_blank" href="https://documenter.getpostman.com/view/21364364/2s93zCYL9G">Documentation</a>
-        </div>
-
+      <div class="footer-link-group g3">
+        <span>Support</span>
+        <a href="tel:+918005756750">Contact Us</a>
+        <a
+          target="_blank"
+          href="https://documenter.getpostman.com/view/21364364/2s93zCYL9G"
+          >Documentation</a
+        >
+      </div>
     </div>
 
     <div id="footerbreak"></div>
 
     <div id="footerBottom">
-        <span>© Heltar, 2024. All rights reserved.</span>
-        <div id="footerBottomMid">
-            <a target="_blank" href="https://www.heltar.com/_files/ugd/cd0dcd_9d0b5dfa6e9f4b88933a639239f817be.pdf">Terms</a>
-            <a target="_blank" href="https://www.heltar.com/_files/ugd/cd0dcd_f8ed8989f1304d04bb91539d103c1d37.pdf">Privacy</a>
-            <a href="tel:+918005756750">Contact Us</a>
-        </div>
-        <div id="socials">
-            <a target="_blank"  href="mailto:prashant.jangid@heltar.com"><img src="assets/icons/mail.svg" alt="Mail"></a>
-            <a target="_blank" href="https://www.instagram.com/heltar_ai"><img src="assets/icons/instagram.svg" alt="instagram"></a>
-            <a target="_blank" href="https://www.linkedin.com/company/heltar"><img src="assets/icons/linkedin.svg" alt="linkedin"></a>
-        </div>
+      <span>© Heltar, 2024. All rights reserved.</span>
+      <div id="footerBottomMid">
+        <a
+          target="_blank"
+          href="https://www.heltar.com/_files/ugd/cd0dcd_9d0b5dfa6e9f4b88933a639239f817be.pdf"
+          >Terms</a
+        >
+        <a
+          target="_blank"
+          href="https://www.heltar.com/_files/ugd/cd0dcd_f8ed8989f1304d04bb91539d103c1d37.pdf"
+          >Privacy</a
+        >
+        <a href="tel:+918005756750">Contact Us</a>
+      </div>
+      <div id="socials">
+        <a target="_blank" href="mailto:prashant.jangid@heltar.com"
+          ><img src="assets/icons/mail.svg" alt="Mail"
+        /></a>
+        <a target="_blank" href="https://www.instagram.com/heltar_ai"
+          ><img src="assets/icons/instagram.svg" alt="instagram"
+        /></a>
+        <a target="_blank" href="https://www.linkedin.com/company/heltar"
+          ><img src="assets/icons/linkedin.svg" alt="linkedin"
+        /></a>
+      </div>
     </div>
 
     <div id="chatWithUs">
+      <div id="chatWindow">
+        <img id="chatDemo" src="/assets/chatDemo.webp" alt="Chat" />
+        <a
+          href="https://api.whatsapp.com/send?phone=917029798962"
+          target="_blank"
+          >Start Chat</a
+        >
+        <img
+          id="chatClose"
+          src="/assets/close.svg"
+          alt="X"
+          onclick="toggleChat()"
+        />
+      </div>
 
-        <div id="chatWindow">
-            <img id="chatDemo" src="/assets/chatDemo.webp" alt="Chat">
-            <a href="https://api.whatsapp.com/send?phone=917029798962" target="_blank">Start Chat</a>
-            <img id="chatClose" src="/assets/close.svg" alt="X" onclick="toggleChat()">
-        </div>
-
-        <div id="chatActionButton" onclick="toggleChat()">
-            <img src="/assets/whatsapp.svg" alt="WhatsApp">
-            <span>Chat with us</span>
-        </div>
+      <div id="chatActionButton" onclick="toggleChat()">
+        <img src="/assets/whatsapp.svg" alt="WhatsApp" />
+        <span>Chat with us</span>
+      </div>
     </div>
 
     <script src="app.js"></script>
     <script src="scripts/scrollpop.js"></script>
 
     <script>
-        let chatVisible = false;
-        const chatWindow = document.querySelector("#chatWindow")
+      let chatVisible = false;
+      const chatWindow = document.querySelector("#chatWindow");
 
-        toggleChat = () => {
-            chatVisible = !chatVisible;
-            if (chatVisible) chatWindow.classList.add('show');
-            else chatWindow.classList.remove('show');
-        }
+      toggleChat = () => {
+        chatVisible = !chatVisible;
+        if (chatVisible) chatWindow.classList.add("show");
+        else chatWindow.classList.remove("show");
+      };
     </script>
     <!-- <script defer type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
-
-</body>
-
+  </body>
 </html>
