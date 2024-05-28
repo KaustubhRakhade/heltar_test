@@ -254,6 +254,15 @@
             if (chatVisible) chatWindow.classList.add('show');
             else chatWindow.classList.remove('show');
         }
+
+        // date validation to tomoorow and beyond but not today
+        let today = new Date();
+        today.setDate(today.getDate() + 1);
+        let tomorrow = today.toISOString().split('T')[0];
+
+        document.getElementById("date").setAttribute('min', tomorrow);
+
+
     </script>
 </body>
 
