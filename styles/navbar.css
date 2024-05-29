@@ -50,14 +50,65 @@ body {
     justify-content: space-between;
 }
 
+/*         <button id="ham-menu" alt="menu" type="button">
+            <div id="line1"></div>
+            <div id="line2"></div>
+            <div id="line3"></div>
+        </button> */
+
 #logoBox #ham-menu {
     display: none;
-    width: 2.5rem;
+    width: 1.8rem;
+    height: 1.4rem;
     color: var(--primary-accent-color);
     font-weight: 900;
     font-size: 2rem;
     border: none;
+    position: relative;
+    background: none;
+    border: none;
+    outline: none;
 }
+
+#logoBox #ham-menu div {
+    width: 1.8rem;
+    height: 3px;
+    background: var(--primary-accent-color);
+    transition: all 0.2s;
+    position: absolute;
+}
+
+#line1 {
+    top: 0;
+    left: 0;
+}
+
+#line2 {
+    top: 0.5rem;
+    left: 0;
+}
+
+#line3 {
+    top: 1rem;
+    left: 0;
+}
+
+#navbar:focus-within #ham-menu #line1 {
+    transform: rotate(45deg);
+    top: 0.5rem;
+}
+
+#navbar:focus-within #ham-menu #line2 {
+    opacity: 0;
+}
+
+#navbar:focus-within #ham-menu #line3 {
+    transform: rotate(-45deg);
+    top: 0.5rem;
+}
+
+
+
  
 #navbar img#logoPC {
     height: 2.5rem;
@@ -225,6 +276,14 @@ body {
 }
 
 @media screen and (max-width: 960px) {
+    #navbar-container:focus-within #closeMenuBtn {
+        height: 2.5rem;
+        width: 2.5rem;
+        position: absolute;
+        opacity: 0;
+        top: 1rem;
+        left: 1.5rem;
+    }
     #backedBy {
         display: none;
     }
@@ -235,7 +294,7 @@ body {
     }
 
     #navbar {
-        background: black;
+        background: #000000CC;
     }
 
     #navbar img#logoDark {
@@ -274,7 +333,7 @@ body {
 
     .dropdown-content, .dropbtn {
         position: static;
-        background-color: #000000;
+        background-color: #0000;
         box-shadow: none;
         transform: translateY(-2rem);
         transition: all 0.2s;
@@ -324,6 +383,10 @@ body {
 }
 
 @media screen and (max-width: 420px) {
+    #navbar-container:focus-within #closeMenuBtn {
+        left: initial;
+        right: 2.5rem;
+    }
     #navbar {
         padding: 0.75rem 1.5rem;
     }
@@ -333,8 +396,11 @@ body {
     }
     #navbar #logoBox {
         column-gap: 1.5rem;
-        justify-content: flex-start;
+        justify-content: space-between;
         padding-bottom: 0;
+        padding: 0 1rem;
+        box-sizing: border-box;
+        flex-direction: row-reverse;
     }
 
     #navbar:focus-within #nav-links {
