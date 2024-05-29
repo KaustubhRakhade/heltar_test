@@ -17,6 +17,17 @@
     <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KTX4W9FV');</script>
+    <!-- End Google Tag Manager -->
+
     <noscript>
         <link rel="stylesheet" href="styles.css">
     </noscript>
@@ -76,66 +87,43 @@
 
     <div id="navbar-container" style="position: fixed">
         <div id="navbar" tabindex="0">
-          <div id="logoBox">
-          <button id="ham-menu" aria-label="menu" type="button">
-              <div id="line1"></div>
-              <div id="line2"></div>
-              <div id="line3"></div>
-          </button>
-            <img
-              src="assets/logoDark.svg"
-              alt="Heltar"
-              id="logoDark"
-              onclick="window.location.href='/'"
-            />
-            <img
-              src="assets/logoPC.svg"
-              alt="Heltar"
-              id="logoPC"
-              onclick="window.location.href='/'"
-            />
-            <img
-              src="assets/logoMobile.png"
-              alt="Heltar"
-              id="logoMobile"
-              onclick="window.location.href='/'"
-            />
-            <input
-              id="register-btn-mobile"
-              type="button"
-              value="Book a Demo"
-              onclick="window.location.href='demo.html'"
-            />
-          </div>
-  
-          <div id="nav-links">
-            <a href="/">Home</a>
-            <div class="dropdown">
-              <input type="button" class="dropbtn" value="Solutions &#x25BE;" />
-              <div class="dropdown-content">
-                <a href="marketing.html">Marketing</a>
-                <a href="automation.html">Automation</a>
-                <a href="customer-support.html">Customer Support</a>
-                <a href="ai-solution.html">AI Solutions</a>
-              </div>
+            <div id="logoBox">
+                <button id="ham-menu" aria-label="menu" type="button">
+                    <div id="line1"></div>
+                    <div id="line2"></div>
+                    <div id="line3"></div>
+                </button>
+                <img src="assets/logoDark.svg" alt="Heltar" id="logoDark" onclick="window.location.href='/'" />
+                <img src="assets/logoPC.svg" alt="Heltar" id="logoPC" onclick="window.location.href='/'" />
+                <img src="assets/logoMobile.png" alt="Heltar" id="logoMobile" onclick="window.location.href='/'" />
+                <input id="register-btn-mobile" type="button" value="Book a Demo"
+                    onclick="window.location.href='demo.html'" />
             </div>
-            <a href="/pricing.html">Pricing</a>
-            <input
-              id="register-btn-pc"
-              type="button"
-              value="Book a Demo"
-              onclick="window.location.href='demo.html'"
-            />
-          </div>
-  
-          <div id="backedBy">
-            <span>backed by</span>
-            <img src="assets/antler.png" alt="Antler" />
-            <img src="assets/gradcapital.png" alt="gradCapital" />
-          </div>
+
+            <div id="nav-links">
+                <a href="/">Home</a>
+                <div class="dropdown">
+                    <input type="button" class="dropbtn" value="Solutions &#x25BE;" />
+                    <div class="dropdown-content">
+                        <a href="marketing.html">Marketing</a>
+                        <a href="automation.html">Automation</a>
+                        <a href="customer-support.html">Customer Support</a>
+                        <a href="ai-solution.html">AI Solutions</a>
+                    </div>
+                </div>
+                <a href="/pricing.html">Pricing</a>
+                <input id="register-btn-pc" type="button" value="Book a Demo"
+                    onclick="window.location.href='demo.html'" />
+            </div>
+
+            <div id="backedBy">
+                <span>backed by</span>
+                <img src="assets/antler.png" alt="Antler" />
+                <img src="assets/gradcapital.png" alt="gradCapital" />
+            </div>
         </div>
         <div id="closeMenuBtn"></div>
-      </div>
+    </div>
 
 
     <div id="main">
